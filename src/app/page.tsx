@@ -1,8 +1,32 @@
+import { Archive } from "iconsax-reactjs";
 import Image from "next/image";
+
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <div className="flex flex-col">
+        <p className="font-helvetica">Lorem ipsum dolor sit.</p>
+        <p className="font-helvetica font-bold">Lorem ipsum dolor sit.</p>
+        <p className="font-satoshi">Lorem ipsum dolor sit.</p>
+        <p className="font-satoshi font-bold">Lorem ipsum dolor sit.</p>
+      </div>
+
+      <div className="flex flex-wrap gap-4">
+        <Button size="lg">Large Btn</Button>
+        <Button>Medium Btn</Button>
+        <Button size="sm">Small Btn</Button>
+        <Button variant="ghost" size="icon-lg">
+          <Archive color="#555555" />
+        </Button>
+        <Button variant="ghost" size="icon-md">
+          <Archive color="#555555" />
+        </Button>
+        <Button variant="ghost" size="icon-sm">
+          <Archive color="#555555" />
+        </Button>
+      </div>
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <Image
           className="dark:invert"
