@@ -9,6 +9,7 @@
   --color-alinsky-night-secondary: var(--night-secondary);
   --color-alinsky-gunmetal: var(--gunmetal);
   --color-alinsky-gray-600: var(--gray-600);
+  --color-alinsky-silver: var(--silver);
   --color-alinsky-rich-black: var(--rich-black);
   --color-alinsky-battleship-gray: var(--battleship-gray);
   --color-alinsky-midnight-blue: var(--midnight-blue);
@@ -68,6 +69,7 @@
   --night-secondary: oklch(0.19 0.0051 219.74);
   --gunmetal: oklch(0.3 0.0107 254);
   --gray-600: oklch(0.56 0 0);
+  --silver: oklch(0.8 0 0);
   --rich-black: oklch(0.11 0.0453 272.05);
   --battleship-gray: oklch(0.64 0.0142 221.52);
   --midnight-blue: oklch(0.29 0.1267 269.95);
