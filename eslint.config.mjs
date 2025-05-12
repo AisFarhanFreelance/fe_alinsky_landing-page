@@ -27,7 +27,8 @@ const eslintConfig = [
           case: "kebabCase",
         },
       ],
-      "unicorn/import-style": "off"
+      "unicorn/import-style": "off",
+      "unicorn/prevent-abbreviations": "false"
     },
   }),
   eslintPluginUnicorn.configs.recommended,
