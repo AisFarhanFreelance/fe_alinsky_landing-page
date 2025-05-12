@@ -6,7 +6,7 @@ import Alinsky from "/public/assets/logo/alinsky-logo.svg";
 
 const Navbar = () => {
   return (
-    <div className="bg-alinsky-white">
+    <div className="bg-alinsky-white font-helvetica text-base leading-5">
       <div className="hidden sm:flex flex-row gap-8 justify-center items-center py-5">
         <Link href="#">About</Link>
         <Link href="#">Market</Link>
