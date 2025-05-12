@@ -4,8 +4,8 @@ import HeroCardImage from "./hero-card-image";
 
 const HeroSection = () => {
   return (
-    <div className="mb-16 space-y-8 lg:mx-[54.5px]">
-      <div className="mt-[200px] text-center lg:px-[228.5px]">
+    <div className="mt-[200px] mb-16 space-y-8 lg:mx-[54.5px]">
+      <div className="mx-4  space-y-2.5 text-center lg:px-[228.5px]">
         <div className="font-helvetica text-2xl font-bold text-alinsky-midnight-blue lg:text-5xl lg:leading-16">
           SOCIAL MEDIA MANAGEMENT MADE SIMPLE
         </div>

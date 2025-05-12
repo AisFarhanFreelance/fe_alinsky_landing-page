@@ -2,14 +2,14 @@ import SolutionOverviewCard from "./solution-overview-card";
 
 const SolutionOverviewSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center lg:px-[208px] lg:py-60 min-h-screen w-full space-y-12">
-      <div className="text-center space-y-2">
-        <div className="font-helvetica capitalize text-5xl text-alinsky-onyx leading-16">
+    <div className="flex min-h-screen w-full flex-col items-center space-y-12 py-14 lg:px-[208px] lg:py-60">
+      <div className="space-y-2 text-center">
+        <div className="font-helvetica text-2xl text-alinsky-onyx capitalize lg:text-5xl lg:leading-16">
           Meet Yout New&nbsp;
           <span className="font-bold italic">Social Media</span>&nbsp;Command
           Center
         </div>
-        <div className="font-satoshi text-alinsky-gray-600 text-xl">
+        <div className="font-satoshi text-sm font-medium text-alinsky-gray-600 lg:text-xl">
           Most marketing teams waste 12+ hours weekly on
         </div>
       </div>

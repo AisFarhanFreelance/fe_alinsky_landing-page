@@ -38,9 +38,12 @@ const images = [
 
 const HeroCardImage = () => {
   return (
-    <div className="grid grid-cols-5 gap-8 items-end">
+    <div className="flex flex-col items-end gap-8 lg:grid lg:grid-cols-5">
       {images.map((img, idx) => (
-        <Card key={idx} className="border-0 shadow-none w-full">
+        <Card
+          key={idx}
+          className="mx-auto w-fit border-0 shadow-none lg:w-full"
+        >
           <CardContent className="p-0">
             <div className={img.className}>
               <Image src={img.src} alt={img.alt} className="object-contain" />

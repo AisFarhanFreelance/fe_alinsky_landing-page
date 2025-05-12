@@ -35,7 +35,7 @@ const cardData = [
 
 const SolutionOverviewCard = () => {
   return (
-    <div className="grid grid-cols-4 gap-12">
+    <div className="flex flex-col space-y-12 lg:grid lg:grid-cols-4 lg:gap-12">
       {cardData.map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
           <div className="relative w-fit">
@@ -45,12 +45,12 @@ const SolutionOverviewCard = () => {
               fetchPriority="high"
             />
             <div
-              className={`absolute -bottom-2 -right-2 rounded-full p-[21.5px] ${item.bg}`}
+              className={`absolute -right-2 -bottom-2 rounded-full p-[21.5px] ${item.bg}`}
             >
               {item.icon}
             </div>
           </div>
-          <span className="mt-4 font-satoshi font-medium text-base text-alinsky-onyx">
+          <span className="mt-4 font-satoshi text-base font-medium text-alinsky-onyx">
             {item.label}
           </span>
         </div>

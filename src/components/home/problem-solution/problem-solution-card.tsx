@@ -29,14 +29,14 @@ const cardData = [
 
 const ProblemSolutionCard = () => {
   return (
-    <div className="grid grid-cols-4 gap-2.5 h-[215px]">
+    <div className="mx-20 flex h-auto flex-col space-y-4 lg:mx-0 lg:grid lg:h-[215px] lg:grid-cols-4 lg:gap-2.5 lg:space-y-0">
       {cardData.map((item, idx) => (
         <Card key={idx} className="flex flex-col justify-between p-6">
           <CardHeader className="flex flex-row justify-between">
             {item.icon}
             <ArrowRight color="#151f68" className="-rotate-45" />
           </CardHeader>
-          <CardContent className="font-satoshi font-medium text-base text-alinsky-midnight-blue">
+          <CardContent className="font-satoshi text-[15px] font-medium text-alinsky-midnight-blue">
             <span>{item.text}</span>
           </CardContent>
         </Card>
