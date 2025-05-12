@@ -1,6 +1,6 @@
 const ResultsSection = () => {
   return (
-    <div className="flex w-full flex-col items-center bg-alinsky-pink-lavender lg:min-h-screen">
+    <div className="flex w-full flex-col items-center lg:min-h-screen">
       <div className="mx-4 my-12 space-y-12 lg:mx-auto lg:my-60">
         <div className="text-center font-helvetica text-4xl font-bold text-alinsky-midnight-blue uppercase lg:text-9xl">
           <span>Did You Know?</span>
