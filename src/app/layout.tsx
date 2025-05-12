@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import CallToAction from "@/components/call-to-action/call-to-action";
 import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 
@@ -34,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased bg-alinsky-seasalt`}
+        className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} bg-alinsky-seasalt antialiased`}
       >
         <div>
           <div>
@@ -42,7 +41,6 @@ export default function RootLayout({
           </div>
           <main className="mt-2.5">{children}</main>
           <div>
-            <CallToAction />
             <Footer />
           </div>
         </div>
