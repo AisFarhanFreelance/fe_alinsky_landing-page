@@ -28,7 +28,7 @@ const eslintConfig = [
         },
       ],
       "unicorn/import-style": "off",
-      "unicorn/prevent-abbreviations": "false"
+      "unicorn/prevent-abbreviations": "off"
     },
   }),
   eslintPluginUnicorn.configs.recommended,
