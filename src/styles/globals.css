@@ -4,13 +4,20 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  /** Alinsky Color */
-  --alinsky-color-rich-black: var(--rich-black);
-  --alinsky-color-midnight-blue: var(--midnight-blue);
-  --alinsky-color-persian-blue: var(--persian-blue);
-  --alinsky-color-medium-slate-blue: var(--medium-slate-blue);
-  --alinsky-color-white: var(--white);
-  /** Alinsky Color */
+  /** Alinsky */
+  --color-alinsky-night: var(--night);
+  --color-alinsky-night-secondary: var(--night-secondary);
+  --color-alinsky-gunmetal: var(--gunmetal);
+  --color-alinsky-gray-600: var(--gray-600);
+  --color-alinsky-rich-black: var(--rich-black);
+  --color-alinsky-battleship-gray: var(--battleship-gray);
+  --color-alinsky-midnight-blue: var(--midnight-blue);
+  --color-alinsky-persian-blue: var(--persian-blue);
+  --color-alinsky-medium-slate-blue: var(--medium-slate-blue);
+  --color-alinsky-white-smoke: var(--white-smoke);
+  --color-alinsky-seasalt: var(--seasalt);
+  --color-alinsky-white: var(--white);
+  /** Alinsky */
 
   /** Font Families */
   --font-helvetica: "Helvetica", sans-serif;
@@ -57,13 +64,18 @@
 }
 
 :root {
-  /** Alinsky */
+  --night: oklch(0.15 0.0034 196.79);
+  --night-secondary: oklch(0.19 0.0051 219.74);
+  --gunmetal: oklch(0.3 0.0107 254);
+  --gray-600: oklch(0.56 0 0);
   --rich-black: oklch(0.11 0.0453 272.05);
+  --battleship-gray: oklch(0.64 0.0142 221.52);
   --midnight-blue: oklch(0.29 0.1267 269.95);
   --persian-blue: oklch(0.43 0.2018 280.57);
   --medium-slate-blue: oklch(0.58 0.1911 280.62);
+  --white-smoke: oklch(0.97 0 0);
+  --seasalt: oklch(0.99 0 0);
   --white: oklch(1 0 0);
-  /** Alinsky */
 
   --radius: 0.625rem;
   --background: oklch(1 0 0);
