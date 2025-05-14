@@ -13,6 +13,7 @@ import {
 interface PricingPlan {
   title: string;
   price: string;
+  description?: string;
   features: string[];
   note?: string;
   bg: string;
@@ -33,7 +34,8 @@ const plans: PricingPlan[] = [
   {
     title: "Plan A",
     price: "800,000",
-    note: "Perfect for solopreneurs and small teams",
+    description: "Perfect for solopreneurs and small teams",
+    note: "Panel + Content Plan Template Autopost + Limited 3 User",
     features: [
       "Social Media Calendar",
       "Basic Post Scheduling",
@@ -84,6 +86,7 @@ const CardItem: React.FC<PricingPlan> = ({
   title,
   price,
   features,
+  description,
   note,
   bg,
   text,
@@ -94,30 +97,33 @@ const CardItem: React.FC<PricingPlan> = ({
     className={`relative flex justify-center lg:mt-0 ${featured ? "mt-4" : "mt-0"}`}
   >
     {featured && (
-      <div className="absolute -top-3 left-1/3 z-10 -translate-x-1/2 rounded-full bg-alinsky-periwinkle px-2.5 py-[7px] font-satoshi text-xs text-alinsky-violet-blue">
+      <div className="absolute -top-3 left-1/5 z-10 -translate-x-1/2 rounded-full bg-alinsky-periwinkle px-2.5 py-[7px] font-satoshi text-xs text-alinsky-violet-blue lg:left-1/3">
         Most Popular
       </div>
     )}
     <Card
-      className={`flex w-full flex-col justify-between p-6 font-satoshi lg:max-w-xs ${
+      className={`flex w-full flex-col justify-between rounded-2xl p-6 font-satoshi lg:max-w-xs ${
         featured ? "border-2 border-alinsky-vista-blue" : "border-none"
       } ${bg} ${text}`}
     >
       <div>
         <CardHeader>
           <CardTitle className="text-base font-black">{title}</CardTitle>
-          {note && (
+          {description && (
             <CardDescription className="text-xs leading-[18px] font-normal tracking-[0.16px] text-alinsky-periwinkle lg:text-[10px]">
-              {note}
+              {description}
             </CardDescription>
           )}
         </CardHeader>
-        <CardContent className="mt-4">
+        <CardContent className="mt-4 space-y-2">
           <div className="text-xl font-bold">
             <sup>Rp.</sup>&nbsp;{price}&nbsp;<sub>/month</sub>
           </div>
+          <div>
+            <span className="text-xs font-normal">{note}</span>
+          </div>
           {features.length > 0 && (
-            <div className="mt-2 space-y-1 text-xs">
+            <div className="space-y-1 text-xs">
               {features.map((feature: string, idx) => (
                 <div key={idx} className="flex items-center space-x-2">
                   <TickCircle color="#5c6bc0" />
