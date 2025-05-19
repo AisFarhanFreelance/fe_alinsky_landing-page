@@ -1,37 +1,30 @@
-import { HamburgerMenu } from "iconsax-reactjs";
 import Image from "next/image";
 import Link from "next/link";
 
-import Alinsky from "/public/assets/logo/alinsky-logo.svg";
+import Alinsky_Logo from "/public/assets/logo/alinsky-logo.svg";
 
 const Navbar = () => {
   return (
-    <div className="bg-alinsky-white font-helvetica text-base leading-5">
-      <div className="hidden sm:flex flex-row gap-8 justify-center items-center py-5">
-        <Link href="#">About</Link>
-        <Link href="#">Market</Link>
+    <nav className="relative isolate overflow-hidden">
+      <div className="mx-8 my-2 hidden items-center justify-between font-helvetica text-base leading-5 sm:flex">
         <Link href="#">
           <Image
-            src={Alinsky}
+            src={Alinsky_Logo}
             alt="Alinsky-Logo"
-            style={{ width: "40px", height: "auto" }}
+            style={{ width: "auto", height: "auto" }}
+            className="rounded-2xl"
           />
         </Link>
-        <Link href="#">Service</Link>
-        <Link href="#">Blog</Link>
+        <div className="my-5 space-x-8 rounded-2xl bg-alinsky-white p-4 drop-shadow-lg">
+          <Link href="#">Home</Link>
+          <Link href="#">Pricing</Link>
+          <Link href="#">Product</Link>
+          <Link href="#">Contact Us</Link>
+          <Link href="#">Blog</Link>
+        </div>
+        <div />
       </div>
-
-      <div className="flex sm:hidden flex-row justify-between items-center px-12 py-5">
-        <Link href="#">
-          <Image
-            src={Alinsky}
-            alt="Alinsky-Logo"
-            style={{ width: "40px", height: "auto" }}
-          />
-        </Link>
-        <HamburgerMenu color="#292d32" />
-      </div>
-    </div>
+    </nav>
   );
 };
 

@@ -2,14 +2,17 @@ import { Button } from "@/components/ui/button";
 
 const CallToAction = () => {
   return (
-    <div className="my-[72px]">
-      <div className="flex w-[262px] flex-col items-center justify-center space-y-6 space-x-0 rounded-2xl bg-alinsky-white-smoke p-8 lg:w-[868px] lg:flex-row lg:space-y-0 lg:space-x-20 lg:px-16 lg:py-8">
-        <div className="text-center font-helvetica text-xl text-alinsky-rich-black capitalize lg:text-start lg:text-[32px]">
-          Your Social Media Dashboard Is Ready, But Are You?
+    <div className="flex items-center justify-center">
+      <div className="flex w-[884px] flex-row items-center justify-between rounded-[20px] bg-gradient-to-br from-white/40 to-white/0 px-16 py-8 shadow-[0_-8px_24px_0_rgba(0,0,0,0.08)] backdrop-blur-[21px]">
+        <div>
+          <span className="flex flex-col font-satoshi text-2xl text-alinsky-midnight-blue capitalize">
+            Your Social Media Dashboard is Ready,&nbsp;
+            <span className="text-[32px] font-bold text-alinsky-rich-black">
+              but are you?
+            </span>
+          </span>
         </div>
-        <Button size="lg" className="mt-4 uppercase lg:mt-0">
-          Get Started
-        </Button>
+        <Button size="lg">Get Started</Button>
       </div>
     </div>
   );
