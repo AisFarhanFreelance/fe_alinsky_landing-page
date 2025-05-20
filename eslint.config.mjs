@@ -66,6 +66,12 @@ const eslintConfig = [
             params: {
               parameters: false,
             },
+            ref: {
+              reference: false,
+            },
+            refs: {
+              references: false,
+            },
             res: {
               resource: true,
               response: true,
