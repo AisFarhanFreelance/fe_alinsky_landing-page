@@ -1,6 +1,7 @@
 import { Instagram, Whatsapp } from "iconsax-reactjs";
 
 import CallToAction from "../home/call-to-action/call-to-action";
+import CatalogLinks from "./catalog-links";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,21 +15,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 gap-6 p-12 text-alinsky-white">
           <div className="space-y-8">
             <h1 className="font-helvetica text-xs uppercase">Catalog</h1>
-            <div className="flex flex-row justify-start space-x-8 font-satoshi text-[28px] capitalize">
-              <div className="flex flex-col space-y-3">
-                <span className="mb-4 w-fit">
-                  Home
-                  <div className="-mt-4 h-3 w-full bg-alinsky-medium-slate-blue/50" />
-                </span>
-                <span className="w-fit">Pricing</span>
-                <span className="w-fit">Products</span>
-              </div>
-              <div className="flex flex-col space-y-3">
-                <span className="w-fit">Contact Us</span>
-                <span className="w-fit">Tutorial</span>
-                <span className="w-fit">Blog</span>
-              </div>
-            </div>
+            <CatalogLinks />
           </div>
           <div className="grid grid-cols-2 gap-6">
             <div className="space-y-8">
@@ -36,7 +23,7 @@ const Footer = () => {
               <p className="font-satoshi text-base">
                 <a
                   href="mailto:info@alinsky.com"
-                  className="hover:text-alinsky-battleship-gray"
+                  className="hover:text-alinsky-silver"
                 >
                   info@alinsky.com
                 </a>
@@ -47,8 +34,12 @@ const Footer = () => {
                 Connect With Us
               </h1>
               <div className="flex flex-row justify-end space-x-1">
-                <Instagram color="#ffffff" size="18" />
-                <Whatsapp color="#ffffff" size="18" />
+                <span className="cursor-pointer transition-transform duration-200 hover:scale-110">
+                  <Instagram color="#ffffff" size="24" />
+                </span>
+                <span className="cursor-pointer transition-transform duration-200 hover:scale-110">
+                  <Whatsapp color="#ffffff" size="24" />
+                </span>
               </div>
             </div>
           </div>
