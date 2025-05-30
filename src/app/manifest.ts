@@ -12,7 +12,7 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#fff",
     icons: [
       {
-        src: "/assets/logo/alinsky-logo.svg",
+        src: "/assets/logo/alinsky-icon.svg",
         sizes: "any",
         type: "image/svg+xml",
       },
