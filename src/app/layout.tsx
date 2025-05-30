@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "provide tailored digital solutions that respect the unique challenges and aspirations of SMEs. By focusing on cost-effective strategies, personalized service, and cutting-edge technology, we empower businesses to thrive in the digital landscape",
   icons: {
-    icon: "assets/logo/alinsky-logo.svg",
+    icon: "assets/logo/alinsky-icon.svg",
   },
 };
 
