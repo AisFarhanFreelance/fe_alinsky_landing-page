@@ -36,10 +36,10 @@ export default function RootLayout({
         className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} bg-alinsky-seasalt antialiased`}
       >
         <div>
-          <div>
+          <div className="fixed top-0 right-0 left-0 z-50">
             <Navbar />
           </div>
-          <main className="mt-2.5">{children}</main>
+          <main>{children}</main>
           <div>
             <Footer />
           </div>
