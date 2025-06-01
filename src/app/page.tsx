@@ -6,10 +6,8 @@ export default function Home() {
   return (
     <div className="min-h-screen items-center justify-items-center font-[family-name:var(--font-geist-sans)]">
       <HeroSection />
-      <div className="mt-[300px]">
-        <PreorderSection />
-        <TeamRoleSection />
-      </div>
+      <PreorderSection />
+      <TeamRoleSection />
     </div>
   );
 }
