@@ -17,7 +17,6 @@ const Navbar = () => {
         </Link>
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-x-8 rounded-2xl bg-alinsky-seasalt p-4 text-alinsky-dim-gray capitalize drop-shadow-lg">
-          <Link href="#">Home</Link>
           <Link href="#">Pricing</Link>
           <Link href="#">Products</Link>
           <Link href="#">Contact Us</Link>
