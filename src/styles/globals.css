@@ -7,6 +7,7 @@
   /** Alinsky */
   --color-alinsky-night: var(--night);
   --color-alinsky-night-secondary: var(--night-secondary);
+  --color-alinsky-eerie-black: var(--eerie-black);
   --color-alinsky-gunmetal: var(--gunmetal);
   --color-alinsky-onyx: var(--onyx);
   --color-alinsky-dim-gray: var(--dim-gray);
@@ -87,6 +88,7 @@
 :root {
   --night: oklch(0.15 0.0034 196.79);
   --night-secondary: oklch(0.19 0.0051 219.74);
+  --eerie-black: oklch(0.2478 0 0);
   --gunmetal: oklch(0.3 0.0107 254);
   --onyx: oklch(0.38 0 0);
   --dim-gray: oklch(0.4926 0 0);
