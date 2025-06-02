@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
-import BlurredCard from "./blurred-card";
-import ReminderCard from "./reminder-card";
+import BlurredCard from "./card/blurred-card";
+import ReminderCard from "./card/reminder-card";
 import BrushBackground from "/public/assets/images/background/brush-background.svg";
 import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
 
