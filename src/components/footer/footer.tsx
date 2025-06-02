@@ -1,15 +1,10 @@
 import { Instagram, Whatsapp } from "iconsax-reactjs";
 
-import CallToAction from "../home/call-to-action/call-to-action";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
     <div className="relative mx-8 mb-6">
-      <div className="absolute -top-20 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2">
-        <CallToAction />
-      </div>
       <div className="rounded-4xl bg-alinsky-rich-black pt-32">
         <div className="grid grid-cols-2 gap-6 p-12 text-alinsky-white">
           <div className="space-y-8">
