@@ -20,6 +20,11 @@ const helvetica = localFont({
 const satoshi = localFont({
   src: [
     {
+      path: "../../../public/assets/fonts/satoshi/Satoshi-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "../../../public/assets/fonts/satoshi/Satoshi-Regular.otf",
       weight: "400",
       style: "normal",

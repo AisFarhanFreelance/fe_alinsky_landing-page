@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "provide tailored digital solutions that respect the unique challenges and aspirations of SMEs. By focusing on cost-effective strategies, personalized service, and cutting-edge technology, we empower businesses to thrive in the digital landscape",
   icons: {
-    icon: "assets/logo/alinsky-logo.svg",
+    icon: "assets/logo/alinsky-icon.svg",
   },
 };
 
@@ -36,10 +36,10 @@ export default function RootLayout({
         className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} bg-alinsky-seasalt antialiased`}
       >
         <div>
-          <div>
+          <div className="fixed top-0 right-0 left-0 z-50">
             <Navbar />
           </div>
-          <main className="mt-2.5">{children}</main>
+          <main>{children}</main>
           <div>
             <Footer />
           </div>

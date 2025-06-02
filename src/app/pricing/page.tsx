@@ -1,9 +1,9 @@
-import PricingSection from "@/components/pricing/pricing-section";
+import PricingPlanSection from "@/components/pricing/pricing-plan-section";
 
 const Pricing = () => {
   return (
-    <div>
-      <PricingSection />
+    <div className="min-h-screen items-center justify-items-center">
+      <PricingPlanSection />
     </div>
   );
 };
