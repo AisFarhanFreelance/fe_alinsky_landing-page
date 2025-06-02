@@ -87,11 +87,11 @@ const PlanCardItem = ({
 }: PricingPlanCardProps) => {
   return (
     <div
-      className={`relative flex justify-center font-satoshi ${planFeatured ? "h-full rounded-[24px] px-2 pb-2" : ""}`}
+      className={`relative flex max-w-[347px] justify-center font-satoshi ${planFeatured ? "h-full rounded-[24px]" : ""}`}
     >
       <div
         className={`flex w-full rounded-[20px] ${
-          planFeatured ? "h-full flex-col items-center justify-center" : ""
+          planFeatured ? "h-full flex-col items-center justify-center " : ""
         }`}
         style={{
           ...(planFeatured
@@ -99,7 +99,7 @@ const PlanCardItem = ({
                 borderRadius: "24px",
                 backgroundImage:
                   "url('/assets/images/background/most-popular-background.svg')",
-                backgroundSize: "fill",
+                backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 boxShadow: "0px 4px 74.6px 0px rgba(26, 36, 107, 0.50)",
