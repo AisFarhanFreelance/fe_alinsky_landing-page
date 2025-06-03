@@ -2,7 +2,7 @@ import PricingPlanCard from "./pricing-plan-card";
 
 const PricingPlanSection = () => {
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center overflow-hidden pb-8">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pb-8">
       <div
         className="absolute inset-0 top-0 left-[-35.538px] z-0"
         style={{
