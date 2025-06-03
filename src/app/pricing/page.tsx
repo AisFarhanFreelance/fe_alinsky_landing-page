@@ -1,4 +1,4 @@
-import PricingPlanSection from "@/components/pricing/pricing-plan-section";
+import PricingPlanSection from "@/components/pricing/pricing-plan/pricing-plan-section";
 
 const Pricing = () => {
   return (

@@ -1,7 +1,7 @@
 import { TickCircle } from "iconsax-reactjs";
 import React from "react";
 
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../ui/card";
+} from "../../ui/card";
 
 interface PricingPlanCardProps {
   planTitle: string;
