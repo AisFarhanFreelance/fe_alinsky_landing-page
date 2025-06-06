@@ -36,6 +36,7 @@
   --color-alinsky-orchid-pink: var(--orchid-pink);
   --color-alinsky-tea-rose-red: var(--tea-rose-red);
   --color-alinsky-platinum: var(--platinum);
+  --color-alinsky-anti-flash-white: var(--anti-flash-white);
   --color-alinsky-white-smoke: var(--white-smoke);
   --color-alinsky-seasalt: var(--seasalt);
   --color-alinsky-white: var(--white);
@@ -117,6 +118,7 @@
   --tea-rose-red: oklch(0.89 0.0569 11.54);
   --lavender-blush: oklch(0.9609 0.0197 9.78);
   --platinum: oklch(0.9067 0 0);
+  --anti-flash-white: oklch(0.9491 0 0);
   --white-smoke: oklch(0.97 0 0);
   --seasalt: oklch(0.99 0 0);
   --white: oklch(1 0 0);
