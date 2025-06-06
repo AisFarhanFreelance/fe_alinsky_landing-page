@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const CallToAction = () => {
+const HomePageCallToAction = () => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex w-[884px] flex-row items-center justify-between rounded-[20px] bg-gradient-to-br from-white/40 to-white/0 px-16 py-8 shadow-[0_-8px_24px_0_rgba(0,0,0,0.08)] backdrop-blur-[21px]">
@@ -18,4 +18,4 @@ const CallToAction = () => {
   );
 };
 
-export default CallToAction;
+export default HomePageCallToAction;
