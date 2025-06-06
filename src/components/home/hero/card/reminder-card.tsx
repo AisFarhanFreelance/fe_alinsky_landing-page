@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import ReminderCardContent from "/public/assets/images/additional/reminders-card.svg";
+import BrandVoiceCardContent from "/public/assets/images/additional/brand-voice-card-content.svg";
 
-const ReminderCard = () => {
+const BrandVoiceCard = () => {
   return (
     <div>
       <svg width="483" height="411" viewBox="0 0 483 411" fill="none">
@@ -23,7 +23,7 @@ const ReminderCard = () => {
             }}
           >
             <Image
-              src={ReminderCardContent}
+              src={BrandVoiceCardContent}
               alt="Reminder Card Content"
               style={{ objectFit: "contain" }}
             />
@@ -130,4 +130,4 @@ const ReminderCard = () => {
   );
 };
 
-export default ReminderCard;
+export default BrandVoiceCard;
