@@ -4,7 +4,6 @@ import Image from "next/image";
 import Avatar1 from "/public/assets/images/avatar/avatar-1.svg";
 import Avatar2 from "/public/assets/images/avatar/avatar-2.svg";
 import Avatar3 from "/public/assets/images/avatar/avatar-3.svg";
-import Avatar4 from "/public/assets/images/avatar/avatar-4.svg";
 
 const TeamRoleAvatarDatas = [
   {
@@ -27,13 +26,6 @@ const TeamRoleAvatarDatas = [
     icon: <StatusUp color="#03A9F4" />,
     iconBackground: "bg-alinsky-uranian-blue",
     label: "Campaign Manager",
-  },
-  {
-    src: Avatar4,
-    bg: "bg-linear-to-b from-alinsky-naples-yellow to-alinsky-white",
-    icon: <StatusUp color="#F44336" />,
-    iconBackground: "bg-alinsky-tea-rose-red",
-    label: "Lead Tracker",
   },
 ];
 

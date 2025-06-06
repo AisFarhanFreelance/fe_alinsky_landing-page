@@ -5,10 +5,12 @@ import TeamRoleSection from "@/components/home/marketing-teams/team-role-section
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen items-center justify-items-center">
+    <div className="relative min-h-screen">
       <HeroSection />
+      <div className="rounded-t-full4xl bg-alinsky-white">
+        <TeamRoleSection />
+      </div>
       <PreorderSection />
-      <TeamRoleSection />
 
       <div className="absolute -bottom-16 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2">
         <HomePageCallToAction />
