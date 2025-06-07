@@ -3,7 +3,7 @@ import PricingPlanCard from "./pricing-plan-card";
 const PricingPlanSection = () => {
   return (
     <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pb-8">
-      <div
+      {/* <div
         className="absolute inset-0 top-0 left-[-35.538px] z-0"
         style={{
           background:
@@ -12,7 +12,7 @@ const PricingPlanSection = () => {
           width: "100%",
           height: "100%",
         }}
-      />
+      /> */}
 
       <div className="mt-[108px] space-y-16">
         <div className="space-y-2 text-center capitalize">
