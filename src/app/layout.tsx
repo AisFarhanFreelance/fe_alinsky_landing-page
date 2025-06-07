@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} bg-alinsky-seasalt antialiased`}
+        className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
           <div className="fixed top-0 right-0 left-0 z-50">

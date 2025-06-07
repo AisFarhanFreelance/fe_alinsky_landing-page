@@ -3,14 +3,14 @@ import TeamRoleAvatar from "./team-role-avatar";
 const TeamRoleSection = () => {
   return (
     <div className="relative mx-8 min-h-screen">
-      <div
+      {/* <div
         className="absolute z-0 h-full w-full"
         style={{
           backgroundImage: "linear-gradient(180deg, #EEE 0%, #FAFAFA 30%)",
         }}
-      />
+      /> */}
       <div className="flex min-h-screen flex-col items-center justify-center space-y-12 px-4">
-        <div className="z-50 mx-auto max-w-screen-xl space-y-8 text-center">
+        <div className="z-10 mx-auto max-w-screen-xl space-y-8 text-center">
           <div className="flex flex-col items-center space-y-0.5 font-satoshi capitalize">
             <div className="text-2xl text-alinsky-onyx capitalize lg:text-5xl lg:leading-16">
               Meet Your New&nbsp;
