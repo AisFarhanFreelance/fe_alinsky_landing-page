@@ -21,6 +21,7 @@ const FirstSocialMediaCard = () => {
               width: "100%",
               display: "flex",
               justifyContent: "center",
+              marginTop: "30px",
             }}
           >
             <Image

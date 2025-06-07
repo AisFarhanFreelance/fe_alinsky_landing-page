@@ -3,16 +3,14 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
-import FirstSocialMediaCard from "./card/first-social-media-card";
 import ReminderCard from "./card/reminder-card";
-import SecondSocialMediaCard from "./card/second-social-media-card";
 import SocialMediaApproval from "./card/social-media-approval";
 import BrushBackground from "/public/assets/images/background/brush-background.svg";
 import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
 
 const HeroSection = () => {
   return (
-    <div className="relative flex min-h-screen w-full items-center overflow-hidden">
+    <div className="relative flex min-h-[105vh] w-full items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src={BrushBackground}
@@ -34,18 +32,8 @@ const HeroSection = () => {
         <ReminderCard />
       </div>
 
-      <div className="absolute top-[380px] right-[-12.541px] h-[379px] w-[456px] scale-75">
+      <div className="absolute top-[400px] right-[-12.541px] h-[379px] w-[456px] scale-75">
         <SocialMediaApproval />
-      </div>
-
-      <div className="pointer-events-none absolute -bottom-10 h-[215px] w-full">
-        <div className="absolute left-[14.813px] h-[215px] w-[215px]">
-          <FirstSocialMediaCard />
-        </div>
-
-        <div className="absolute left-[208px] h-[215px] w-[215px]">
-          <SecondSocialMediaCard />
-        </div>
       </div>
 
       <div className="z-10 flex w-full justify-center px-4">
