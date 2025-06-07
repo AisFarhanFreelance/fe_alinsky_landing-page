@@ -22,7 +22,7 @@ export default function Home() {
         <HeroSection />
       </div>
 
-      <div className="relative -top-7 rounded-t-4xl bg-alinsky-white">
+      <div className="relative -top-7 rounded-t-4xl bg-alinsky-white pt-[72px]">
         <ProblemSolutionSection />
         <TeamRoleSection />
       </div>
