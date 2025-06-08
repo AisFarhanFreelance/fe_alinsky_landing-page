@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { Button } from "@/components/ui/button";
+
 // import BrandToneImage from "/public/assets/images/additional/solution-overview/brand-tone-image.svg";
 import ContentAI2 from "/public/assets/images/additional/solution-overview/content-ai-2.svg";
 import ContentAI3 from "/public/assets/images/additional/solution-overview/content-ai-3.svg";
@@ -62,6 +64,11 @@ const BrandTonePostCreationSection = () => {
             voice and writes like your best copywriter—on demand. With ALINSKY’s
             AI Copy Enhancer, generate scroll-stopping posts in seconds, freeing
             up hours of content creation time.
+          </div>
+          <div className="mt-8">
+            <Button className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95">
+              Learn More
+            </Button>
           </div>
         </div>
       </div>
