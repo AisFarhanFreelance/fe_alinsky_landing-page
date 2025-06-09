@@ -5,6 +5,10 @@ import SecondSocialMediaCard from "@/components/home/hero/card/second-social-med
 import HeroSection from "@/components/home/hero/hero-section";
 import TeamRoleSection from "@/components/home/marketing-teams/team-role-section";
 import ProblemSolutionSection from "@/components/home/problem-solution/probelm-solution-section";
+import SolutionOverviewSection from "@/components/home/solution-overview/solution-overview-section";
+import AgencyServiceSection from "@/components/pricing/agency-service/agency-service-section";
+import PricingPlanSection from "@/components/pricing/pricing-plan/pricing-plan-section";
+import ServiceBlockSection from "@/components/pricing/service-block/service-block-section";
 
 export default function Home() {
   return (
@@ -23,10 +27,18 @@ export default function Home() {
       </div>
 
       <div className="relative -top-7 rounded-t-4xl bg-alinsky-white pt-[72px]">
-        <ProblemSolutionSection />
-        <TeamRoleSection />
+        <div>
+          <ProblemSolutionSection />
+          <TeamRoleSection />
+          <SolutionOverviewSection />
+        </div>
+        <div>
+          <PricingPlanSection />
+          <AgencyServiceSection />
+          <ServiceBlockSection />
+        </div>
+        <PreorderSection />
       </div>
-      <PreorderSection />
 
       <div className="absolute -bottom-16 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2">
         <HomePageCallToAction />
