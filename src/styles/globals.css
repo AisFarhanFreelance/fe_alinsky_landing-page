@@ -47,6 +47,12 @@
   --font-satoshi: "Satoshi", sans-serif;
   /** Font Families */
 
+  /** Breakpoints */
+  --breakpoint-alinsky-xl: 1024px;
+  --breakpoint-alinsky-2xl: 1366px;
+  --breakpoint-alinsky-3xl: 1920px;
+  /** Breakpoints */
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
