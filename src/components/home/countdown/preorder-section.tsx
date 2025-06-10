@@ -41,27 +41,29 @@ const PreorderSection = () => {
   });
 
   return (
-    <div className="mx-8 min-h-screen ">
-      <div className="grid grid-cols-2 gap-8">
-        <div className="flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-[72px] text-center font-satoshi text-alinsky-platinum">
-          <span className="text-[32px] capitalize">Pre-Order Closes In</span>
-          <div className="flex flex-row justify-center space-x-8 text-8xl font-light">
-            {["days", "hours", "minutes", "seconds"].map((unit, idx) => (
-              <div key={idx} className="flex flex-col">
-                <span className="animate-pulse drop-shadow-[0_0_16px_rgba(255,255,255,0.7)]">
-                  {salesTime[unit as keyof typeof salesTime]}
-                </span>
-              </div>
-            ))}
-          </div>
-          <span className="text-xl italic">Secure Early Access & Save 15%</span>
+    <div className="mx-[104px] h-[516px] ">
+      <div className="flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-32 text-center font-satoshi text-alinsky-platinum">
+        <span className="text-[32px] font-bold capitalize">
+          Pre-Order Closes In
+        </span>
+        <div className="flex flex-row justify-center space-x-8 text-8xl leading-[100%] font-normal">
+          {["days", "hours", "minutes", "seconds"].map((unit, idx) => (
+            <div key={idx} className="flex flex-col">
+              <span
+                className="animate-pulse"
+                style={{
+                  textShadow: "0px 2px 9px #FFF",
+                  color: "var(--grey-300, #E0E0E0)",
+                }}
+              >
+                {salesTime[unit as keyof typeof salesTime]}
+              </span>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col items-center justify-center space-y-2 rounded-4xl bg-alinsky-midnight-blue py-[72px] text-center font-satoshi text-alinsky-platinum">
-          <span className="text-[32px] uppercase">
-            Pre-Order Now&nbsp;<span className="normal-case">for</span>&nbsp;
-            <span className="font-black">IDR 1,111,000</span>
-          </span>
-          <span className="text-xl">(Before prices rises to IDR,300,000)</span>
+        <div className="text-xl font-bold text-alinsky-sunset uppercase">
+          Hurry!! Only&nbsp;
+          <span className="text-alinsky-beige">20</span>&nbsp;Left In Stock
         </div>
       </div>
     </div>

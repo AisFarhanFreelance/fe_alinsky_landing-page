@@ -2,7 +2,7 @@ import PricingPlanCard from "./pricing-plan-card";
 
 const PricingPlanSection = () => {
   return (
-    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pb-8">
+    <div className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pb-16">
       {/* <div
         className="absolute inset-0 top-0 left-[-35.538px] z-0"
         style={{
@@ -14,7 +14,7 @@ const PricingPlanSection = () => {
         }}
       /> */}
 
-      <div className="mt-[108px] space-y-16">
+      <div className="mx-[104px] mt-[108px] space-y-16">
         <div className="space-y-2 text-center capitalize">
           <div className="font-helvetica text-2xl leading-16 font-bold text-alinsky-rich-black lg:text-5xl">
             Pick Your Growth Blueprint

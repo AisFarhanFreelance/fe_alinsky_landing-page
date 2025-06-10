@@ -14,7 +14,8 @@ import {
 interface PricingPlanCardProps {
   planTitle: string;
   planSubtitle?: string;
-  planPrice: string;
+  planPriceInitial?: string;
+  planPriceDiscount: string;
   planDescription: string;
   planFeatures: string[];
   planButtonVariant?: "default" | "outline";
@@ -26,7 +27,8 @@ const plans: PricingPlanCardProps[] = [
   {
     planTitle: "Plan A",
     planSubtitle: "Perfect for solopreneurs and small teams",
-    planPrice: "800,000",
+    planPriceInitial: "1,600,000",
+    planPriceDiscount: "800,000",
     planDescription: "Panel + Content Plan Template Autopost + Limited 3 User",
     planFeatures: [
       "Social Media Calendar",
@@ -41,7 +43,8 @@ const plans: PricingPlanCardProps[] = [
   },
   {
     planTitle: "Plan B",
-    planPrice: "1,300,000",
+    planPriceInitial: "2,600,000",
+    planPriceDiscount: "1,300,000",
     planDescription:
       "Panel + Content Plan Template Autopost + Monthly Result Report + Unlimited User + Bonus 1 Video Asset",
     planFeatures: [
@@ -58,7 +61,8 @@ const plans: PricingPlanCardProps[] = [
   },
   {
     planTitle: "Plan C",
-    planPrice: "3,600,000",
+    planPriceInitial: "4,200,000",
+    planPriceDiscount: "3,600,000",
     planDescription:
       "Panel + Content Plan Template Autopost + Month Result Report + Unlimited User + Bonus 5 Video Asset",
     planFeatures: [
@@ -78,7 +82,8 @@ const plans: PricingPlanCardProps[] = [
 const PlanCardItem = ({
   planTitle,
   planSubtitle,
-  planPrice,
+  planPriceInitial,
+  planPriceDiscount,
   planDescription,
   planFeatures,
   planButtonVariant = "outline",
@@ -87,11 +92,11 @@ const PlanCardItem = ({
 }: PricingPlanCardProps) => {
   return (
     <div
-      className={`relative flex max-w-[347px] justify-center font-satoshi ${planFeatured ? "h-full rounded-[24px]" : ""}`}
+      className={`relative flex justify-center font-satoshi ${planFeatured ? "h-full rounded-[24px]" : ""}`}
     >
       <div
         className={`flex w-full rounded-[20px] ${
-          planFeatured ? "h-full flex-col items-center justify-center " : ""
+          planFeatured ? "h-full flex-col items-center justify-center px-6" : ""
         }`}
         style={{
           ...(planFeatured
@@ -115,31 +120,40 @@ const PlanCardItem = ({
           </div>
         )}
         <Card
-          className={`mx-auto flex flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300
+          className={` flex flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300
         ${planFeatured ? "mx-2 mb-2" : "w-full"}
       `}
         >
           <div>
             <CardHeader>
-              <CardTitle className="text-base leading-[150%] font-black">
+              <CardTitle className="text-4xl leading-[150%] font-black">
                 {planTitle}
               </CardTitle>
               {planSubtitle && (
-                <CardDescription className="text-[10px] leading-[18px] tracking-[0.16px] text-[#757575]">
+                <CardDescription className="text-[14px] leading-[18px] tracking-[0.16px] text-[#757575]">
                   {planSubtitle}
                 </CardDescription>
               )}
             </CardHeader>
 
             <CardContent className="mt-4 space-y-2">
-              <div className="text-xl leading-[150%] font-bold">
-                <sup>Rp.</sup>&nbsp;{planPrice}&nbsp;<sub>/month</sub>
+              <div className="leading-[150%] font-bold capitalize">
+                <div className="flex flex-row items-center text-xl text-alinsky-persian-red">
+                  <sup>Rp.</sup>
+                  <div className="line-through">
+                    &nbsp;{planPriceInitial}&nbsp;
+                  </div>
+                  <sub>/month</sub>
+                </div>
+                <div className="text-4xl leading-[150%] font-bold">
+                  <sup>Rp.</sup>&nbsp;{planPriceDiscount}&nbsp;<sub>/month</sub>
+                </div>
               </div>
-              <div className="text-xs leading-[150%] font-medium">
+              <div className="text-base leading-[150%] font-medium">
                 {planDescription}
               </div>
               {planFeatures.length > 0 && (
-                <div className="space-y-1 text-xs leading-[150%]">
+                <div className="space-y-1 text-base leading-[150%]">
                   {planFeatures.map((feature: string, idx) => (
                     <div key={idx} className="flex items-center space-x-2">
                       <TickCircle color="#5c6bc0" />
@@ -167,7 +181,7 @@ const PlanCardItem = ({
 
 const PricingPlanCard = () => {
   return (
-    <div className="mx-[176px] grid grid-cols-3 gap-4 space-y-0">
+    <div className="grid grid-cols-3 gap-4 space-y-0">
       {plans.map((plan, idx) => (
         <PlanCardItem key={idx} {...plan} />
       ))}
