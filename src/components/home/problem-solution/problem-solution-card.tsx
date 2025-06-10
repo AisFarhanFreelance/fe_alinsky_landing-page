@@ -37,11 +37,11 @@ const cardData: CardItem[] = [
 
 const ProblemSolutionCard = () => {
   return (
-    <div className="mx-20 flex min-h-[400px] flex-col space-y-4 lg:mx-0 lg:grid lg:h-[215px] lg:grid-cols-3 lg:gap-5 lg:space-y-0">
+    <div className="flex min-h-[400px] flex-col space-y-4 lg:mx-0 lg:grid lg:h-[215px] lg:grid-cols-3 lg:gap-5 lg:space-y-0">
       {cardData.map((item, idx) => (
         <Card
           key={idx}
-          className="flex flex-col gap-y-12 rounded-2xl bg-alinsky-anti-flash-white p-6"
+          className="flex flex-col gap-y-12 rounded-2xl bg-alinsky-seasalt p-6"
         >
           <CardHeader className="flex flex-row justify-between">
             {item.icon}

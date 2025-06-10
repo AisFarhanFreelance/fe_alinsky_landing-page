@@ -3,9 +3,10 @@ import ContactUsSection from "@/components/contact-us/contact-us-section";
 import PreorderSection from "@/components/home/countdown/preorder-section";
 import FirstSocialMediaCard from "@/components/home/hero/card/first-social-media-card";
 import SecondSocialMediaCard from "@/components/home/hero/card/second-social-media-card";
+import SocialMediaApproval from "@/components/home/hero/card/social-media-approval";
 import HeroSection from "@/components/home/hero/hero-section";
 import TeamRoleSection from "@/components/home/marketing-teams/team-role-section";
-import ProblemSolutionSection from "@/components/home/problem-solution/probelm-solution-section";
+import ProblemSolutionSection from "@/components/home/problem-solution/problem-solution-section";
 import SolutionOverviewSection from "@/components/home/solution-overview/solution-overview-section";
 import PricingSection from "@/components/pricing/pricing-section";
 
@@ -14,6 +15,10 @@ export default function Home() {
     <div className="relative min-h-screen">
       <div className="relative">
         <div className="pointer-events-none absolute -bottom-5 z-10 h-[215px] w-full">
+          <div className="absolute right-[-12.541px] -bottom-10 h-[379px] w-[456px] scale-75">
+            <SocialMediaApproval />
+          </div>
+
           <div className="absolute left-[14.813px] h-[215px] w-[215px] scale-75">
             <FirstSocialMediaCard />
           </div>
