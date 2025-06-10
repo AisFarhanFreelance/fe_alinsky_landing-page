@@ -1,4 +1,5 @@
 import HomePageCallToAction from "@/components/call-to-action/homepage-call-to-action";
+import ContactUsSection from "@/components/contact-us/contact-us-section";
 import PreorderSection from "@/components/home/countdown/preorder-section";
 import FirstSocialMediaCard from "@/components/home/hero/card/first-social-media-card";
 import SecondSocialMediaCard from "@/components/home/hero/card/second-social-media-card";
@@ -35,6 +36,16 @@ export default function Home() {
         </div>
         <div>
           <PricingSection />
+        </div>
+        <div className="relative">
+          <div
+            className="absolute top-1/2 left-1/2 z-0 h-[740px] w-[780px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-60 blur-[450px]"
+            style={{
+              background:
+                "linear-gradient(100deg, #151F68 56.79%, #0015D0 67.8%)",
+            }}
+          />
+          <ContactUsSection />
         </div>
       </div>
 
