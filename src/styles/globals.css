@@ -24,8 +24,10 @@
   --color-alinsky-picton-blue: var(--picton-blue);
   --color-alinsky-vista-blue: var(--vista-blue);
   --color-alinsky-mauveine: var(--mauveine);
+  --color-alinsky-persian-red: var(--persian-red);
   --color-alinsky-vermilion: var(--vermilion);
   --color-alinsky-naples-yellow: var(--naples-yellow);
+  --color-alinsky-sunset: var(--sunset);
   --color-alinsky-uranian-blue: var(--uranian-blue);
   --color-alinsky-light-cyan: var(--light-cyan);
   --color-alinsky-periwinkle: var(--periwinkle);
@@ -40,6 +42,7 @@
   --color-alinsky-white-smoke: var(--white-smoke);
   --color-alinsky-seasalt: var(--seasalt);
   --color-alinsky-white: var(--white);
+  --color-alinsky-beige: var(--beige);
   /** Alinsky */
 
   /** Font Families */
@@ -112,8 +115,10 @@
   --picton-blue: oklch(0.7 0.157 238.99);
   --vista-blue: oklch(0.74 0.073 276.54);
   --mauveine: oklch(0.52 0.2151 321.24);
+  --persian-red: oklch(0.568 0.2002 26.41);
   --vermilion: oklch(0.64 0.2153 28.81);
   --naples-yellow: oklch(0.8677 0.1488 93.74);
+  --sunset: oklch(0.8741 0.1102 76.47);
   --uranian-blue: oklch(0.89 0.0604 227.77);
   --light-cyan: oklch(0.9323 0.0308 206.71);
   --periwinkle: oklch(0.85 0.0435 278.18);
@@ -127,6 +132,7 @@
   --anti-flash-white: oklch(0.9491 0 0);
   --white-smoke: oklch(0.97 0 0);
   --seasalt: oklch(0.99 0 0);
+  --beige: oklch(0.9898 0.0288 102.67);
   --white: oklch(1 0 0);
 
   --radius: 0.625rem;
