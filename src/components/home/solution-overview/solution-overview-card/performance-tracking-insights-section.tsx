@@ -8,7 +8,7 @@ const PerformanceTrackingInsightsSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-[104px] grid h-[648px] max-h-[648px] grid-cols-2 gap-x-6 alinsky-3xl:mx-[344px]">
+        <div className="grid h-[648px] max-h-[648px] grid-cols-2 gap-x-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px]">
           <div className="flex flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 font-satoshi text-alinsky-midnight-blue">
             <div className="flex items-center space-x-8">
               <svg

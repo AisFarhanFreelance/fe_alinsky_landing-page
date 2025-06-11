@@ -21,7 +21,7 @@ const ServiceBlockSection = () => {
             }}
           />
 
-          <div className="z-10 mx-[104px] grid h-[400px] w-full grid-cols-3 items-center justify-center gap-6 alinsky-3xl:mx-[344px]">
+          <div className="z-10 grid h-[400px] w-full grid-cols-3 items-center justify-center gap-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px]">
             <Card className="flex h-full flex-col justify-between bg-alinsky-midnight-blue text-alinsky-white">
               <CardContent className="mx-10 my-[64px] flex flex-1 flex-col justify-between">
                 <div className="max-w-[253px] font-helvetica text-4xl leading-12 font-bold tracking-[-0.18px]">

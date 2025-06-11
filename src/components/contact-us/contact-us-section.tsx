@@ -4,7 +4,7 @@ const ContactUsSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-[104px] my-[72px] flex h-[274px] items-center justify-center overflow-hidden alinsky-3xl:mx-[344px]">
+        <div className="my-[72px] flex h-[274px] items-center justify-center overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px]">
           <div className=" flex flex-col items-center justify-center space-y-10 text-center">
             <div className="font-satoshi text-5xl leading-[100%] font-medium text-alinsky-midnight-blue capitalize">
               See Your Brand In Our Platform

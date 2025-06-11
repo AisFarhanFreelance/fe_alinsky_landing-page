@@ -2,10 +2,10 @@ import ProblemSolutionCard from "./problem-solution-card";
 
 const ProblemSolutionSection = () => {
   return (
-    <div className="flex  min-h-screen items-center justify-center rounded-t-4xl bg-alinsky-anti-flash-white">
+    <div className="flex min-h-screen items-center justify-center rounded-t-4xl bg-alinsky-anti-flash-white">
       <div className="flex justify-center">
         <div className="w-full max-w-[1920px]">
-          <div className="mx-[104px] mt-14 mb-8 flex flex-col justify-center space-y-8 alinsky-3xl:mx-[344px] ">
+          <div className="mt-14 mb-8 flex flex-col justify-center space-y-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] ">
             <div className="space-y-[72px] text-alinsky-rich-black">
               <div className="text-center font-helvetica text-5xl capitalize">
                 4 Hidden Costs Slowing Down Your Client social media Growth
@@ -22,7 +22,7 @@ const ProblemSolutionSection = () => {
                 If even one of these problems feels too real… <br /> It&apos;s
                 time to reflect&nbsp;:
                 <b>
-                  &nbsp; What if your social media didn’t need more effort, just
+                  &nbsp; What if your social media didn`t need more effort, just
                   better tools
                 </b>
               </span>

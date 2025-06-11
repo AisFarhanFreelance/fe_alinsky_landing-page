@@ -4,7 +4,7 @@ const AgencyServiceSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-[104px] flex h-[500px] flex-col items-center justify-center space-y-12 rounded-4xl bg-alinsky-midnight-blue text-alinsky-white alinsky-3xl:mx-[344px]">
+        <div className="flex h-[500px] flex-col items-center justify-center space-y-12 rounded-4xl bg-alinsky-midnight-blue text-alinsky-white alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px]">
           <div className="text-center capitalize">
             <div className="font-satoshi text-4xl font-medium">
               Give Your Team

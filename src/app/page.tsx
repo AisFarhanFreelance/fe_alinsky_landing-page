@@ -38,16 +38,16 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 w-full max-w-[1920px] overflow-hidden">
-            <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[28%] alinsky-3xl:scale-90">
+            <div className="absolute h-[379px] w-[456px] alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[28%] alinsky-3xl:scale-90">
               <BrandVoiceCard />
             </div>
-            <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-90">
+            <div className="absolute h-[379px] w-[456px] alinsky-2xl:right-[5%] alinsky-2xl:bottom-[-2%] alinsky-2xl:scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-90">
               <SocialMediaApproval />
             </div>
-            <div className="absolute h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[15%] alinsky-3xl:scale-90">
+            <div className="absolute h-[215px] w-[215px] alinsky-2xl:bottom-0 alinsky-2xl:left-[5%] alinsky-2xl:scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[15%] alinsky-3xl:scale-90">
               <FirstSocialMediaCard />
             </div>
-            <div className="absolute h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[24%] alinsky-3xl:scale-90">
+            <div className="absolute h-[215px] w-[215px] alinsky-2xl:bottom-0 alinsky-2xl:left-[15%] alinsky-2xl:scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[24%] alinsky-3xl:scale-90">
               <SecondSocialMediaCard />
             </div>
 
