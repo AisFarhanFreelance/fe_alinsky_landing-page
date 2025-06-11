@@ -37,20 +37,18 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="relative w-full max-w-[1920px] ">
-            <div className="pointer-events-none absolute inset-x-0 -bottom-5 z-10 h-[215px] w-full">
-              <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[150%] alinsky-3xl:scale-105">
-                <BrandVoiceCard />
-              </div>
-              <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-105">
-                <SocialMediaApproval />
-              </div>
-              <div className="absolute left-[15%] h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-10 alinsky-3xl:scale-105">
-                <FirstSocialMediaCard />
-              </div>
-              <div className="absolute left-[25%] h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-10 alinsky-3xl:scale-105">
-                <SecondSocialMediaCard />
-              </div>
+          <div className="relative z-10 w-full max-w-[1920px] overflow-hidden">
+            <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[28%] alinsky-3xl:scale-90">
+              <BrandVoiceCard />
+            </div>
+            <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-90">
+              <SocialMediaApproval />
+            </div>
+            <div className="absolute h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[15%] alinsky-3xl:scale-90">
+              <FirstSocialMediaCard />
+            </div>
+            <div className="absolute h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[24%] alinsky-3xl:scale-90">
+              <SecondSocialMediaCard />
             </div>
 
             <div className="">
