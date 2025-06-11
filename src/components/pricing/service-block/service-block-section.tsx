@@ -58,7 +58,7 @@ const ServiceBlockSection = () => {
 
         <Card className="relative flex h-full flex-col justify-between overflow-hidden bg-alinsky-white text-alinsky-midnight-blue">
           <CardContent className="mx-10 my-[64px] flex flex-1 flex-col justify-between">
-            <div className="max-w-[211px] font-helvetica text-4xl leading-[52px] font-bold tracking-[-0.18px]">
+            <div className="max-w-[315px] font-helvetica text-4xl leading-[52px] font-bold tracking-[-0.18px]">
               Monthly Strategy Session
             </div>
             <div className="absolute -right-20 -bottom-10">
