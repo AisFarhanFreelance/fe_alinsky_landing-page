@@ -41,29 +41,31 @@ const PreorderSection = () => {
   });
 
   return (
-    <div className="mx-[104px] h-[516px] ">
-      <div className="flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-32 text-center font-satoshi text-alinsky-platinum">
-        <span className="text-[32px] font-bold capitalize">
-          Pre-Order Closes In
-        </span>
-        <div className="flex flex-row justify-center space-x-8 text-8xl leading-[100%] font-normal">
-          {["days", "hours", "minutes", "seconds"].map((unit, idx) => (
-            <div key={idx} className="flex flex-col">
-              <span
-                className="animate-pulse"
-                style={{
-                  textShadow: "0px 2px 9px #FFF",
-                  color: "var(--grey-300, #E0E0E0)",
-                }}
-              >
-                {salesTime[unit as keyof typeof salesTime]}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="text-xl font-bold text-alinsky-sunset uppercase">
-          Hurry!! Only&nbsp;
-          <span className="text-alinsky-beige">20</span>&nbsp;Left In Stock
+    <div className="flex justify-center">
+      <div className="h-[516px] w-full max-w-[1920px]">
+        <div className="mx-[104px] flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-32 text-center font-satoshi text-alinsky-platinum alinsky-3xl:mx-[344px]">
+          <span className="text-[32px] font-bold capitalize">
+            Pre-Order Closes In
+          </span>
+          <div className="flex flex-row justify-center space-x-8 text-8xl leading-[100%] font-normal">
+            {["days", "hours", "minutes", "seconds"].map((unit, idx) => (
+              <div key={idx} className="flex flex-col">
+                <span
+                  className="animate-pulse"
+                  style={{
+                    textShadow: "0px 2px 9px #FFF",
+                    color: "var(--grey-300, #E0E0E0)",
+                  }}
+                >
+                  {salesTime[unit as keyof typeof salesTime]}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="text-xl font-bold text-alinsky-sunset uppercase">
+            Hurry!! Only&nbsp;
+            <span className="text-alinsky-beige">20</span>&nbsp;Left In Stock
+          </div>
         </div>
       </div>
     </div>
