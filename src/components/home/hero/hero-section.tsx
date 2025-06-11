@@ -1,38 +1,12 @@
 import { Flash } from "iconsax-reactjs";
-import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
-import ReminderCard from "./card/reminder-card";
-import BrushBackground from "/public/assets/images/background/brush-background.svg";
-import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
-
 const HeroSection = () => {
   return (
-    <div className="relative flex min-h-[105vh] w-full items-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={BrushBackground}
-          alt="Brush Background"
-          fill
-          className="object-cover mix-blend-overlay"
-          priority
-        />
-        <Image
-          src={NoiseOverlay}
-          alt="Noise Overlay"
-          fill
-          className="object-cover mix-blend-overlay"
-          priority
-        />
-      </div>
-
-      <div className="absolute top-[100px] right-[-215.327px] h-[379px] w-[456px] scale-75">
-        <ReminderCard />
-      </div>
-
+    <div className="flex min-h-[105vh] w-full items-center overflow-hidden">
       <div className="z-10 flex w-full justify-center px-4">
-        <div className="max-w-4xl space-y-6 text-center">
+        <div className="max-w-[1920px] space-y-6 text-center">
           <div className="space-y-6">
             <div className="flex flex-col items-center space-y-2 font-helvetica text-2xl font-bold capitalize lg:text-[64px] lg:leading-16">
               <div className="flex flex-row items-center justify-center gap-x-2.5 rounded-2xl bg-alinsky-anti-flash-white p-4 text-center">
