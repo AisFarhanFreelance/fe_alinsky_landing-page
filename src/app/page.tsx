@@ -1,6 +1,9 @@
+import Image from "next/image";
+
 import HomePageCallToAction from "@/components/call-to-action/homepage-call-to-action";
 import ContactUsSection from "@/components/contact-us/contact-us-section";
 import PreorderSection from "@/components/home/countdown/preorder-section";
+import BrandVoiceCard from "@/components/home/hero/card/brand-voice-card";
 import FirstSocialMediaCard from "@/components/home/hero/card/first-social-media-card";
 import SecondSocialMediaCard from "@/components/home/hero/card/second-social-media-card";
 import SocialMediaApproval from "@/components/home/hero/card/social-media-approval";
@@ -10,24 +13,51 @@ import ProblemSolutionSection from "@/components/home/problem-solution/problem-s
 import SolutionOverviewSection from "@/components/home/solution-overview/solution-overview-section";
 import PricingSection from "@/components/pricing/pricing-section";
 
+import BrushBackground from "/public/assets/images/background/brush-background.svg";
+import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen">
       <div className="relative">
-        <div className="pointer-events-none absolute -bottom-5 z-10 h-[215px] w-full">
-          <div className="absolute right-[-12.541px] -bottom-10 h-[379px] w-[456px] scale-75">
-            <SocialMediaApproval />
+        <div className="relative flex w-full justify-center">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={BrushBackground}
+              alt="Brush Background"
+              fill
+              className="object-cover mix-blend-overlay"
+              priority
+            />
+            <Image
+              src={NoiseOverlay}
+              alt="Noise Overlay"
+              fill
+              className="object-cover mix-blend-overlay"
+              priority
+            />
           </div>
+          <div className="relative w-full max-w-[1920px]">
+            <div className="pointer-events-none absolute inset-x-0 -bottom-5 z-10 h-[215px] w-full">
+              <div className="absolute right-[1%] h-[379px] w-[456px] scale-75 alinsky-3xl:bottom-[100%] alinsky-3xl:scale-100">
+                <BrandVoiceCard />
+              </div>
+              <div className="absolute right-[15%] -bottom-10 h-[379px] w-[456px] scale-75 alinsky-3xl:scale-100">
+                <SocialMediaApproval />
+              </div>
+              <div className="absolute left-[15%] h-[215px] w-[215px] scale-75 alinsky-3xl:scale-100">
+                <FirstSocialMediaCard />
+              </div>
+              <div className="absolute left-[25%] h-[215px] w-[215px] scale-75 alinsky-3xl:scale-100">
+                <SecondSocialMediaCard />
+              </div>
+            </div>
 
-          <div className="absolute left-[14.813px] h-[215px] w-[215px] scale-75">
-            <FirstSocialMediaCard />
-          </div>
-
-          <div className="absolute left-[160px] h-[215px] w-[215px] scale-75">
-            <SecondSocialMediaCard />
+            <div className="relative z-10">
+              <HeroSection />
+            </div>
           </div>
         </div>
-        <HeroSection />
       </div>
 
       <div className="relative -top-7 space-y-16 rounded-t-4xl bg-alinsky-white pt-[72px] pb-16">
