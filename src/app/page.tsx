@@ -37,23 +37,23 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="relative w-full max-w-[1920px]">
+          <div className="relative w-full max-w-[1920px] ">
             <div className="pointer-events-none absolute inset-x-0 -bottom-5 z-10 h-[215px] w-full">
-              <div className="absolute right-[1%] h-[379px] w-[456px] scale-75 alinsky-3xl:bottom-[100%] alinsky-3xl:scale-100">
+              <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[150%] alinsky-3xl:scale-105">
                 <BrandVoiceCard />
               </div>
-              <div className="absolute right-[15%] -bottom-10 h-[379px] w-[456px] scale-75 alinsky-3xl:scale-100">
+              <div className="absolute h-[379px] w-[456px] scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-105">
                 <SocialMediaApproval />
               </div>
-              <div className="absolute left-[15%] h-[215px] w-[215px] scale-75 alinsky-3xl:scale-100">
+              <div className="absolute left-[15%] h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-10 alinsky-3xl:scale-105">
                 <FirstSocialMediaCard />
               </div>
-              <div className="absolute left-[25%] h-[215px] w-[215px] scale-75 alinsky-3xl:scale-100">
+              <div className="absolute left-[25%] h-[215px] w-[215px] scale-75 alinsky-3xl:bottom-10 alinsky-3xl:scale-105">
                 <SecondSocialMediaCard />
               </div>
             </div>
 
-            <div className="relative z-10">
+            <div className="">
               <HeroSection />
             </div>
           </div>
