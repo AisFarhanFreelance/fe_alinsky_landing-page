@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mb-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px]">
+        <div className="mb-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
           <div className="rounded-4xl bg-alinsky-rich-black pt-32">
             <div className="grid grid-cols-2 gap-6 p-12 text-alinsky-white">
               <div className="space-y-8">

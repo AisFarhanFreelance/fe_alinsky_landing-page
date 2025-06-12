@@ -5,7 +5,7 @@ const ProblemSolutionSection = () => {
     <div className="flex min-h-screen items-center justify-center rounded-t-4xl bg-alinsky-anti-flash-white">
       <div className="flex justify-center">
         <div className="w-full max-w-[1920px]">
-          <div className="mt-14 mb-8 flex flex-col justify-center space-y-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] ">
+          <div className="mt-14 mb-8 flex flex-col justify-center space-y-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px] ">
             <div className="space-y-[72px] text-alinsky-rich-black">
               <div className="text-center font-helvetica text-5xl capitalize">
                 4 Hidden Costs Slowing Down Your Client social media Growth

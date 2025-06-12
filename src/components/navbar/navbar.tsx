@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <nav className="relative isolate my-2 overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px]">
+        <nav className="relative isolate my-2 overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
           <div className="relative my-5 hidden items-center font-helvetica text-base leading-5 sm:flex">
             <Link href="#">
               <Image
