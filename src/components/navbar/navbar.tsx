@@ -1,6 +1,15 @@
+import { ArrowDown2 } from "iconsax-reactjs";
 import Image from "next/image";
 import Link from "next/link";
 
+import { Button } from "../ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import USFlagIcon from "/public/assets/flags/united-states-flag.svg";
 import Alinsky_Logo from "/public/assets/logo/alinsky-logo.svg";
 
 const Navbar = () => {
@@ -8,7 +17,7 @@ const Navbar = () => {
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
         <nav className="relative isolate my-2 overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
-          <div className="relative my-5 hidden items-center font-helvetica text-base leading-5 sm:flex">
+          <div className="my-5 hidden items-center justify-between font-helvetica text-base leading-5 sm:flex">
             <Link href="#">
               <Image
                 src={Alinsky_Logo}
@@ -18,12 +27,30 @@ const Navbar = () => {
               />
             </Link>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 space-x-8 rounded-2xl bg-alinsky-seasalt p-4 text-alinsky-dim-gray capitalize drop-shadow-lg">
+            <div className="flex items-center space-x-6 rounded-2xl bg-alinsky-seasalt px-6 py-4 text-alinsky-dim-gray capitalize drop-shadow-lg">
               <Link href="#">Home</Link>
               <Link href="#">Pricing</Link>
               <Link href="#">Features</Link>
               <Link href="#">Contact Us</Link>
             </div>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="flec items-center gap-x-2 rounded-full bg-alinsky-rich-black px-4 font-helvetica text-[15px] text-alinsky-white hover:bg-alinsky-rich-black/90 ">
+                  <Image
+                    src={USFlagIcon}
+                    alt="English"
+                    className="h-6 w-6 rounded-full"
+                  />
+                  <span>EN</span>
+                  <ArrowDown2 size="18" color="#FFFFFF" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-32">
+                <DropdownMenuItem>EN - English</DropdownMenuItem>
+                <DropdownMenuItem>ID - Bahasa</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </nav>
       </div>
