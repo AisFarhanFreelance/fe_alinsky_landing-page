@@ -36,7 +36,7 @@ const TeamRoleAvatar = () => {
         ({ src, bg, icon, iconBackground, label }, idx) => (
           <div
             key={idx}
-            className={`flex flex-col items-center ${idx === 0 || idx === 2 ? "translate-y-9" : "-translate-y-9"} mt-12`}
+            className={`flex flex-col items-center ${idx === 0 || idx === 2 ? "lg:translate-y-9" : "lg:-translate-y-9"} mt-12`}
           >
             <div className="relative w-fit">
               <div
