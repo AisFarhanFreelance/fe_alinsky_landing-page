@@ -8,16 +8,16 @@ const HeroSection = () => {
       <div className="z-10 flex w-full justify-center px-4">
         <div className="max-w-[1920px] space-y-6 text-center">
           <div className="space-y-6">
-            <div className="flex flex-col items-center space-y-2 font-helvetica text-2xl font-bold capitalize lg:text-[64px] lg:leading-16">
-              <div className="flex flex-row items-center justify-center gap-x-2.5 rounded-2xl bg-alinsky-anti-flash-white p-4 text-center">
-                <div className="hidden md:block">
+            <div className="flex flex-col items-center space-y-2 font-helvetica text-2xl font-bold capitalize sm:text-4xl lg:text-[64px] lg:leading-16">
+              <div className="flex flex-row items-center justify-center gap-x-2.5 rounded-2xl bg-alinsky-anti-flash-white p-[18px] text-center">
+                <div className="hidden lg:block">
                   <Flash size="64" color="#151F68" variant="Bold" />
                 </div>
-                <div className="block md:hidden">
+                <div className="block lg:hidden">
                   <Flash size="32" color="#151F68" variant="Bold" />
                 </div>
                 <span
-                  className="leading-[100%] text-alinsky-white italic md:px-1 md:leading-20"
+                  className="leading-[100%] text-alinsky-white italic sm:leading-[120%] lg:px-1 lg:leading-20"
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #3A377F 0%, #A8A4D6 100%)",
@@ -28,10 +28,10 @@ const HeroSection = () => {
                 >
                   Supercharge
                 </span>
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                   <Flash size="64" color="#A8A4D6" variant="Bold" />
                 </div>
-                <div className="block md:hidden">
+                <div className="block lg:hidden">
                   <Flash size="32" color="#A8A4D6" variant="Bold" />
                 </div>
               </div>

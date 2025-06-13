@@ -8,8 +8,8 @@ const ApprovalWorkflowToolSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="grid min-h-[600px] grid-cols-1 place-content-center gap-x-[60px] rounded-[46px] bg-alinsky-midnight-blue p-12 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 xl:mx-[104px]">
-          <div className="h-[420px]">
+        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center gap-x-[60px] rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 sm:p-12 xl:mx-[104px]">
+          <div className="order-1 py-8 sm:order-none sm:h-[420px]">
             <Image
               src={ApprovalWorkflowImage}
               alt="Smart Automation Post Image"
@@ -31,7 +31,7 @@ const ApprovalWorkflowToolSection = () => {
                   strokeWidth="2.34078"
                 />
               </svg>
-              <span className="text-xl leading-[126%] font-medium tracking-[-0.6px]">
+              <span className="text-base leading-[126%] font-medium tracking-[-0.6px] whitespace-nowrap sm:text-xl">
                 Effortless Pipeline
               </span>
             </div>

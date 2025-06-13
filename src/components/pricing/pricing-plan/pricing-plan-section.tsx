@@ -16,7 +16,7 @@ const PricingPlanSection = () => {
 
       <div className="flex justify-center">
         <div className="w-full max-w-[1920px]">
-          <div className="mt-[108px] space-y-16 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
+          <div className="mx-8 mt-[108px] space-y-16 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
             <div className="space-y-2 text-center capitalize">
               <div className="font-helvetica text-2xl leading-16 font-bold text-alinsky-rich-black lg:text-5xl">
                 Pick Your Growth Blueprint

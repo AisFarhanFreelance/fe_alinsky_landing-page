@@ -4,14 +4,14 @@ const AgencyServiceSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="flex h-[500px] flex-col items-center justify-center space-y-12 rounded-4xl bg-alinsky-midnight-blue text-alinsky-white alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
+        <div className="mx-8 flex h-[500px] flex-col items-center justify-center space-y-12 rounded-4xl bg-alinsky-midnight-blue text-alinsky-white alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
           <div className="text-center capitalize">
-            <div className="font-satoshi text-4xl font-medium">
+            <div className="font-satoshi text-xl font-medium sm:text-4xl">
               Give Your Team
             </div>
             <div>
               <div
-                className="w-[874px] font-helvetica text-[64px] font-bold italic"
+                className="w-[874px] font-helvetica text-[40px] font-bold italic sm:text-[64px]"
                 style={{
                   backgroundImage:
                     "radial-gradient(65.27% 65.54% at 19.22% 50.39%, #FAFAFA 0%, #F9BAB6 61.54%, #B7B9F4 100%)",

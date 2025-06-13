@@ -46,10 +46,10 @@ const TeamRoleAvatar = () => {
                 src={src}
                 alt={`Avatar${idx + 2}`}
                 fetchPriority="high"
-                className={`relative z-20 h-[220px] w-[220px] rounded-full object-cover`}
+                className={`relative z-20 h-[165px] w-[165px] rounded-full object-cover sm:h-[220px] sm:w-[220px]`}
               />
               <div
-                className={`absolute -right-2 -bottom-2 z-30 rounded-full p-[21.5px] ${iconBackground}`}
+                className={`absolute -right-2 -bottom-2 z-30 flex h-[67px] w-[67px] items-center justify-center rounded-full border-4 border-alinsky-white ${iconBackground}`}
               >
                 {icon}
               </div>

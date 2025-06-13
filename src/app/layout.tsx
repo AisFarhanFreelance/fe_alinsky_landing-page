@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import Footer from "@/components/footer/footer";
 import Navbar from "@/components/navbar/navbar";
 
 const geistSans = Geist({
@@ -33,16 +32,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${helvetica.variable} ${satoshi.variable} ${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <div>
           <div className="fixed top-0 right-0 left-0 z-50">
             <Navbar />
           </div>
           <main className="overflow-hidden">{children}</main>
-          <div>
+          {/* <div>
             <Footer />
-          </div>
+          </div> */}
         </div>
       </body>
     </html>

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import HomePageCallToAction from "@/components/call-to-action/homepage-call-to-action";
 import ContactUsSection from "@/components/contact-us/contact-us-section";
+import Footer from "@/components/footer/footer";
 import PreorderSection from "@/components/home/countdown/preorder-section";
 import BrandVoiceCard from "@/components/home/hero/card/brand-voice-card";
 import FirstSocialMediaCard from "@/components/home/hero/card/first-social-media-card";
@@ -82,8 +83,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="absolute -bottom-16 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2">
+      <div className="z-10 sm:absolute sm:-bottom-16 sm:left-1/2 sm:w-full sm:max-w-4xl sm:-translate-x-1/2">
         <HomePageCallToAction />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

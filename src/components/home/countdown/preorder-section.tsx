@@ -41,14 +41,14 @@ const PreorderSection = () => {
   });
 
   return (
-    <div className="flex justify-center">
-      <div className="h-[516px] w-full max-w-[1920px]">
-        <div className="flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-32 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
-          <span className="text-[32px] font-bold capitalize">
+    <div className="flex justify-center md:my-0">
+      <div className="h-fit w-full max-w-[1920px] md:h-[516px]">
+        <div className="mx-8 flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] md:py-32 xl:mx-[104px]">
+          <span className="text-xl font-bold capitalize sm:text-[32px]">
             Pre-Order Closes In
           </span>
-          <div className="flex flex-row justify-center space-x-8 text-8xl leading-[100%] font-normal">
-            {["days", "hours", "minutes", "seconds"].map((unit, idx) => (
+          <div className="flex flex-row justify-center space-x-8 text-6xl leading-[100%] font-normal sm:text-8xl">
+            {["days", "hours", "seconds"].map((unit, idx) => (
               <div key={idx} className="flex flex-col">
                 <span
                   className="animate-pulse"
@@ -62,7 +62,7 @@ const PreorderSection = () => {
               </div>
             ))}
           </div>
-          <div className="text-xl font-bold text-alinsky-sunset uppercase">
+          <div className="text-base font-bold text-alinsky-sunset uppercase sm:text-xl">
             Hurry!! Only&nbsp;
             <span className="text-alinsky-beige">20</span>&nbsp;Left In Stock
           </div>
