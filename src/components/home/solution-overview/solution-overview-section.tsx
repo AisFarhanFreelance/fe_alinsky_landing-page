@@ -5,7 +5,7 @@ import SmartAutomationPostSection from "./solution-overview-card/smart-automatio
 
 const SolutionOverviewSection = () => {
   return (
-    <div className="my-8 space-y-8">
+    <div className="my-8 grid grid-cols-1 gap-4">
       <BrandTonePostCreationSection />
       <SmartAutomationPostSection />
       <ApprovalWorkflowToolSection />

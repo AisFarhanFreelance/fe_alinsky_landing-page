@@ -8,7 +8,7 @@ const BrandTonePostCreationSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="grid h-[648px] max-h-[648px] grid-cols-2 gap-x-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
+        <div className="grid min-h-[648px] grid-cols-1 gap-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 xl:mx-[104px]">
           <div className="flex justify-center rounded-[2340.778px_46.816px_46.816px_46.816px] bg-alinsky-midnight-blue">
             <Image src={BrandToneImage} alt="Content Image 3" />
           </div>
