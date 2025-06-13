@@ -9,10 +9,15 @@ const HeroSection = () => {
         <div className="max-w-[1920px] space-y-6 text-center">
           <div className="space-y-6">
             <div className="flex flex-col items-center space-y-2 font-helvetica text-2xl font-bold capitalize lg:text-[64px] lg:leading-16">
-              <div className="flex flex-row items-center justify-center gap-x-2.5 rounded-2xl bg-alinsky-anti-flash-white p-0 text-center lg:p-1">
-                <Flash size="64" color="#151F68" variant="Bold" />
+              <div className="flex flex-row items-center justify-center gap-x-2.5 rounded-2xl bg-alinsky-anti-flash-white p-4 text-center">
+                <div className="hidden md:block">
+                  <Flash size="64" color="#151F68" variant="Bold" />
+                </div>
+                <div className="block md:hidden">
+                  <Flash size="32" color="#151F68" variant="Bold" />
+                </div>
                 <span
-                  className="px-1 leading-20 text-alinsky-white italic"
+                  className="leading-[100%] text-alinsky-white italic md:px-1 md:leading-20"
                   style={{
                     backgroundImage:
                       "linear-gradient(90deg, #3A377F 0%, #A8A4D6 100%)",
@@ -23,7 +28,12 @@ const HeroSection = () => {
                 >
                   Supercharge
                 </span>
-                <Flash size="64" color="#A8A4D6" variant="Bold" />
+                <div className="hidden md:block">
+                  <Flash size="64" color="#A8A4D6" variant="Bold" />
+                </div>
+                <div className="block md:hidden">
+                  <Flash size="32" color="#A8A4D6" variant="Bold" />
+                </div>
               </div>
               <div className="rounded-2xl bg-alinsky-anti-flash-white p-4">
                 <span
