@@ -38,16 +38,16 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 w-full max-w-[1920px] overflow-hidden">
-            <div className="absolute h-[379px] w-[456px] alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[28%] alinsky-3xl:scale-90 xl:right-[-15%] xl:bottom-[25%] xl:scale-75">
+            <div className="absolute right-[-50%] h-[379px] w-[456px] scale-50 alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 alinsky-3xl:right-[2%] alinsky-3xl:bottom-[28%] alinsky-3xl:scale-90 sm:right-[-20%] xl:right-[-15%] xl:bottom-[25%] xl:scale-75">
               <BrandVoiceCard />
             </div>
-            <div className="absolute h-[379px] w-[456px] alinsky-2xl:right-[5%] alinsky-2xl:bottom-[-2%] alinsky-2xl:scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-90 xl:right-[5%] xl:bottom-[-10%] xl:scale-75">
+            <div className="absolute right-[-30%] bottom-0 h-[379px] w-[456px] scale-50 alinsky-2xl:right-[5%] alinsky-2xl:bottom-[-2%] alinsky-2xl:scale-75 alinsky-3xl:right-[15%] alinsky-3xl:bottom-8 alinsky-3xl:scale-90 sm:right-[-15%] xl:right-[5%] xl:bottom-[-10%] xl:scale-75">
               <SocialMediaApproval />
             </div>
-            <div className="absolute h-[215px] w-[215px] alinsky-2xl:bottom-0 alinsky-2xl:left-[5%] alinsky-2xl:scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[15%] alinsky-3xl:scale-90 xl:bottom-0 xl:left-[5%] xl:scale-75">
+            <div className="absolute bottom-0 left-[-25%] h-[215px] w-[215px] scale-50 -rotate-30 alinsky-2xl:bottom-0 alinsky-2xl:left-[5%] alinsky-2xl:scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[15%] alinsky-3xl:scale-90 sm:left-[-5%] xl:bottom-0 xl:left-[5%] xl:scale-75">
               <FirstSocialMediaCard />
             </div>
-            <div className="absolute h-[215px] w-[215px] alinsky-2xl:bottom-0 alinsky-2xl:left-[15%] alinsky-2xl:scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[24%] alinsky-3xl:scale-90 xl:bottom-0 xl:left-[15%] xl:scale-75">
+            <div className="absolute bottom-[3%] left-[-2%] h-[215px] w-[215px] scale-50 -rotate-10 alinsky-2xl:bottom-0 alinsky-2xl:left-[15%] alinsky-2xl:scale-75 alinsky-3xl:bottom-5 alinsky-3xl:left-[24%] alinsky-3xl:scale-90 sm:left-[4%] xl:bottom-0 xl:left-[15%] xl:scale-75">
               <SecondSocialMediaCard />
             </div>
 
