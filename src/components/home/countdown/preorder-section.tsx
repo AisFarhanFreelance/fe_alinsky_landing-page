@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const PreorderSection = () => {
-  const deadline = new Date("2027-06-28T23:59:59Z");
+  const deadline = new Date("2025-06-28T23:59:59Z");
 
   const [salesTime, setSalesTime] = useState<{
     days: string;
@@ -23,9 +23,7 @@ const PreorderSection = () => {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-      );
+      const hours = Math.floor(distance / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -48,7 +46,7 @@ const PreorderSection = () => {
             Pre-Order Closes In
           </span>
           <div className="flex flex-row justify-center space-x-8 text-6xl leading-[100%] font-normal sm:text-8xl">
-            {["days", "hours", "seconds"].map((unit, idx) => (
+            {["hours", "minutes", "seconds"].map((unit, idx) => (
               <div key={idx} className="flex flex-col">
                 <span
                   className="animate-pulse"

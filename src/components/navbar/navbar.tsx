@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <nav className="relative isolate my-2 overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] md:m-8 xl:mx-[104px]">
+        <nav className="relative isolate mx-8 my-2 overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] md:m-8 xl:mx-[104px]">
           <div className="my-5 flex flex-row items-center justify-between font-helvetica text-base leading-5">
             <Link href="#">
               <Image
@@ -57,9 +57,7 @@ const Navbar = () => {
             <div className="flex md:hidden">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center">
-                    <HamburgerMenu size="32" color="#000000" />
-                  </Button>
+                  <HamburgerMenu size="32" color="#000000" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="w-32">
                   <DropdownMenuItem>EN - English</DropdownMenuItem>

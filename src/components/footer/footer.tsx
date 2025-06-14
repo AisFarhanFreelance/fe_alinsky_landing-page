@@ -7,11 +7,11 @@ const Footer = () => {
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
         <div className="mx-8 mb-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
-          <div className="rounded-4xl bg-alinsky-rich-black pt-32">
-            <div className="grid grid-cols-2 gap-6 p-12 text-alinsky-white">
+          <div className="rounded-4xl bg-alinsky-rich-black pt-2 sm:pt-32">
+            <div className="grid-1 grid gap-12 p-6 text-alinsky-white sm:grid-cols-2 sm:gap-6 sm:p-12">
               <div className="space-y-8">
                 <h1 className="font-helvetica text-xs uppercase">Catalog</h1>
-                <div className="flex flex-row justify-start space-x-8 font-satoshi text-[28px] capitalize">
+                <div className="flex flex-col space-y-3 font-satoshi text-[28px] capitalize sm:flex-row sm:space-y-0 sm:space-x-8">
                   <div className="flex flex-col space-y-3">
                     <span className="group mb-4 inline-block w-fit cursor-pointer">
                       Home
@@ -26,6 +26,7 @@ const Footer = () => {
                       <div className="-mt-4 h-3 w-full origin-left scale-x-0 bg-alinsky-medium-slate-blue/50 transition-transform duration-300 group-hover:scale-x-100" />
                     </span>
                   </div>
+
                   <div className="flex flex-col space-y-3">
                     <span className="group mb-4 inline-block w-fit cursor-pointer">
                       Contact Us
@@ -42,6 +43,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
+
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-8">
                   <h1 className="font-helvetica text-xs uppercase">
@@ -56,6 +58,7 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
+
                 <div className="space-y-8 justify-self-end">
                   <h1 className="font-helvetica text-xs uppercase">
                     Connect With Us
@@ -71,10 +74,11 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row justify-between px-12 py-4 text-xs text-alinsky-battleship-gray">
+
+            <div className="flex flex-row justify-between px-6 py-4 text-xs text-alinsky-battleship-gray sm:px-12">
               <div>&copy; {currentYear} — Copyright</div>
               <div>Privacy</div>
-              <div>All right reserved</div>
+              <div>All rights reserved</div>
             </div>
           </div>
         </div>
