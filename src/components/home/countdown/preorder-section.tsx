@@ -41,11 +41,11 @@ const PreorderSection = () => {
   return (
     <div className="flex justify-center md:my-0">
       <div className="h-fit w-full max-w-[1920px] md:h-[516px]">
-        <div className="mx-8 flex flex-col space-y-14 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] md:py-32 xl:mx-[104px]">
+        <div className="mx-8 flex flex-col space-y-10 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:space-y-14 md:py-32 xl:mx-[104px]">
           <span className="text-xl font-bold capitalize sm:text-[32px]">
             Pre-Order Closes In
           </span>
-          <div className="flex flex-row justify-center space-x-8 text-6xl leading-[100%] font-normal sm:text-8xl">
+          <div className="flex flex-row justify-center space-x-8 text-5xl leading-[100%] font-normal sm:text-8xl">
             {["hours", "minutes", "seconds"].map((unit, idx) => (
               <div key={idx} className="flex flex-col">
                 <span
