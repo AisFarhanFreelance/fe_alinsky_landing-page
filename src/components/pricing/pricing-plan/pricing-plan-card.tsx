@@ -97,7 +97,7 @@ const PlanCardItem = ({
       <div
         className={`flex w-full rounded-[20px] ${
           planFeatured
-            ? "h-full flex-col items-center justify-center px-2 xl:px-6"
+            ? "h-full flex-col items-center justify-center px-2 md:px-1 md:pb-2 xl:px-6"
             : ""
         }`}
         style={{
@@ -123,7 +123,7 @@ const PlanCardItem = ({
         )}
         <Card
           className={` flex flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300
-        ${planFeatured ? "mb-2 md:w-full xl:mx-2 2xl:w-full" : "w-full"}
+        ${planFeatured ? "mb-2 sm:mx-2" : "w-full"}
       `}
         >
           <div>
