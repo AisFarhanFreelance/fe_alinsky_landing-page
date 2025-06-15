@@ -97,7 +97,7 @@ const PlanCardItem = ({
       <div
         className={`flex w-full rounded-[20px] ${
           planFeatured
-            ? "h-full flex-col items-center justify-center px-2 sm:px-6"
+            ? "h-full flex-col items-center justify-center px-2 xl:px-6"
             : ""
         }`}
         style={{
@@ -123,12 +123,12 @@ const PlanCardItem = ({
         )}
         <Card
           className={` flex flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300
-        ${planFeatured ? "mb-2 sm:mx-2" : "w-full"}
+        ${planFeatured ? "mb-2 md:w-full xl:mx-2" : "w-full"}
       `}
         >
           <div>
             <CardHeader>
-              <CardTitle className="text-xl leading-[150%] font-black sm:text-4xl">
+              <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
                 {planTitle}
               </CardTitle>
               {planSubtitle && (
@@ -140,18 +140,18 @@ const PlanCardItem = ({
 
             <CardContent className="mt-4 space-y-2">
               <div className="leading-[150%] font-bold capitalize">
-                <div className="flex flex-row items-center text-base text-alinsky-persian-red sm:text-xl">
+                <div className="flex flex-row items-center text-base text-alinsky-persian-red xl:text-xl">
                   <sup>Rp.</sup>
                   <div className="line-through">
                     &nbsp;{planPriceInitial}&nbsp;
                   </div>
                   <sub>/month</sub>
                 </div>
-                <div className="text-2xl leading-[150%] font-bold sm:text-4xl">
+                <div className="text-2xl leading-[150%] font-bold xl:text-4xl">
                   <sup>Rp.</sup>&nbsp;{planPriceDiscount}&nbsp;<sub>/month</sub>
                 </div>
               </div>
-              <div className="text-sm leading-[150%] font-medium sm:text-base">
+              <div className="text-sm leading-[150%] font-medium xl:text-base">
                 {planDescription}
               </div>
               {planFeatures.length > 0 && (
@@ -183,7 +183,7 @@ const PlanCardItem = ({
 
 const PricingPlanCard = () => {
   return (
-    <div className="grid-1 grid gap-4 space-y-0 sm:grid-cols-3">
+    <div className="grid-1 grid gap-4 space-y-0 xl:grid-cols-3">
       {plans.map((plan, idx) => (
         <PlanCardItem key={idx} {...plan} />
       ))}

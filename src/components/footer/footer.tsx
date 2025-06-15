@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 mb-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px]">
-          <div className="rounded-4xl bg-alinsky-rich-black pt-2 sm:pt-32">
+        <div className="mx-8 mb-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] md:mx-14 xl:mx-[104px]">
+          <div className="rounded-4xl bg-alinsky-rich-black pt-2 md:pt-14 xl:pt-32">
             <div className="grid-1 grid gap-12 p-6 text-alinsky-white sm:grid-cols-2 sm:gap-6 sm:p-12">
               <div className="space-y-8">
                 <h1 className="font-helvetica text-xs uppercase">Catalog</h1>

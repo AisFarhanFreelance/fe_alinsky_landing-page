@@ -5,9 +5,9 @@ const CallToAction = () => {
     <div className="flex items-center justify-center">
       <div className="flex w-[884px] flex-row items-center justify-between rounded-[20px] bg-gradient-to-br from-white/40 to-white/0 px-16 py-8 shadow-[0_-8px_24px_0_rgba(0,0,0,0.08)] backdrop-blur-[21px]">
         <div>
-          <span className="flex flex-col font-satoshi text-2xl text-alinsky-midnight-blue capitalize">
+          <span className="flex flex-col font-satoshi text-2xl text-alinsky-midnight-blue capitalize md:text-base xl:text-2xl">
             Your Social Media Dashboard is Ready,&nbsp;
-            <span className="text-[32px] font-bold text-alinsky-rich-black">
+            <span className="text-[32px] font-bold text-alinsky-rich-black md:text-base xl:text-[32px]">
               but are you?
             </span>
           </span>

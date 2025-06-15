@@ -8,8 +8,8 @@ const ApprovalWorkflowToolSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center gap-x-[60px] rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 sm:p-12 xl:mx-[104px]">
-          <div className="order-1 py-8 sm:order-none sm:h-[420px]">
+        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 md:mx-14 md:min-h-fit md:gap-x-2 xl:mx-[104px] xl:gap-x-[60px] xl:p-12">
+          <div className="order-1 sm:order-none sm:h-[420px]">
             <Image
               src={ApprovalWorkflowImage}
               alt="Smart Automation Post Image"
@@ -31,12 +31,12 @@ const ApprovalWorkflowToolSection = () => {
                   strokeWidth="2.34078"
                 />
               </svg>
-              <span className="text-base leading-[126%] font-medium tracking-[-0.6px] whitespace-nowrap sm:text-xl">
+              <span className="text-base leading-[126%] font-medium tracking-[-0.6px] whitespace-nowrap xl:text-xl">
                 Effortless Pipeline
               </span>
             </div>
             <div className="space-y-3">
-              <div className="text-4xl leading-[100%] font-bold tracking-[-0.18px]">
+              <div className="text-3xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
                 Simplify teamwork with built-in approval flows
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">

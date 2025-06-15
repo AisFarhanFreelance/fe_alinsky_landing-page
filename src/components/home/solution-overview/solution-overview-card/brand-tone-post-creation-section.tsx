@@ -8,14 +8,14 @@ const BrandTonePostCreationSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 grid grid-cols-1 gap-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:max-h-[648px] sm:grid-cols-2 xl:mx-[104px]">
-          <div className="flex h-[360px] justify-center rounded-[2340.778px_46.816px_46.816px_46.816px] bg-alinsky-midnight-blue sm:h-[648px]">
+        <div className="mx-8 grid grid-cols-1 gap-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:max-h-[648px] sm:grid-cols-2 md:mx-14 xl:mx-[104px]">
+          <div className="flex h-[360px] justify-center rounded-[2340.778px_46.816px_46.816px_46.816px] bg-alinsky-midnight-blue md:h-full xl:h-[648px]">
             <Image src={BrandToneImage} alt="Content Image 3" />
           </div>
 
-          <div className="flex h-fit flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 py-[72px] font-satoshi text-alinsky-midnight-blue sm:h-[648px]">
+          <div className="flex h-fit flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 py-[72px] font-satoshi text-alinsky-midnight-blue xl:h-[648px]">
             <div className="flex items-center space-x-4 sm:space-x-8">
-              <span className="text-base leading-[126%] font-medium tracking-[-0.48px] whitespace-nowrap sm:text-xl sm:tracking-[-3%]">
+              <span className="text-base leading-[126%] font-medium tracking-[-0.48px] whitespace-nowrap sm:tracking-[-3%] lg:text-xl">
                 Consistent Brand Tone
               </span>
               <svg
@@ -33,7 +33,7 @@ const BrandTonePostCreationSection = () => {
               </svg>
             </div>
             <div className="space-y-3 self-stretch">
-              <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] sm:text-4xl">
+              <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] lg:text-4xl">
                 Craft posts that match your brand voice in seconds
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">

@@ -2,7 +2,7 @@ import ProblemSolutionCard from "./problem-solution-card";
 
 const ProblemSolutionSection = () => {
   return (
-    <div className="mx-8 flex min-h-screen items-center justify-center rounded-4xl bg-alinsky-anti-flash-white">
+    <div className="mx-8 flex min-h-screen items-center justify-center rounded-4xl bg-alinsky-anti-flash-white md:mx-14">
       <div className="flex justify-center">
         <div className="w-full max-w-[1920px]">
           <div className="mt-14 mb-8 flex flex-col justify-center space-y-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px] ">
