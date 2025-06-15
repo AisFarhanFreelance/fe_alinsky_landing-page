@@ -41,7 +41,7 @@ const PreorderSection = () => {
   return (
     <div className="flex justify-center md:my-0">
       <div className="h-fit w-full max-w-[1920px] xl:h-[516px]">
-        <div className="mx-8 flex flex-col space-y-6 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] xl:mx-[104px] xl:space-y-14 xl:py-32">
+        <div className="mx-8 flex flex-col space-y-6 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] xl:mx-[104px] xl:space-y-14 xl:py-32 2xl:mx-[344px]">
           <div className="flex flex-col space-y-4">
             <span className="text-xl font-bold capitalize xl:text-[32px]">
               Pre-Order Closes In

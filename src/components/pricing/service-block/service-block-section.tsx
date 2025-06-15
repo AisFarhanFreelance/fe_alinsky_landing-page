@@ -20,7 +20,7 @@ const ServiceBlockSection = () => {
               filter: "blur(364.95px)",
             }}
           /> */}
-          <div className="z-10 mx-8 grid grid-cols-1 items-center justify-center gap-6 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-3 md:mx-14 xl:mx-[104px]">
+          <div className="z-10 mx-8 grid grid-cols-1 items-center justify-center gap-6 alinsky-2xl:mx-[104px] sm:grid-cols-3 md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
             <Card className="flex h-full flex-col justify-between bg-alinsky-midnight-blue text-alinsky-white">
               <CardContent className="mx-10 my-[64px] flex flex-1 flex-col items-center justify-between space-y-20 md:mx-1 xl:my-10">
                 <div className="max-w-[253px] font-helvetica text-xl leading-12 font-bold tracking-[-0.18px] md:leading-[100%] md:whitespace-nowrap xl:text-4xl">

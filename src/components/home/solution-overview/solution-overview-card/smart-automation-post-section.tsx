@@ -8,7 +8,7 @@ const SmartAutomationPostSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 md:mx-14 md:min-h-fit md:gap-x-2 md:py-[72px] xl:mx-[104px] xl:gap-9 xl:p-12">
+        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] sm:grid-cols-2 md:mx-14 md:min-h-fit md:gap-x-2 md:py-[72px] xl:mx-[104px] xl:gap-9 xl:p-12 2xl:mx-[344px]">
           <div className="flex flex-col justify-center space-y-8 font-satoshi text-alinsky-white">
             <div className="flex flex-row items-center gap-x-4">
               <svg

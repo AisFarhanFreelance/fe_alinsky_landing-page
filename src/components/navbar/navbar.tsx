@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <nav className="relative isolate mx-8 my-2 overflow-hidden alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] md:m-8 md:mx-14 xl:mx-[104px]">
+        <nav className="relative isolate mx-8 my-2 overflow-hidden alinsky-2xl:mx-[104px] md:m-8 md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
           <div className="my-5 flex flex-row items-center justify-between font-helvetica text-base leading-5">
             <Link href="#">
               <Image

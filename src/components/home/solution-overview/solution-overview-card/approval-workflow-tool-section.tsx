@@ -8,7 +8,7 @@ const ApprovalWorkflowToolSection = () => {
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] alinsky-3xl:mx-[344px] sm:grid-cols-2 md:mx-14 md:min-h-fit md:gap-x-2 xl:mx-[104px] xl:gap-x-[60px] xl:p-12">
+        <div className="mx-8 grid min-h-[600px] grid-cols-1 place-content-center rounded-[46px] bg-alinsky-midnight-blue p-8 alinsky-2xl:mx-[104px] sm:grid-cols-2 md:mx-14 md:min-h-fit md:gap-x-2 xl:mx-[104px] xl:gap-x-[60px] xl:p-12 2xl:mx-[344px]">
           <div className="order-1 sm:order-none sm:h-[420px]">
             <Image
               src={ApprovalWorkflowImage}

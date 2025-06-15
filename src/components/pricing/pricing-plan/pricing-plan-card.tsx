@@ -123,7 +123,7 @@ const PlanCardItem = ({
         )}
         <Card
           className={` flex flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300
-        ${planFeatured ? "mb-2 md:w-full xl:mx-2" : "w-full"}
+        ${planFeatured ? "mb-2 md:w-full xl:mx-2 2xl:w-full" : "w-full"}
       `}
         >
           <div>
