@@ -1,4 +1,4 @@
-import { ArrowDown2, HamburgerMenu } from "iconsax-reactjs";
+import { ArrowDown2 } from "iconsax-reactjs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import NavbarMobile from "./navbar-mobile/navbar-mobile";
 import USFlagIcon from "/public/assets/flags/united-states-flag.svg";
 import Alinsky_Logo from "/public/assets/logo/alinsky-logo.svg";
 
@@ -55,15 +56,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex md:hidden">
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <HamburgerMenu size="32" color="#000000" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-32">
-                  <DropdownMenuItem>EN - English</DropdownMenuItem>
-                  <DropdownMenuItem>ID - Bahasa</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <NavbarMobile />
             </div>
           </div>
         </nav>
