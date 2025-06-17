@@ -92,39 +92,23 @@ const PlanCardItem = ({
 }: PricingPlanCardProps) => {
   return (
     <div
-      className={`relative flex justify-center font-satoshi ${planFeatured ? "h-full rounded-[24px]" : ""}`}
+      className={`relative flex h-full flex-col font-satoshi ${planFeatured ? "px-0" : ""}`}
     >
       <div
-        className={`flex w-full rounded-[20px] ${
-          planFeatured
-            ? "h-full flex-col items-center justify-center px-2 md:px-1 md:pb-2 xl:px-6"
-            : ""
-        }`}
+        className={`flex flex-1 flex-col ${planFeatured ? 'rounded-[24px] bg-[url("/assets/images/background/most-popular-background.svg")] bg-cover bg-center bg-no-repeat p-2' : "rounded-[20px]"}`}
         style={{
-          ...(planFeatured
-            ? {
-                borderRadius: "24px",
-                backgroundImage:
-                  "url('/assets/images/background/most-popular-background.svg')",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                boxShadow: "0px 4px 74.6px 0px rgba(26, 36, 107, 0.50)",
-              }
-            : {
-                boxShadow: "0px 4px 56px 0px rgba(0, 0, 0, 0.15)",
-              }),
+          boxShadow: planFeatured
+            ? "0px 4px 74.6px 0px rgba(26, 36, 107, 0.50)"
+            : "0px 4px 56px 0px rgba(0, 0, 0, 0.15)",
         }}
       >
         {planFeatured && (
-          <div className="py-4 text-sm leading-[18px] font-bold tracking-[0.16px] text-alinsky-white">
+          <div className="w-full py-4 text-center text-sm font-bold text-alinsky-white">
             Most Popular
           </div>
         )}
         <Card
-          className={` flex flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300
-        ${planFeatured ? "mb-2 sm:mx-2" : "w-full"}
-      `}
+          className={`flex h-full flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg transition-all duration-300 ${planFeatured ? "backdrop-blur-2xl" : ""}`}
         >
           <div>
             <CardHeader>
@@ -183,9 +167,14 @@ const PlanCardItem = ({
 
 const PricingPlanCard = () => {
   return (
-    <div className="grid-1 grid gap-4 space-y-0 xl:grid-cols-3">
+    <div className="flex flex-col gap-4 min-[960px]:flex-row min-[960px]:items-stretch">
       {plans.map((plan, idx) => (
-        <PlanCardItem key={idx} {...plan} />
+        <div
+          key={idx}
+          className={`${plan.planFeatured ? "min-[960px]:flex-[1.2]" : "min-[960px]:flex-1"}`}
+        >
+          <PlanCardItem {...plan} />
+        </div>
       ))}
     </div>
   );
