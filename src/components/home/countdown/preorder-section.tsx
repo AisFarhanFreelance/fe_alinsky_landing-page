@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const PreorderSection = () => {
@@ -10,7 +11,12 @@ const PreorderSection = () => {
     hours: string;
     minutes: string;
     seconds: string;
-  }>({ days: "0", hours: "0", minutes: "0", seconds: "0" });
+  }>({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +29,9 @@ const PreorderSection = () => {
       }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(distance / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -36,7 +44,13 @@ const PreorderSection = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  });
+  }, [deadline]);
+
+  const timeUnits = [
+    { value: salesTime.hours, label: "hours" },
+    { value: salesTime.minutes, label: "minutes" },
+    { value: salesTime.seconds, label: "seconds" },
+  ];
 
   return (
     <div className="flex justify-center md:my-0">
@@ -47,25 +61,54 @@ const PreorderSection = () => {
               Pre-Order Closes In
             </span>
             <div className="flex flex-row justify-center space-x-8 text-5xl leading-[100%] font-normal md:text-6xl xl:text-8xl">
-              {["hours", "minutes", "seconds"].map((unit, idx) => (
-                <div key={idx} className="flex flex-col">
+              {timeUnits.map((unit, idx) => (
+                <motion.div
+                  key={idx}
+                  className="flex flex-col"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: idx * 0.1,
+                  }}
+                >
                   <span
-                    className="animate-pulse"
+                    className="block"
                     style={{
-                      textShadow: "0px 2px 9px #FFF",
+                      textShadow: "0px 2px 4px rgba(255, 255, 255, 0.3)",
                       color: "var(--grey-300, #E0E0E0)",
                     }}
                   >
-                    {salesTime[unit as keyof typeof salesTime]}
+                    {unit.value}
                   </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-          <div className="text-base font-bold text-alinsky-sunset uppercase xl:text-xl">
-            Hurry!! Only&nbsp;
-            <span className="text-alinsky-beige">20</span>&nbsp;Left In Stock
-          </div>
+
+          {/* Entire Hurry section with subtle pulse */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              scale: [1, 1.02, 1],
+            }}
+            transition={{
+              opacity: { duration: 0.4, delay: 0.4 },
+              scale: {
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              },
+            }}
+            className="text-xl font-bold uppercase xl:text-2xl"
+          >
+            <span className="text-alinsky-sunset">HURRY!! </span>
+            <span className="text-alinsky-platinum">Only </span>
+            <span className="font-bold text-alinsky-beige">20 </span>
+            <span className="text-alinsky-platinum">Left In Stock</span>
+          </motion.div>
         </div>
       </div>
     </div>
