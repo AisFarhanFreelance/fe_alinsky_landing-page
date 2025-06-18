@@ -149,7 +149,7 @@ export default function Home() {
       </div>
 
       <div className="relative">
-        <div className="absolute -top-8 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2 px-4 md:-top-25 md:scale-75 xl:-top-12">
+        <div className="absolute bottom-155 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2 px-4 md:bottom-95 md:scale-75 xl:bottom-110">
           <HomePageCallToAction />
         </div>
         <Footer />
