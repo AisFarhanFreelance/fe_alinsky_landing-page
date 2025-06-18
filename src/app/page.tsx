@@ -1,3 +1,6 @@
+"use client";
+
+import { Variants, motion } from "framer-motion";
 import Image from "next/image";
 
 import HomePageCallToAction from "@/components/call-to-action/homepage-call-to-action";
@@ -17,6 +20,29 @@ import PricingSection from "@/components/pricing/pricing-section";
 import BrushBackground from "/public/assets/images/background/brush-background.svg";
 import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
 
+const floatingVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut" as const,
+    },
+  },
+  float: {
+    y: [0, -15, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut" as const,
+    },
+  },
+};
+
 export default function Home() {
   return (
     <div className="relative min-h-screen">
@@ -34,23 +60,62 @@ export default function Home() {
               src={NoiseOverlay}
               alt="Noise Overlay"
               fill
-              className="object-cover mix-blend-overlay"
+              className="object-cover opacity-70 mix-blend-overlay"
               priority
             />
           </div>
+
           <div className="relative z-10 w-full max-w-[1920px] overflow-hidden">
-            <div className="absolute top-[5%] right-[-50%] h-[379px] w-[456px] scale-50 alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 sm:right-[-20%] md:top-[15%] md:scale-60 xl:right-[-15%] xl:bottom-[25%] xl:scale-75 2xl:right-[2%] 2xl:bottom-[28%] 2xl:scale-90">
+            <motion.div
+              className="absolute top-[5%] right-[-50%] h-[379px] w-[456px] scale-50 alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 sm:right-[-20%] md:top-[15%] md:scale-60 xl:right-[-15%] xl:bottom-[25%] xl:scale-75 2xl:right-[2%] 2xl:bottom-[28%] 2xl:scale-90"
+              variants={floatingVariants}
+              initial="hidden"
+              whileInView="visible"
+              whileHover="hover"
+              animate="float"
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <BrandVoiceCard />
-            </div>
-            <div className="2xlnsky-2xlale-90 sm:2xl] absolute right-[-40%] bottom-[-10%] h-[379px] w-[456px] scale-50 alinsky-2xl:right-[5%] alinsky-2xl:bottom-[-2%] alinsky-2xl:scale-75 md:bottom-[-5%] md:scale-70 xl:right-[5%] xl:bottom-[-10%] xl:scale-75">
+            </motion.div>
+
+            <motion.div
+              className="2xlnsky-2xlale-90 sm:2xl] absolute right-[-40%] bottom-[-10%] h-[379px] w-[456px] scale-50 alinsky-2xl:right-[5%] alinsky-2xl:bottom-[-2%] alinsky-2xl:scale-75 md:bottom-[-5%] md:scale-70 xl:right-[5%] xl:bottom-[-10%] xl:scale-75"
+              variants={floatingVariants}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.05 }}
+              animate="float"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.7 }}
+            >
               <SocialMediaApproval />
-            </div>
-            <div className="2xl-22xl-[-2%] absolute bottom-[-5%] left-[-25%] h-[215px] w-[215px] scale-50 alinsky-2xl:bottom-0 alinsky-2xl:left-[5%] alinsky-2xl:scale-75 md:scale-65 xl:bottom-0 xl:left-[5%] xl:scale-75">
+            </motion.div>
+
+            <motion.div
+              className="2xl-22xl-[-2%] absolute bottom-[-5%] left-[-25%] h-[215px] w-[215px] scale-50 alinsky-2xl:bottom-0 alinsky-2xl:left-[5%] alinsky-2xl:scale-75 md:scale-65 xl:bottom-0 xl:left-[5%] xl:scale-75"
+              variants={floatingVariants}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.05 }}
+              animate="float"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.3 }}
+            >
               <FirstSocialMediaCard />
-            </div>
-            <div className="absolute bottom-[-5%] left-[-2%] h-[215px] w-[215px] scale-50 alinsky-2xl:bottom-0 alinsky-2xl:left-[15%] alinsky-2xl:scale-75 sm:left-[4%] md:bottom-[-2%] md:left-[10%] md:scale-65 xl:bottom-0 xl:left-[15%] xl:scale-75 2xl:bottom-5 2xl:left-[24%] 2xl:scale-90">
+            </motion.div>
+
+            <motion.div
+              className="absolute bottom-[-5%] left-[-2%] h-[215px] w-[215px] scale-50 alinsky-2xl:bottom-0 alinsky-2xl:left-[15%] alinsky-2xl:scale-75 sm:left-[4%] md:bottom-[-2%] md:left-[10%] md:scale-65 xl:bottom-0 xl:left-[15%] xl:scale-75 2xl:bottom-5 2xl:left-[24%] 2xl:scale-90"
+              variants={floatingVariants}
+              initial="hidden"
+              whileInView="visible"
+              whileHover={{ scale: 1.05 }}
+              animate="float"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.4 }}
+            >
               <SecondSocialMediaCard />
-            </div>
+            </motion.div>
 
             <div className="">
               <HeroSection />
