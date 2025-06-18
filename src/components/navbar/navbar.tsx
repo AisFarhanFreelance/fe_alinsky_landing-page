@@ -20,7 +20,6 @@ import Alinsky_Logo from "/public/assets/logo/alinsky-logo.svg";
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState<string | undefined>();
 
-  // Animation variants
   const navItemVariants: Variants = {
     hover: {
       scale: 1.05,
