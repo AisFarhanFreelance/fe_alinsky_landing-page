@@ -1,5 +1,8 @@
+import { motion } from "framer-motion";
 import { TickCircle } from "iconsax-reactjs";
 import React from "react";
+
+// Import framer-motion
 
 import { Button } from "../../ui/button";
 import {
@@ -91,25 +94,36 @@ const PlanCardItem = ({
   planFeatured = false,
 }: PricingPlanCardProps) => {
   return (
-    <div
-      className={`relative flex h-full flex-col font-satoshi ${planFeatured ? "px-0" : ""}`}
-    >
-      <div
-        className={`flex flex-1 flex-col ${planFeatured ? 'rounded-[24px] bg-[url("/assets/images/background/most-popular-background.svg")] bg-cover bg-center bg-no-repeat p-2' : "rounded-[20px]"}`}
+    <div className="relative flex h-full w-full flex-col justify-center font-satoshi">
+      <motion.div
+        className={`flex h-auto w-full flex-col rounded-[20px] lg:h-full ${
+          planFeatured ? "items-center justify-center px-2 pb-2" : ""
+        }`}
         style={{
-          boxShadow: planFeatured
-            ? "0px 4px 74.6px 0px rgba(26, 36, 107, 0.50)"
-            : "0px 4px 56px 0px rgba(0, 0, 0, 0.15)",
+          ...(planFeatured
+            ? {
+                borderRadius: "24px",
+                backgroundImage:
+                  "url('/assets/images/background/most-popular-background.svg')",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                boxShadow: "0px 4px 74.6px 0px rgba(26, 36, 107, 0.50)",
+              }
+            : {
+                boxShadow: "0px 4px 56px 0px rgba(0, 0, 0, 0.15)",
+              }),
         }}
+        whileHover={{ scale: 1.03 }} // Zoom in on hover
+        whileTap={{ scale: 0.98 }} // Zoom out on tap
+        transition={{ type: "spring", stiffness: 300, damping: 10 }} // Spring animation
       >
         {planFeatured && (
-          <div className="w-full py-4 text-center text-sm font-bold text-alinsky-white">
+          <div className="py-4 text-sm font-bold text-alinsky-white">
             Most Popular
           </div>
         )}
-        <Card
-          className={`flex h-full flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg transition-all duration-300 ${planFeatured ? "backdrop-blur-2xl" : ""}`}
-        >
+        <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300">
           <div>
             <CardHeader>
               <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
@@ -160,19 +174,16 @@ const PlanCardItem = ({
             </Button>
           </CardFooter>
         </Card>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
 const PricingPlanCard = () => {
   return (
-    <div className="flex flex-col gap-4 min-[960px]:flex-row min-[960px]:items-stretch">
+    <div className="flex flex-col gap-4 lg:flex-row">
       {plans.map((plan, idx) => (
-        <div
-          key={idx}
-          className={`${plan.planFeatured ? "min-[960px]:flex-[1.2]" : "min-[960px]:flex-1"}`}
-        >
+        <div key={idx} className="w-full lg:flex lg:flex-1 lg:flex-col">
           <PlanCardItem {...plan} />
         </div>
       ))}
