@@ -1,3 +1,4 @@
+import { Variants, motion } from "framer-motion";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -5,12 +6,59 @@ import { Button } from "@/components/ui/button";
 import PerformanceTrackingImage from "/public/assets/images/additional/solution-overview/performance-tracking/performance-tracking.svg";
 
 const PerformanceTrackingInsightsSection = () => {
+  // Animation variants
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const imageVariants: Variants = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.175, 0.885, 0.32, 1.275], // backOut easing
+      },
+    },
+  };
+
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center overflow-hidden">
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 grid grid-cols-1 gap-6 alinsky-2xl:mx-[104px] sm:max-h-[648px] sm:grid-cols-2 md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
-          <div className="flex h-fit flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 py-[72px] font-satoshi text-alinsky-midnight-blue sm:px-8 xl:h-[648px]">
-            <div className="flex items-center space-x-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="mx-8 grid grid-cols-1 gap-6 alinsky-2xl:mx-[104px] sm:max-h-[648px] sm:grid-cols-2 md:mx-14 xl:mx-[104px] 2xl:mx-[344px]"
+        >
+          <motion.div
+            variants={containerVariants}
+            className="flex h-fit flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 py-[72px] font-satoshi text-alinsky-midnight-blue sm:px-8 xl:h-[648px]"
+          >
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center space-x-8"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="127"
@@ -27,10 +75,14 @@ const PerformanceTrackingInsightsSection = () => {
               <span className="text-base leading-[126%] font-medium tracking-[-3%] xl:text-xl">
                 Real-Time Performance Report
               </span>
-            </div>
-            <div className="space-y-3 self-stretch">
+            </motion.div>
+
+            <motion.div
+              variants={itemVariants}
+              className="space-y-3 self-stretch"
+            >
               <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
-                Rack what&apos;s working, pinpoint what&apos;s not, rapidly
+                Track what&apos;s working, pinpoint what&apos;s not, rapidly
                 iterate your strategy
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">
@@ -39,21 +91,29 @@ const PerformanceTrackingInsightsSection = () => {
                 what&apos;s falling flat, and helps you pivot fast—so your
                 strategy evolves as quickly as your audience does.
               </div>
-              <div className="mt-8">
+              <motion.div
+                variants={itemVariants}
+                className="mt-8"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95">
                   Learn More
                 </Button>
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
 
-          <div className="flex h-[360px] justify-center rounded-[46.816px_46.816px_2066.778px_46.816px] bg-alinsky-midnight-blue md:h-full xl:h-[648px]">
+          <motion.div
+            variants={imageVariants}
+            className="flex h-[360px] justify-center rounded-[46.816px_46.816px_2066.778px_46.816px] bg-alinsky-midnight-blue md:h-full xl:h-[648px]"
+          >
             <Image
               src={PerformanceTrackingImage}
               alt="Performance Tracking Image"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
