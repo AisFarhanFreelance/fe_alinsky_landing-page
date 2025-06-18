@@ -39,7 +39,7 @@ const ProblemSolutionSection = () => {
         type: "spring",
         damping: 12,
         stiffness: 100,
-      } as const, // Tambahkan 'as const' untuk type inference yang lebih baik
+      } as const,
     },
   };
 

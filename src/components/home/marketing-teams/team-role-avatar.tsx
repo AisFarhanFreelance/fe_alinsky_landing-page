@@ -1,3 +1,6 @@
+"use client";
+
+import { Variants, motion } from "framer-motion";
 import { Hashtag, StatusUp } from "iconsax-reactjs";
 import Image from "next/image";
 
@@ -12,6 +15,7 @@ const TeamRoleAvatarDatas = [
     icon: <Hashtag color="#e91e63" />,
     iconBackground: "bg-alinsky-orchid-pink",
     label: "Social Media Manager",
+    floatDirection: "up" as const,
   },
   {
     src: Avatar2,
@@ -19,6 +23,7 @@ const TeamRoleAvatarDatas = [
     icon: <StatusUp color="#9c27b0" />,
     iconBackground: "bg-alinsky-pink-lavender",
     label: "Analytics Expert",
+    floatDirection: "down" as const,
   },
   {
     src: Avatar3,
@@ -26,19 +31,68 @@ const TeamRoleAvatarDatas = [
     icon: <StatusUp color="#03A9F4" />,
     iconBackground: "bg-alinsky-uranian-blue",
     label: "Campaign Manager",
+    floatDirection: "up" as const,
   },
 ];
 
 const TeamRoleAvatar = () => {
+  const floatVariants: Variants = {
+    up: {
+      y: ["0%", "-5%", "0%"],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut" as const,
+      },
+    },
+    down: {
+      y: ["0%", "5%", "0%"],
+      transition: {
+        duration: 5,
+        repeat: Infinity,
+        repeatType: "loop",
+        ease: "easeInOut" as const,
+        delay: 0.5,
+      },
+    },
+  };
+
+  const popInVariants: Variants = {
+    hidden: {
+      scale: 0.8,
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring" as const,
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
+
   return (
     <div className="flex flex-wrap items-end justify-center gap-12">
       {TeamRoleAvatarDatas.map(
-        ({ src, bg, icon, iconBackground, label }, idx) => (
-          <div
+        ({ src, bg, icon, iconBackground, label, floatDirection }, idx) => (
+          <motion.div
             key={idx}
             className={`flex flex-col items-center ${idx === 0 || idx === 2 ? "lg:translate-y-9" : "lg:-translate-y-9"} mt-12`}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-20%" }}
+            variants={popInVariants}
           >
-            <div className="relative w-fit">
+            <motion.div
+              className="relative w-fit"
+              animate={floatDirection}
+              variants={floatVariants}
+            >
               <div
                 className={`absolute inset-0 z-10 rounded-full ${bg} opacity-60`}
               />
@@ -48,16 +102,21 @@ const TeamRoleAvatar = () => {
                 fetchPriority="high"
                 className={`relative z-20 h-[165px] w-[165px] rounded-full object-cover sm:h-[220px] sm:w-[220px] md:h-[160px] md:w-[160px] xl:h-[220px] xl:w-[220px]`}
               />
-              <div
+              <motion.div
                 className={`absolute -right-2 -bottom-2 z-30 flex h-[67px] w-[67px] items-center justify-center rounded-full border-4 border-alinsky-white ${iconBackground}`}
+                whileHover={{ scale: 1.1, rotate: 10 }}
+                transition={{ type: "spring" as const }}
               >
                 {icon}
-              </div>
-            </div>
-            <span className="mt-4 font-satoshi text-xl font-bold text-alinsky-onyx">
+              </motion.div>
+            </motion.div>
+            <motion.span
+              className="mt-4 font-satoshi text-xl font-bold text-alinsky-onyx"
+              whileHover={{ scale: 1.05 }}
+            >
               {label}
-            </span>
-          </div>
+            </motion.span>
+          </motion.div>
         ),
       )}
     </div>
