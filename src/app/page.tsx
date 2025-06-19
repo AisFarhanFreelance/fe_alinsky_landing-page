@@ -46,6 +46,50 @@ const floatingVariants: Variants = {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
+      <div className="absolute top-[700px] left-[-80px] z-[9999] flex scale-50 gap-28 md:top-[900px] md:scale-90 lg:top-[701px] lg:left-[0px] lg:scale-75 xl:scale-100">
+        <motion.div
+          className="h-[108px] w-[108px]"
+          variants={floatingVariants}
+          initial="hidden"
+          whileInView="visible"
+          whileHover={{ scale: 1.05 }}
+          animate="float"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.3 }}
+        >
+          <FirstSocialMediaCard />
+        </motion.div>
+
+        <motion.div
+          className="h-[108px] w-[108px]"
+          variants={floatingVariants}
+          initial="hidden"
+          whileInView="visible"
+          whileHover={{ scale: 1.05 }}
+          animate="float"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.4 }}
+        >
+          <SecondSocialMediaCard />
+        </motion.div>
+      </div>
+
+      <motion.div
+        className="absolute top-[600px] right-[-40%] z-[9999] 
+             h-[379px] w-[456px] scale-50 
+             md:top-[560px] md:right-[0%] md:scale-90 
+             xl:top-[700px] xl:scale-100"
+        variants={floatingVariants}
+        initial="hidden"
+        whileInView="visible"
+        whileHover={{ scale: 1.05 }}
+        animate="float"
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ delay: 0.6 }}
+      >
+        <SocialMediaApproval />
+      </motion.div>
+
       <div className="relative">
         <div className="relative flex w-full justify-center">
           <div className="absolute inset-0 z-0">
@@ -76,45 +120,6 @@ export default function Home() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <BrandVoiceCard />
-            </motion.div>
-
-            <motion.div
-              className="2xlnsky-2xlale-90 sm:2xl] absolute right-[-40%] bottom-[-10%] h-[379px] w-[456px] scale-50 alinsky-2xl:right-[5%] alinsky-2xl:bottom-[-2%] alinsky-2xl:scale-75 md:bottom-[-5%] md:scale-70 xl:right-[5%] xl:bottom-[-10%] xl:scale-75"
-              variants={floatingVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover={{ scale: 1.05 }}
-              animate="float"
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.7 }}
-            >
-              <SocialMediaApproval />
-            </motion.div>
-
-            <motion.div
-              className="2xl-22xl-[-2%] absolute bottom-[-5%] left-[-25%] h-[215px] w-[215px] scale-50 alinsky-2xl:bottom-0 alinsky-2xl:left-[5%] alinsky-2xl:scale-75 md:scale-65 xl:bottom-0 xl:left-[5%] xl:scale-75"
-              variants={floatingVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover={{ scale: 1.05 }}
-              animate="float"
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.3 }}
-            >
-              <FirstSocialMediaCard />
-            </motion.div>
-
-            <motion.div
-              className="absolute bottom-[-5%] left-[-2%] h-[215px] w-[215px] scale-50 alinsky-2xl:bottom-0 alinsky-2xl:left-[15%] alinsky-2xl:scale-75 sm:left-[4%] md:bottom-[-2%] md:left-[10%] md:scale-65 xl:bottom-0 xl:left-[15%] xl:scale-75 2xl:bottom-5 2xl:left-[24%] 2xl:scale-90"
-              variants={floatingVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover={{ scale: 1.05 }}
-              animate="float"
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.4 }}
-            >
-              <SecondSocialMediaCard />
             </motion.div>
 
             <div className="">
