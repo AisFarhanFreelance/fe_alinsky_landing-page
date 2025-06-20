@@ -7,6 +7,7 @@ import {
   Chart21,
   TaskSquare,
 } from "iconsax-reactjs";
+import { useMessages } from "next-intl";
 import { JSX } from "react";
 
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -17,28 +18,24 @@ interface CardItem {
   description: string;
 }
 
-const cardData: CardItem[] = [
-  {
-    icon: <TaskSquare color="#151f68" />,
-    title: "Too Many Tools, Zero Flow",
-    description:
-      "Switching between calendars, schedulers, and analytics tools isn't just tiring—it creates confusion, missed deadlines, and costly mistakes.",
-  },
-  {
-    icon: <CalendarRemove color="#151f68" />,
-    title: "You're Blind Without Real-Time Insights",
-    description:
-      "Guesswork kills campaigns. Without instant feedback on what's working, you risk wasting budget and momentum. Smart teams iterate fast—and win faster.",
-  },
-  {
-    icon: <Chart21 color="#151f68" />,
-    title: "You're Paying for Tasks That Could Run Themselves",
-    description:
-      "Replaces the need for a full-time scheduler—cutting costs while boosting efficiency.",
-  },
-];
-
 const ProblemSolutionCard = () => {
+  const messages = useMessages();
+  const costs = messages.homepage.hiddencosts;
+
+  const cardData: CardItem[] = costs.map((item, index: number) => {
+    const icons = [
+      <TaskSquare color="#151f68" key="icon-1" />,
+      <CalendarRemove color="#151f68" key="icon-2" />,
+      <Chart21 color="#151f68" key="icon-3" />,
+    ];
+
+    return {
+      icon: icons[index],
+      title: item.title,
+      description: item.desc,
+    };
+  });
+
   return (
     <div className="flex min-h-[400px] flex-col space-y-4 lg:mx-0 lg:grid lg:h-[215px] lg:grid-cols-3 lg:gap-5 lg:space-y-0">
       {cardData.map((item, idx) => (
