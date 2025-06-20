@@ -9,6 +9,7 @@
     "herotitle": "OPTIMALKAN",
     "herotitlesub": "Alur Media Sosial Anda",
     "waitlist": "BERGABUNG SEKARANG",
+    "hiddenCostTitle": "4 Biaya Tersembunyi yang Memperlambat Pertumbuhan Media Sosial Klien Anda",
     "hiddencosts": [
       {
         "title": "Terlalu Banyak Alat, Nol Alur",
@@ -22,6 +23,11 @@
         "title": "Anda Membayar untuk Tugas yang Seharusnya Bisa Berjalan Sendiri",
         "desc": "Menggantikan kebutuhan akan penjadwal penuh waktu—memangkas biaya sekaligus meningkatkan efisiensi."
       }
-    ]
+    ],
+    "quotes": {
+      "intro": "Jika salah satu dari masalah ini terasa terlalu nyata...",
+      "callToReflect": "Saatnya untuk berpikir :",
+      "tagline": "Bagaimana jika media sosial Anda tidak memerlukan lebih banyak upaya, hanya alat yang lebih baik?"
+    }
   }
 }

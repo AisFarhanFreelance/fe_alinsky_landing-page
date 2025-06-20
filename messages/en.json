@@ -9,6 +9,7 @@
     "herotitle": "SUPERCHARGE",
     "herotitlesub": "Your Social Media Workflow",
     "waitlist": "JOIN THE WAITLIST",
+    "hiddenCostTitle": "4 Hidden Costs Slowing Down Your Client social media Growth",
     "hiddencosts": [
       {
         "title": "Too Many Tools, Zero Flow",
@@ -24,12 +25,9 @@
       }
     ],
     "quotes": {
-      "intro": "If even one of these problems feels too real... It's time to reflect :",
+      "intro": "If even one of these problems feels too real...",
       "callToReflect": "It's time to reflect :",
       "tagline": "What if your social media didn't need more effort, just better tools"
     }
-  },
-  "shared": {
-    "betterToolsTagline": "What if your social media didn't need more effort, just better tools"
   }
 }

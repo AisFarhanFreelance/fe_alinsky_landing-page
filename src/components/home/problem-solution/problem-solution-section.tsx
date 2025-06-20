@@ -1,6 +1,7 @@
 "use client";
 
 import { Variants, motion, useAnimation } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -57,6 +58,8 @@ const ProblemSolutionSection = () => {
     },
   };
 
+  const t = useTranslations("homepage");
+
   return (
     <motion.div
       ref={ref}
@@ -79,7 +82,7 @@ const ProblemSolutionSection = () => {
                 variants={itemVariants}
                 className="text-center font-helvetica text-xl capitalize sm:text-2xl lg:text-5xl"
               >
-                4 Hidden Costs Slowing Down Your Client social media Growth
+                {t("hiddenCostTitle")}
               </motion.div>
 
               <motion.div variants={itemVariants}>
@@ -102,12 +105,8 @@ const ProblemSolutionSection = () => {
                 variants={itemVariants}
                 className="text-xl leading-[150%] italic lg:text-[32px]"
               >
-                If even one of these problems feels too real... <br /> It&apos;s
-                time to reflect&nbsp;:
-                <b>
-                  &nbsp; What if your social media didn&apos;t need more effort,
-                  just better tools
-                </b>
+                {t("quotes.intro")} <br /> {t("quotes.callToReflect")} <br />
+                <b>{t("quotes.tagline")}</b>
               </motion.span>
 
               <motion.span
