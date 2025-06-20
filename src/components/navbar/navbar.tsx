@@ -1,7 +1,9 @@
 "use client";
 
+import { usePathname } from "@/i18n/navigation";
 import { Variants, motion } from "framer-motion";
 import { ArrowDown2 } from "iconsax-reactjs";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -85,6 +87,20 @@ const Navbar = () => {
 
   const menuItems = ["Home", "Pricing", "Features", "Contact Us"];
 
+  const currentLocale = useLocale();
+  const pathname = usePathname();
+
+  const handleChange = (newLocale: string) => {
+    if (newLocale === currentLocale) return;
+
+    // Ganti locale di URL secara langsung dan reload seluruh halaman
+    const pathSegments = pathname.split("/");
+    pathSegments[1] = newLocale; // asumsi locale selalu di segmen pertama
+
+    const newUrl = pathSegments.join("/");
+    globalThis.location.href = newUrl;
+  };
+
   return (
     <div className="w-full">
       <nav className="relative isolate my-2 w-full px-[104px]">
@@ -156,7 +172,7 @@ const Navbar = () => {
                       width={24}
                       height={24}
                     />
-                    <span>EN</span>
+                    <span>{currentLocale.toUpperCase()}</span>
                     <motion.div
                       animate={{ y: [0, 2, 0] }}
                       transition={{ repeat: Infinity, duration: 2 }}
@@ -172,8 +188,12 @@ const Navbar = () => {
                   animate="visible"
                   variants={dropdownVariants}
                 >
-                  <DropdownMenuItem>EN - English</DropdownMenuItem>
-                  <DropdownMenuItem>ID - Bahasa</DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => handleChange("en")}>
+                    EN - English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => handleChange("id")}>
+                    ID - Bahasa
+                  </DropdownMenuItem>
                 </motion.div>
               </DropdownMenuContent>
             </DropdownMenu>

@@ -2,6 +2,7 @@
 
 import { Variants, motion } from "framer-motion";
 import { Flash } from "iconsax-reactjs";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 
@@ -79,6 +80,8 @@ const HeroSection = () => {
       },
     },
   };
+
+  const t = useTranslations("homepage");
 
   return (
     <div className="flex min-h-[105vh] w-full items-center overflow-hidden">
@@ -197,7 +200,7 @@ const HeroSection = () => {
                   transition: { duration: 0.1 },
                 }}
               >
-                Join The Waitlist
+                {t("waitlist")}
               </motion.button>
             </Button>
           </motion.div>

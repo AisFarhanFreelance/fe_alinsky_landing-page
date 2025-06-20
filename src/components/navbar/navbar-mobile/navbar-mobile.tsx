@@ -1,4 +1,6 @@
+import { usePathname } from "@/i18n/navigation";
 import { ArrowDown2, HamburgerMenu } from "iconsax-reactjs";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -12,6 +14,20 @@ import {
 import USFlagIcon from "/public/assets/flags/united-states-flag.svg";
 
 const NavbarMobile = () => {
+  const currentLocale = useLocale();
+  const pathname = usePathname();
+
+  const handleChange = (newLocale: string) => {
+    if (newLocale === currentLocale) return;
+
+    // Ganti locale di URL secara langsung dan reload seluruh halaman
+    const pathSegments = pathname.split("/");
+    pathSegments[1] = newLocale; // asumsi locale selalu di segmen pertama
+
+    const newUrl = pathSegments.join("/");
+    globalThis.location.href = newUrl;
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -34,13 +50,17 @@ const NavbarMobile = () => {
                   alt="English"
                   className="h-6 w-6 rounded-full"
                 />
-                <span>EN</span>
+                <span>{currentLocale.toUpperCase()}</span>
                 <ArrowDown2 size="18" color="#FFFFFF" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-32">
-              <DropdownMenuItem>EN - English</DropdownMenuItem>
-              <DropdownMenuItem>ID - Bahasa</DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleChange("en")}>
+                EN - English
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => handleChange("id")}>
+                ID - Bahasa
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </DropdownMenuItem>
