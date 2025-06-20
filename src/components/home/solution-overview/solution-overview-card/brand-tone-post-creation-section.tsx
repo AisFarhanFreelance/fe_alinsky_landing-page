@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -40,6 +41,9 @@ const BrandTonePostCreationSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.brandTone");
+  const tShared = useTranslations("shared");
+
   return (
     <div className="flex justify-center overflow-hidden">
       <div className="w-full max-w-[1920px]">
@@ -66,7 +70,7 @@ const BrandTonePostCreationSection = () => {
               className="flex items-center space-x-4 sm:space-x-8"
             >
               <span className="text-base leading-[126%] font-medium tracking-[-0.48px] whitespace-nowrap sm:tracking-[-3%] lg:text-xl">
-                Consistent Brand Tone
+                {t("title")}
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,13 +92,10 @@ const BrandTonePostCreationSection = () => {
               className="space-y-3 self-stretch"
             >
               <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] lg:text-4xl">
-                Craft posts that match your brand voice in seconds
+                {t("heading")}
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">
-                Imagine having an assistant that instantly understands your
-                brand voice and writes like your best copywriter—on demand. With
-                ALINSKY&apos;s AI Copy Enhancer, generate scroll-stopping posts
-                in seconds, freeing up hours of content creation time.
+                {t("description")}
               </div>
               <motion.div
                 variants={itemVariants}
@@ -103,7 +104,7 @@ const BrandTonePostCreationSection = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Button className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95">
-                  Learn More
+                  {tShared("learnMore")}
                 </Button>
               </motion.div>
             </motion.div>

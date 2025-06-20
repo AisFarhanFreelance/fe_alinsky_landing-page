@@ -1,4 +1,7 @@
 {
+  "shared": {
+    "learnMore": "Pelajari Lebih Lanjut"
+  },
   "navbar": {
     "home": "Beranda",
     "pricing": "Harga",
@@ -37,6 +40,26 @@
       "socialMediaManager": "Manajer Sosial Media",
       "analyticsExpert": "Ahli Analisis",
       "campaignManager": "Manajer Kampanye"
+    },
+    "brandTone": {
+      "title": "Nada Merek yang Konsisten",
+      "heading": "Buat postingan yang selaras dengan suara merek Anda dalam hitungan detik",
+      "description": "Bayangkan memiliki asisten yang langsung memahami gaya komunikasi merek Anda dan menulis seperti copywriter terbaik Anda—sesuai permintaan. Dengan AI Copy Enhancer dari ALINSKY, hasilkan postingan yang menarik perhatian hanya dalam hitungan detik, menghemat berjam-jam waktu pembuatan konten."
+    },
+    "contentAutopilot": {
+      "title": "Konten Otomatis",
+      "heading": "Hilangkan tugas posting berulang dengan otomatisasi cerdas",
+      "description": "Tak perlu lagi masuk ke lima platform berbeda untuk menjadwalkan konten. ALINSKY mengotomatisasi seluruh kalender posting Anda, memungkinkan Anda merencanakan jauh ke depan sambil memastikan setiap posting terbit tepat waktu dan di tempat yang seharusnya—tanpa usaha sama sekali."
+    },
+    "effortlessPipeline": {
+      "title": "Alur Kerja Tanpa Repot",
+      "heading": "Permudah kerja tim dengan alur persetujuan bawaan",
+      "description": "Berkoordinasi dengan tim belum pernah semudah ini. ALINSKY memusatkan proses tinjauan konten dengan alur persetujuan cerdas dan notifikasi real-time. Tim tetap sinkron dan tak ada yang terlewat."
+    },
+    "realTimePerfReport": {
+      "title": "Laporan Performa Real-Time",
+      "heading": "Pantau yang berhasil, temukan yang tidak, dan perbarui strategi dengan cepat",
+      "description": "Lupakan spreadsheet tak berujung dan tebak-tebakan. Dasbor real-time dari ALINSKY menunjukkan dengan jelas konten mana yang berhasil, mana yang tidak, dan membantu Anda beradaptasi dengan cepat—agar strategi Anda berkembang secepat audiens Anda."
     }
   }
 }

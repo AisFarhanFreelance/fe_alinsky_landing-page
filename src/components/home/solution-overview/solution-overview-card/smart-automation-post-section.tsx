@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -41,6 +42,9 @@ const SmartAutomationPostSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.contentAutoPilot");
+  const tShared = useTranslations("shared");
+
   return (
     <div className="flex justify-center overflow-hidden">
       <div className="w-full max-w-[1920px]">
@@ -73,19 +77,16 @@ const SmartAutomationPostSection = () => {
                 />
               </svg>
               <span className="text-base leading-[126%] font-medium tracking-[-0.48px] whitespace-nowrap xl:text-xl xl:tracking-[-0.6px]">
-                Content Autopilot
+                {t("title")}
               </span>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-3">
               <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
-                Eliminate repetitive posting tasks with smart automation
+                {t("heading")}
               </div>
               <div className="text-left text-base leading-[140%] tracking-[0.1px] opacity-80">
-                No more logging into five different platforms to schedule
-                content. ALINSKY automates your entire posting calendar, letting
-                you plan weeks ahead while ensuring every post goes out exactly
-                when and where it should—with zero effort.
+                {t("description")}
               </div>
             </motion.div>
 
@@ -95,7 +96,7 @@ const SmartAutomationPostSection = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Button className="font-satoshi text-[15px] leading-[26px] tracking-[0.46px] uppercase">
-                LEARN MORE
+                {tShared("learnMore")}
               </Button>
             </motion.div>
           </motion.div>

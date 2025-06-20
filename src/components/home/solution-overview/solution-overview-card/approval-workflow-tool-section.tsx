@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -43,6 +44,9 @@ const ApprovalWorkflowToolSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.effortlessPipeline");
+  const tShared = useTranslations("shared");
+
   return (
     <div className="flex justify-center overflow-hidden">
       <div className="w-full max-w-[1920px]">
@@ -85,19 +89,16 @@ const ApprovalWorkflowToolSection = () => {
                 />
               </svg>
               <span className="text-base leading-[126%] font-medium tracking-[-0.6px] whitespace-nowrap xl:text-xl">
-                Effortless Pipeline
+                {t("title")}
               </span>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-3">
               <div className="text-3xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
-                Simplify teamwork with built-in approval flows
+                {t("heading")}
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">
-                Collaborating with your team has never been easier. ALINSKY
-                centralizes content review with smart approval workflows and
-                real-time notifications, Team stays aligned and nothing slips
-                through the cracks.
+                {t("description")}
               </div>
             </motion.div>
 
@@ -107,7 +108,7 @@ const ApprovalWorkflowToolSection = () => {
               whileTap={{ scale: 0.98 }}
             >
               <Button className="font-satoshi text-[15px] leading-[26px] tracking-[0.46px] uppercase">
-                LEARN MORE
+                {tShared("learnMore")}
               </Button>
             </motion.div>
           </motion.div>

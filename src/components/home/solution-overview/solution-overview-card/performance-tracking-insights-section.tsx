@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -41,6 +42,9 @@ const PerformanceTrackingInsightsSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.realTimePerfReport");
+  const tShared = useTranslations("shared");
+
   return (
     <div className="flex justify-center overflow-hidden">
       <div className="w-full max-w-[1920px]">
@@ -73,7 +77,7 @@ const PerformanceTrackingInsightsSection = () => {
                 />
               </svg>
               <span className="text-base leading-[126%] font-medium tracking-[-3%] xl:text-xl">
-                Real-Time Performance Report
+                {t("title")}
               </span>
             </motion.div>
 
@@ -82,14 +86,10 @@ const PerformanceTrackingInsightsSection = () => {
               className="space-y-3 self-stretch"
             >
               <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
-                Track what&apos;s working, pinpoint what&apos;s not, rapidly
-                iterate your strategy
+                {t("heading")}
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">
-                Forget endless spreadsheets and guessing games. ALINSKY&apos;s
-                real-time dashboard shows exactly what content is working,
-                what&apos;s falling flat, and helps you pivot fast—so your
-                strategy evolves as quickly as your audience does.
+                {t("description")}
               </div>
               <motion.div
                 variants={itemVariants}
@@ -98,7 +98,7 @@ const PerformanceTrackingInsightsSection = () => {
                 whileTap={{ scale: 0.98 }}
               >
                 <Button className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95">
-                  Learn More
+                  {tShared("learnMore")}
                 </Button>
               </motion.div>
             </motion.div>

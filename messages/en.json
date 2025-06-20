@@ -1,4 +1,7 @@
 {
+  "shared": {
+    "learnMore": "Learn More"
+  },
   "navbar": {
     "home": "Home",
     "pricing": "Pricing",
@@ -37,6 +40,26 @@
       "socialMediaManager": "Social Media Manager",
       "analyticsExpert": "Analytics Expert",
       "campaignManager": "Campaign Manager"
+    },
+    "brandTone": {
+      "title": "Consistent Brand Tone",
+      "heading": "Craft posts that match your brand voice in seconds",
+      "description": "Imagine having an assistant that instantly understands your brand voice and writes like your best copywriter—on demand. With ALINSKY's AI Copy Enhancer, generate scroll-stopping posts in seconds, freeing up hours of content creation time."
+    },
+    "contentAutopilot": {
+      "title": "Content Autopilot",
+      "heading": "Eliminate repetitive posting tasks with smart automation",
+      "description": "No more logging into five different platforms to schedule content. ALINSKY automates your entire posting calendar, letting you plan weeks ahead while ensuring every post goes out exactly when and where it should—with zero effort."
+    },
+    "effortlessPipeline": {
+      "title": "Effortless Pipeline",
+      "heading": "Simplify teamwork with built-in approval flows",
+      "description": "Collaborating with your team has never been easier. ALINSKY centralizes content review with smart approval workflows and real-time notifications, Team stays aligned and nothing slips through the cracks."
+    },
+    "realTimePerfReport": {
+      "title": "Real-Time Performance Report",
+      "heading": "Track what's working, pinpoint what's not, rapidly iterate your strategy",
+      "description": "Forget endless spreadsheets and guessing games. ALINSKY's real-time dashboard shows exactly what content is working, what's falling flat, and helps you pivot fast—so your strategy evolves as quickly as your audience does."
     }
   }
 }
