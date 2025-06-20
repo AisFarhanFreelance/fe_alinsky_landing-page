@@ -1,5 +1,25 @@
 {
+  "navbar": {
+    "home": "Beranda",
+    "pricing": "Harga",
+    "features": "Fitur",
+    "contact": "Hubungi Kami"
+  },
   "homepage": {
-    "waitlist": "BERGABUNG SEKARANG"
+    "waitlist": "BERGABUNG SEKARANG",
+    "hiddencosts": [
+      {
+        "title": "Terlalu Banyak Alat, Nol Alur",
+        "desc": "Beralih di antara kalender, penjadwal, dan alat analisis tidak hanya melelahkan—ini menciptakan kebingungan, tenggat waktu yang terlewat, dan kesalahan yang merugikan."
+      },
+      {
+        "title": "Anda Buta Tanpa Wawasan Waktu Nyata",
+        "desc": "Menerka-nerka membunuh kampanye. Tanpa umpan balik instan tentang apa yang berhasil, Anda berisiko membuang anggaran dan momentum. Tim cerdas berulang dengan cepat—dan menang lebih cepat."
+      },
+      {
+        "title": "Anda Membayar untuk Tugas yang Seharusnya Bisa Berjalan Sendiri",
+        "desc": "Menggantikan kebutuhan akan penjadwal penuh waktu—memangkas biaya sekaligus meningkatkan efisiensi."
+      }
+    ]
   }
 }

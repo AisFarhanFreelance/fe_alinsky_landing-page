@@ -3,7 +3,7 @@
 import { usePathname } from "@/i18n/navigation";
 import { Variants, motion } from "framer-motion";
 import { ArrowDown2 } from "iconsax-reactjs";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -85,7 +85,7 @@ const Navbar = () => {
     },
   };
 
-  const menuItems = ["Home", "Pricing", "Features", "Contact Us"];
+  const menuItems = ["home", "pricing", "features", "contact"];
 
   const currentLocale = useLocale();
   const pathname = usePathname();
@@ -100,6 +100,8 @@ const Navbar = () => {
     const newUrl = pathSegments.join("/");
     globalThis.location.href = newUrl;
   };
+
+  const t = useTranslations("navbar");
 
   return (
     <div className="w-full">
@@ -140,7 +142,7 @@ const Navbar = () => {
                     className="relative block px-4 py-2 text-center"
                   >
                     <span className="relative inline-block pb-1">
-                      {item}
+                      {t(item)}
                       {isHovered === item && (
                         <motion.span
                           className="absolute right-0 bottom-0 left-0 h-[2px] bg-alinsky-midnight-blue"

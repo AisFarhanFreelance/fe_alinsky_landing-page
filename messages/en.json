@@ -1,5 +1,35 @@
 {
+  "navbar": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "features": "Features",
+    "contact": "Contact Us"
+  },
   "homepage": {
-    "waitlist": "JOIN THE WAITLIST"
+    "herotitle": "Supercharge",
+    "herotitlesub": "Your Social Media Workflow",
+    "waitlist": "JOIN THE WAITLIST",
+    "hiddencosts": [
+      {
+        "title": "Too Many Tools, Zero Flow",
+        "desc": "Switching between calendars, schedulers, and analytics tools isn't just tiring—it creates confusion, missed deadlines, and costly mistakes."
+      },
+      {
+        "title": "You're Blind Without Real-Time Insights",
+        "desc": "Guesswork kills campaigns. Without instant feedback on what's working, you risk wasting budget and momentum. Smart teams iterate fast—and win faster."
+      },
+      {
+        "title": "You're Paying for Tasks That Could Run Themselves",
+        "desc": "Replaces the need for a full-time scheduler—cutting costs while boosting efficiency."
+      }
+    ],
+    "quotes": {
+      "intro": "If even one of these problems feels too real... It's time to reflect :",
+      "callToReflect": "It's time to reflect :",
+      "tagline": "What if your social media didn't need more effort, just better tools"
+    }
+  },
+  "shared": {
+    "betterToolsTagline": "What if your social media didn't need more effort, just better tools"
   }
 }

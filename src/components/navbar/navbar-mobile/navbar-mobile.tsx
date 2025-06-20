@@ -1,6 +1,6 @@
 import { usePathname } from "@/i18n/navigation";
 import { ArrowDown2, HamburgerMenu } from "iconsax-reactjs";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
@@ -28,6 +28,8 @@ const NavbarMobile = () => {
     globalThis.location.href = newUrl;
   };
 
+  const t = useTranslations("navbar");
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -37,10 +39,10 @@ const NavbarMobile = () => {
         align="end"
         className="w-64 bg-[#FAFAFA] p-4 text-[#616161]"
       >
-        <DropdownMenuItem className="mb-6">Home</DropdownMenuItem>
-        <DropdownMenuItem className="mb-6">Pricing</DropdownMenuItem>
-        <DropdownMenuItem className="mb-6">Features</DropdownMenuItem>
-        <DropdownMenuItem className="mb-6">Contact Us</DropdownMenuItem>
+        <DropdownMenuItem className="mb-6">{t("home")}</DropdownMenuItem>
+        <DropdownMenuItem className="mb-6">{t("pricing")}</DropdownMenuItem>
+        <DropdownMenuItem className="mb-6">{t("features")}</DropdownMenuItem>
+        <DropdownMenuItem className="mb-6">{t("contact")}</DropdownMenuItem>
         <DropdownMenuItem>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
