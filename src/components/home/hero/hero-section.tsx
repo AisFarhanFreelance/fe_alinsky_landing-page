@@ -128,7 +128,7 @@ const HeroSection = () => {
                 variants={superchargeVariants}
                 whileHover="hover"
               >
-                SUPERCHARGE
+                {t("herotitle")}
               </motion.span>
 
               <motion.div
@@ -171,7 +171,7 @@ const HeroSection = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Your Social Media Workflow
+                {t("herotitlesub")}
               </span>
             </motion.div>
           </div>
