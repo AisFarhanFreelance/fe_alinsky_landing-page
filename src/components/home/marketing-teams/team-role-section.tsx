@@ -1,6 +1,7 @@
 "use client";
 
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import TeamRoleAvatar from "./team-role-avatar";
 
@@ -60,6 +61,8 @@ const TeamRoleSection = () => {
     },
   };
 
+  const t = useTranslations("homepage");
+
   return (
     <motion.div
       className="relative min-h-screen"
@@ -83,15 +86,17 @@ const TeamRoleSection = () => {
               className="text-xl text-alinsky-onyx capitalize sm:text-2xl lg:text-5xl lg:leading-16"
               variants={titleVariants}
             >
-              Meet Your New&nbsp;
-              <span className="font-bold italic">Social Media</span>
+              {t("teamRole.title")}
+              <span className="font-bold italic">
+                {t("teamRole.titleBold")}
+              </span>
             </motion.div>
 
             <motion.div
               className="rounded-2xl bg-alinsky-magnolia p-2 text-xl font-black text-alinsky-slate-blue lg:py-6 lg:text-5xl"
               variants={commandCenterVariants}
             >
-              Command Center
+              {t("teamRole.subtitle")}
             </motion.div>
           </motion.div>
 
@@ -99,7 +104,7 @@ const TeamRoleSection = () => {
             className="font-satoshi text-base font-medium text-alinsky-gray-600 capitalize lg:text-xl"
             variants={subtitleVariants}
           >
-            Most marketing teams waste 12+ hours weekly on
+            {t("teamRole.description")}
           </motion.div>
         </motion.div>
 

@@ -28,6 +28,15 @@
       "intro": "Jika salah satu dari masalah ini terasa terlalu nyata...",
       "callToReflect": "Saatnya untuk berpikir :",
       "tagline": "Bagaimana jika media sosial Anda tidak memerlukan lebih banyak upaya, hanya alat yang lebih baik?"
+    },
+    "teamRole": {
+      "title": "Temui ",
+      "titleBold": "Pusat Komando Baru",
+      "subtitle": "Media Sosial Anda",
+      "description": "Sebagian besar tim pemasaran membuang waktu 12+ jam setiap minggunya untuk",
+      "socialMediaManager": "Manajer Sosial Media",
+      "analyticsExpert": "Ahli Analisis",
+      "campaignManager": "Manajer Kampanye"
     }
   }
 }

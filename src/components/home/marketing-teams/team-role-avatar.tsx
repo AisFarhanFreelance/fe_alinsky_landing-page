@@ -2,38 +2,12 @@
 
 import { Variants, motion } from "framer-motion";
 import { Hashtag, StatusUp } from "iconsax-reactjs";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import Avatar1 from "/public/assets/images/avatar/avatar-1.svg";
 import Avatar2 from "/public/assets/images/avatar/avatar-2.svg";
 import Avatar3 from "/public/assets/images/avatar/avatar-3.svg";
-
-const TeamRoleAvatarDatas = [
-  {
-    src: Avatar1,
-    bg: "bg-linear-to-b from-alinsky-lavender-blush to-alinsky-white",
-    icon: <Hashtag color="#e91e63" />,
-    iconBackground: "bg-alinsky-orchid-pink",
-    label: "Social Media Manager",
-    floatDirection: "up" as const,
-  },
-  {
-    src: Avatar2,
-    bg: "bg-linear-to-b from-alinsky-lavender-web to-alinsky-white",
-    icon: <StatusUp color="#9c27b0" />,
-    iconBackground: "bg-alinsky-pink-lavender",
-    label: "Analytics Expert",
-    floatDirection: "down" as const,
-  },
-  {
-    src: Avatar3,
-    bg: "bg-linear-to-b from-alinsky-light-cyan to-alinsky-white",
-    icon: <StatusUp color="#03A9F4" />,
-    iconBackground: "bg-alinsky-uranian-blue",
-    label: "Campaign Manager",
-    floatDirection: "up" as const,
-  },
-];
 
 const TeamRoleAvatar = () => {
   const floatVariants: Variants = {
@@ -76,6 +50,35 @@ const TeamRoleAvatar = () => {
     },
   };
 
+  const TeamRoleAvatarDatas = [
+    {
+      src: Avatar1,
+      bg: "bg-linear-to-b from-alinsky-lavender-blush to-alinsky-white",
+      icon: <Hashtag color="#e91e63" />,
+      iconBackground: "bg-alinsky-orchid-pink",
+      label: "socialMediaManager",
+      floatDirection: "up" as const,
+    },
+    {
+      src: Avatar2,
+      bg: "bg-linear-to-b from-alinsky-lavender-web to-alinsky-white",
+      icon: <StatusUp color="#9c27b0" />,
+      iconBackground: "bg-alinsky-pink-lavender",
+      label: "analyticsExpert",
+      floatDirection: "down" as const,
+    },
+    {
+      src: Avatar3,
+      bg: "bg-linear-to-b from-alinsky-light-cyan to-alinsky-white",
+      icon: <StatusUp color="#03A9F4" />,
+      iconBackground: "bg-alinsky-uranian-blue",
+      label: "campaignManager",
+      floatDirection: "up" as const,
+    },
+  ];
+
+  const t = useTranslations("homepage.teamRole");
+
   return (
     <div className="flex flex-wrap items-end justify-center gap-12">
       {TeamRoleAvatarDatas.map(
@@ -114,7 +117,7 @@ const TeamRoleAvatar = () => {
               className="mt-4 font-satoshi text-xl font-bold text-alinsky-onyx"
               whileHover={{ scale: 1.05 }}
             >
-              {label}
+              {t(label)}
             </motion.span>
           </motion.div>
         ),

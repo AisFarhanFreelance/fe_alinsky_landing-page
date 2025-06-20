@@ -28,6 +28,15 @@
       "intro": "If even one of these problems feels too real...",
       "callToReflect": "It's time to reflect :",
       "tagline": "What if your social media didn't need more effort, just better tools"
+    },
+    "teamRole": {
+      "title": "Meet Your New ",
+      "titleBold": "Social Media",
+      "subtitle": "Command Center",
+      "description": "Most marketing teams waste 12+ hours weekly on",
+      "socialMediaManager": "Social Media Manager",
+      "analyticsExpert": "Analytics Expert",
+      "campaignManager": "Campaign Manager"
     }
   }
 }
