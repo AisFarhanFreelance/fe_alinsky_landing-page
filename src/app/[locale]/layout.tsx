@@ -2,7 +2,7 @@ import { helvetica, satoshi } from "@/lib/fonts/fonts";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getLocale, getMessages } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import Navbar from "@/components/navbar/navbar";
@@ -28,12 +28,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
 }>) {
   const messages = await getMessages();
+  const locale = await getLocale();
 
   return (
     <html lang={locale}>

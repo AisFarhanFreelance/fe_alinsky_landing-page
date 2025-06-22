@@ -42,7 +42,7 @@ const SmartAutomationPostSection = () => {
     },
   };
 
-  const t = useTranslations("homepage.contentAutoPilot");
+  const t = useTranslations("homepage.contentAutopilot");
   const tShared = useTranslations("shared");
 
   return (
