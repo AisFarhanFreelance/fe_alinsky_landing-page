@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const PreorderSection = () => {
-  const deadline = new Date("2025-06-28T23:59:59Z");
+  const deadline = new Date("2025-07-25T14:00:00Z");
 
   const [salesTime, setSalesTime] = useState<{
     days: string;
@@ -86,7 +86,6 @@ const PreorderSection = () => {
             </div>
           </div>
 
-          {/* Entire Hurry section with subtle pulse */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
