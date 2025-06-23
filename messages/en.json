@@ -121,6 +121,30 @@
           "buttonText": "Upgrade Now"
         }
       }
+    },
+    "agencyService": {
+      "headline": "Give Your Team",
+      "headlineBold": "Superpower",
+      "cta": "Get It Now!"
+    },
+    "serviceBlock": {
+      "perfAnalytics": "Performance Analytics",
+      "doneContent": "Done-For-You Content",
+      "monthlyStrategy": "Monthly Strategy Session"
+    },
+    "pricingCta": {
+      "headline": "Software is powerful, but paired with our strategic services, it's ",
+      "highlight": "unstoppable"
+    },
+    "contactUs": {
+      "headline": "See Your Brand In Our Platform",
+      "reachOut": "Reach Out Directly",
+      "bookAudit": "Book a Free Audit"
+    },
+    "homepageCta": {
+      "headline": "Your Social Media Dashboard is Ready,",
+      "highlight": "but are you?",
+      "buttonText": "Get Started"
     }
   }
 }

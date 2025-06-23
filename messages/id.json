@@ -121,6 +121,30 @@
           "buttonText": "Tingkatkan Sekarang"
         }
       }
+    },
+    "agencyService": {
+      "headline": "Butuh Lebih dari Sekadar Software?",
+      "headlineBold": "Team Up",
+      "cta": "Dapatkan Sekarang!"
+    },
+    "serviceBlock": {
+      "perfAnalytics": "Analitik Performa",
+      "doneContent": "Konten Done-For-You",
+      "monthlyStrategy": "Sesi Strategi Bulanan"
+    },
+    "pricingCta": {
+      "headline": "Software memang powerful, tapi kalau dipasangkan dengan layanan strategis kami? ",
+      "highlight": "Hasilnya unstoppable"
+    },
+    "contactUs": {
+      "headline": "Lihat Brand Anda di Platform Kami",
+      "reachOut": "Hubungi Kami Sekarang",
+      "bookAudit": "Buat Audit Gratis"
+    },
+    "homepageCta": {
+      "headline": "Dashboard Media Sosial Anda Sudah Siap,",
+      "highlight": "Bagaimana dengan Anda?",
+      "buttonText": "Mulai Sekarang"
     }
   }
 }

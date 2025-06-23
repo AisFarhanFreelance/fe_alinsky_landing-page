@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -93,6 +94,8 @@ const ServiceBlockSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.serviceBlock");
+
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px] px-8 md:px-14 xl:px-[104px] 2xl:px-[344px]">
@@ -115,7 +118,7 @@ const ServiceBlockSection = () => {
                     variants={textSlideVariants}
                     className="mb-6 font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-4xl xl:leading-[120%]"
                   >
-                    Performance Analytics
+                    {t("perfAnalytics")}
                   </motion.div>
                   <div className="flex-1" />
                   <motion.div
@@ -152,7 +155,7 @@ const ServiceBlockSection = () => {
                       WebkitTextFillColor: "transparent",
                     }}
                   >
-                    Done-For-you Content
+                    {t("doneContent")}
                   </motion.div>
                   <div className="flex-1" />
                   <motion.div
@@ -182,7 +185,7 @@ const ServiceBlockSection = () => {
                     variants={textSlideVariants}
                     className="mb-6 font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-end xl:text-right xl:text-4xl xl:leading-[52px]"
                   >
-                    Monthly Strategy Session
+                    {t("monthlyStrategy")}
                   </motion.div>
                   <div className="flex-1" />
                   <motion.div

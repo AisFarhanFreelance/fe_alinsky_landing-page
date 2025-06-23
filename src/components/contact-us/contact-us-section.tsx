@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 
 import { Button } from "../ui/button";
@@ -56,6 +57,8 @@ const ContactUsSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.contactUs");
+
   return (
     <div
       ref={sectionRef}
@@ -74,7 +77,7 @@ const ContactUsSection = () => {
               }}
               className="font-satoshi text-xl leading-[100%] font-medium text-alinsky-midnight-blue capitalize md:text-4xl xl:text-5xl"
             >
-              See Your Brand In Our Platform
+              {t("headline")}
             </div>
 
             <motion.div
@@ -96,7 +99,7 @@ const ContactUsSection = () => {
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 0.1, transition: { duration: 0.3 } }}
                   />
-                  Reach Out Directly
+                  {t("reachOut")}
                 </Button>
               </motion.div>
 
@@ -128,7 +131,7 @@ const ContactUsSection = () => {
                       transition: { duration: 0.3 },
                     }}
                   />
-                  Book A Free Audit
+                  {t("bookAudit")}
                 </Button>
               </motion.div>
             </motion.div>

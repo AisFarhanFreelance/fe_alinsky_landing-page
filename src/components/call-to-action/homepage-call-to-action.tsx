@@ -1,4 +1,5 @@
 import { Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 
@@ -40,6 +41,8 @@ const buttonVariants: Variants = {
 };
 
 const HomePageCallToAction = () => {
+  const t = useTranslations("homepage.homepageCta");
+
   return (
     <motion.div
       className="flex items-center justify-center"
@@ -55,14 +58,12 @@ const HomePageCallToAction = () => {
       >
         <motion.div variants={itemVariants}>
           <span className="flex flex-col text-center font-satoshi text-base text-alinsky-midnight-blue capitalize sm:text-left sm:text-2xl">
-            <motion.span variants={itemVariants}>
-              Your Social Media Dashboard is Ready,&nbsp;
-            </motion.span>
+            <motion.span variants={itemVariants}>{t("headline")}</motion.span>
             <motion.span
               className="text-center text-base font-bold text-alinsky-rich-black sm:text-left sm:text-[32px]"
               variants={itemVariants}
             >
-              but are you?
+              {t("highlight")}
             </motion.span>
           </span>
         </motion.div>
@@ -78,7 +79,7 @@ const HomePageCallToAction = () => {
               whileHover="hover"
               whileTap="tap"
             >
-              Get Started
+              {t("buttonText")}
             </motion.button>
           </Button>
         </motion.div>

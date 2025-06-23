@@ -1,4 +1,5 @@
 import { Transition, Variants, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 
@@ -67,6 +68,8 @@ const AgencyServiceSection = () => {
     },
   };
 
+  const t = useTranslations("homepage.agencyService");
+
   return (
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
@@ -85,7 +88,7 @@ const AgencyServiceSection = () => {
               variants={textVariants}
               className="font-satoshi text-xl font-medium xl:text-4xl"
             >
-              Give Your Team
+              {t("headline")}
             </motion.div>
             <div>
               <motion.div
@@ -100,7 +103,7 @@ const AgencyServiceSection = () => {
                   backgroundSize: "300% 100%",
                 }}
               >
-                Superpower
+                {t("headlineBold")}
               </motion.div>
             </div>
           </motion.div>
@@ -111,7 +114,7 @@ const AgencyServiceSection = () => {
             whileTap="tap"
           >
             <Button className="font-helvetica text-[15px] leading-[26px] tracking-[0.46px] uppercase">
-              Get It Now!
+              {t("cta")}
             </Button>
           </motion.div>
         </motion.div>
