@@ -60,6 +60,12 @@
       "title": "Laporan Performa Real-Time",
       "heading": "Pantau yang berhasil, temukan yang tidak, dan perbarui strategi dengan cepat",
       "description": "Lupakan spreadsheet tak berujung dan tebak-tebakan. Dasbor real-time dari ALINSKY menunjukkan dengan jelas konten mana yang berhasil, mana yang tidak, dan membantu Anda beradaptasi dengan cepat—agar strategi Anda berkembang secepat audiens Anda."
+    },
+    "preOrder": {
+      "preOrderHeading": "Pre-Order berakhir dalam",
+      "hurry": "DAPATKAN SEGERA !! ",
+      "only": "Hanya ",
+      "stockLeft": "Tersisa"
     }
   }
 }

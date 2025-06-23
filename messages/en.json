@@ -60,6 +60,12 @@
       "title": "Real-Time Performance Report",
       "heading": "Track what's working, pinpoint what's not, rapidly iterate your strategy",
       "description": "Forget endless spreadsheets and guessing games. ALINSKY's real-time dashboard shows exactly what content is working, what's falling flat, and helps you pivot fast—so your strategy evolves as quickly as your audience does."
+    },
+    "preOrder": {
+      "preOrderHeading": "Pre-Order Closes In",
+      "hurry": "HURRY!! ",
+      "only": "Only ",
+      "stockLeft": "Left In Stock"
     }
   }
 }
