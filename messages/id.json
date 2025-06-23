@@ -146,5 +146,16 @@
       "highlight": "Bagaimana dengan Anda?",
       "buttonText": "Mulai Sekarang"
     }
+  },
+  "footer": {
+    "home": "Beranda",
+    "pricing": "Harga",
+    "product": "Produk",
+    "contact": "Hubungi Kami",
+    "tutorial": "Tutorial",
+    "blog": "Blog",
+    "catalog": "Katalog",
+    "connect": "Terhubung dengan Kami",
+    "privacy": "Kebijakan Privasi"
   }
 }

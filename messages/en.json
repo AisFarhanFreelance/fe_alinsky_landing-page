@@ -146,5 +146,16 @@
       "highlight": "but are you?",
       "buttonText": "Get Started"
     }
+  },
+  "footer": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "product": "Products",
+    "contact": "Contact Us",
+    "tutorial": "Tutorial",
+    "blog": "Blog",
+    "catalog": "Catalog",
+    "connect": "Connect with Us",
+    "privacy": "Privacy"
   }
 }
