@@ -66,6 +66,61 @@
       "hurry": "DAPATKAN SEGERA !! ",
       "only": "Hanya ",
       "stockLeft": "Tersisa"
+    },
+    "pricingPlan": {
+      "title": "Pick Your Growth Blueprint",
+      "description": "Semua paket sudah termasuk dashboard utama kami. ",
+      "descriptionHighlight": "Upgrade kapan saja",
+      "mostPopular": "Paling Populer",
+      "plans": {
+        "planA": {
+          "title": "Plan A",
+          "subtitle": "Cocok untuk solopreneurs dan tim starter",
+          "priceInitial": "1,600,000",
+          "priceDiscount": "800,000",
+          "description": "Dashboard + Template Konten Autopost + Maksimal 3 User",
+          "features": [
+            "Kalender Media Sosial",
+            "Penjadwalan Postingan Dasar",
+            "Template Konten",
+            "Analitik Sederhana",
+            "5 Profil Sosial"
+          ],
+          "buttonText": "Beli Sekarang"
+        },
+        "planB": {
+          "title": "Plan B",
+          "subtitle": "",
+          "priceInitial": "2,600,000",
+          "priceDiscount": "1,300,000",
+          "description": "Dashboard + Template Autopost Konten + Report Analytics Bulanan + User Unlimited + Bonus 1 Video Asset",
+          "features": [
+            "Semua di <strong>Plan A</strong>, ditambah:",
+            "Pengguna Tak Terbatas",
+            "Laporan Kinerja Bulanan",
+            "Alat Kampanye Email",
+            "1 Video Asset Bulanan",
+            "Dukungan Prioritas"
+          ],
+          "buttonText": "Beli Sekarang"
+        },
+        "planC": {
+          "title": "Plan C",
+          "subtitle": "",
+          "priceInitial": "4,200,000",
+          "priceDiscount": "3,600,000",
+          "description": "Dashboard + Template Autopost Konten + Report Analytics Bulanan + User Unlimited + Bonus 5 Video Asset",
+          "features": [
+            "Semua di <strong>Plan B</strong>, ditambah:",
+            "Manajemen Afiliasi",
+            "Atribusi Sumber Leads",
+            "5 Video Asset Bulanan",
+            "Sesi Strategi",
+            "Manajer Akun Khusus"
+          ],
+          "buttonText": "Tingkatkan Sekarang"
+        }
+      }
     }
   }
 }

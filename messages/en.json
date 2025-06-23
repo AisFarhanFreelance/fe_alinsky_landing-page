@@ -66,6 +66,61 @@
       "hurry": "HURRY!! ",
       "only": "Only ",
       "stockLeft": "Left In Stock"
+    },
+    "pricingPlan": {
+      "title": "Pick Your Growth Blueprint",
+      "description": "All Plans Include Our Core Platform. ",
+      "descriptionHighlight": "Upgrade Anytime",
+      "mostPopular": "Most Popular",
+      "plans": {
+        "planA": {
+          "title": "Plan A",
+          "subtitle": "Perfect for solopreneurs and small teams",
+          "priceInitial": "1,600,000",
+          "priceDiscount": "800,000",
+          "description": "Panel + Content Plan Template Autopost + Limited 3 User",
+          "features": [
+            "Social Media Calendar",
+            "Basic Post Scheduling",
+            "Content Templates",
+            "Simple Analytics",
+            "5 Social Profiles"
+          ],
+          "buttonText": "Purchase Now"
+        },
+        "planB": {
+          "title": "Plan B",
+          "subtitle": "",
+          "priceInitial": "2,600,000",
+          "priceDiscount": "1,300,000",
+          "description": "Panel + Content Plan Template Autopost + Monthly Result Report + Unlimited User + Bonus 1 Video Asset",
+          "features": [
+            "Everything in <strong>Plan A</strong>, plus:",
+            "Unlimited User Accounts",
+            "Monthly Performance Reports",
+            "Email Campaign Tools",
+            "1 Video Asset Monthly",
+            "Priority Support"
+          ],
+          "buttonText": "Purchase Now"
+        },
+        "planC": {
+          "title": "Plan C",
+          "subtitle": "",
+          "priceInitial": "4,200,000",
+          "priceDiscount": "3,600,000",
+          "description": "Panel + Content Plan Template Autopost + Month Result Report + Unlimited User + Bonus 5 Video Asset",
+          "features": [
+            "Everything in <strong>Plan B</strong>, plus:",
+            "Affiliate Management",
+            "Lead Source Attribution",
+            "5 Video Assets Monthly",
+            "Strategy Sessions",
+            "Dedicated Account Manager"
+          ],
+          "buttonText": "Upgrade Now"
+        }
+      }
     }
   }
 }

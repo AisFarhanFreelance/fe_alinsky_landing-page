@@ -1,10 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 import PricingPlanCard from "./pricing-plan-card";
 
 const PricingPlanSection = () => {
+  const t = useTranslations("homepage.pricingPlan");
+
   return (
     <div className="relative w-full pb-16">
       <div className="flex justify-center">
@@ -22,7 +25,7 @@ const PricingPlanSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                Pick Your Growth Blueprint
+                {t("title")}
               </motion.div>
               <motion.div
                 className="font-satoshi text-sm font-medium text-alinsky-dim-gray lg:text-xl"
@@ -30,8 +33,8 @@ const PricingPlanSection = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                All Plans Include Our Core Platform.&nbsp;
-                <span className="italic">Upgrade Anytime</span>
+                {t("description")}
+                <span className="italic">{t("descriptionHighlight")}</span>
               </motion.div>
             </motion.div>
 

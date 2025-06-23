@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { TickCircle } from "iconsax-reactjs";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 // Import framer-motion
@@ -15,84 +16,26 @@ import {
 } from "../../ui/card";
 
 interface PricingPlanCardProps {
-  planTitle: string;
-  planSubtitle?: string;
-  planPriceInitial?: string;
-  planPriceDiscount: string;
-  planDescription: string;
-  planFeatures: string[];
+  planKey: string;
   planButtonVariant?: "default" | "outline";
-  planButtonText?: string;
   planFeatured?: boolean;
 }
 
-const plans: PricingPlanCardProps[] = [
-  {
-    planTitle: "Plan A",
-    planSubtitle: "Perfect for solopreneurs and small teams",
-    planPriceInitial: "1,600,000",
-    planPriceDiscount: "800,000",
-    planDescription: "Panel + Content Plan Template Autopost + Limited 3 User",
-    planFeatures: [
-      "Social Media Calendar",
-      "Basic Post Scheduling",
-      "Content Templates",
-      "Simple Analytics",
-      "5 Social Profiles",
-    ],
-    planButtonVariant: "outline",
-    planButtonText: "Purchase Now",
-    planFeatured: false,
-  },
-  {
-    planTitle: "Plan B",
-    planPriceInitial: "2,600,000",
-    planPriceDiscount: "1,300,000",
-    planDescription:
-      "Panel + Content Plan Template Autopost + Monthly Result Report + Unlimited User + Bonus 1 Video Asset",
-    planFeatures: [
-      "Everything in <strong>Plan A</strong>, plus:",
-      "Unlimited User Accounts",
-      "Monthly Performance Reports",
-      "Email Campaign Tools",
-      "1 Video Asset Monthly",
-      "Priority Support",
-    ],
-    planButtonVariant: "default",
-    planButtonText: "Purchase Now",
-    planFeatured: true,
-  },
-  {
-    planTitle: "Plan C",
-    planPriceInitial: "4,200,000",
-    planPriceDiscount: "3,600,000",
-    planDescription:
-      "Panel + Content Plan Template Autopost + Month Result Report + Unlimited User + Bonus 5 Video Asset",
-    planFeatures: [
-      "Everything in <strong>Plan B</strong>, plus:",
-      "Affiliate Management",
-      "Lead Source Attribution",
-      "5 Video Assets Monthly",
-      "Strategy Sessions",
-      "Dedicated Account Manager",
-    ],
-    planButtonVariant: "outline",
-    planButtonText: "Upgrade Now",
-    planFeatured: false,
-  },
-];
-
 const PlanCardItem = ({
-  planTitle,
-  planSubtitle,
-  planPriceInitial,
-  planPriceDiscount,
-  planDescription,
-  planFeatures,
+  planKey,
   planButtonVariant = "outline",
-  planButtonText,
   planFeatured = false,
 }: PricingPlanCardProps) => {
+  const t = useTranslations(`homepage.pricingPlan.plans.${planKey}`);
+  const tShared = useTranslations(`homepage.pricingPlan`);
+  const planTitle = t("title");
+  const planSubtitle = t("subtitle");
+  const planPriceInitial = t("priceInitial");
+  const planPriceDiscount = t("priceDiscount");
+  const planDescription = t("description");
+  const planFeatures = t.raw("features") as string[];
+  const planButtonText = t("buttonText");
+
   return (
     <div className="relative flex h-full w-full flex-col justify-center font-satoshi">
       <motion.div
@@ -120,7 +63,7 @@ const PlanCardItem = ({
       >
         {planFeatured && (
           <div className="py-4 text-sm font-bold text-alinsky-white">
-            Most Popular
+            {tShared("mostPopular")}
           </div>
         )}
         <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300">
@@ -129,7 +72,7 @@ const PlanCardItem = ({
               <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
                 {planTitle}
               </CardTitle>
-              {planSubtitle && (
+              {planSubtitle !== "" && (
                 <CardDescription className="text-[14px] leading-[18px] tracking-[0.16px] text-[#757575]">
                   {planSubtitle}
                 </CardDescription>
@@ -182,11 +125,24 @@ const PlanCardItem = ({
 const PricingPlanCard = () => {
   return (
     <div className="flex flex-col gap-4 lg:flex-row">
-      {plans.map((plan, idx) => (
+      {/* {plans.map((plan, idx) => (
         <div key={idx} className="w-full lg:flex lg:flex-1 lg:flex-col">
           <PlanCardItem {...plan} />
         </div>
-      ))}
+      ))} */}
+      <div key={"plan-a"} className="w-full lg:flex lg:flex-1 lg:flex-col">
+        <PlanCardItem planKey="planA" planButtonVariant="outline" />
+      </div>
+      <div key={"plan-b"} className="w-full lg:flex lg:flex-1 lg:flex-col">
+        <PlanCardItem
+          planKey="planB"
+          planButtonVariant="default"
+          planFeatured={true}
+        />
+      </div>
+      <div key={"plan-c"} className="w-full lg:flex lg:flex-1 lg:flex-col">
+        <PlanCardItem planKey="planC" planButtonVariant="outline" />
+      </div>
     </div>
   );
 };
