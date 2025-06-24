@@ -37,7 +37,7 @@ const NavbarMobile = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="mx-8 w-sm bg-[#FAFAFA] p-4 text-[#616161]"
+        className="mx-8 w-[calc(100vw-64px)] bg-[#FAFAFA] p-4 text-[#616161] sm:mx-0 sm:w-sm"
       >
         <DropdownMenuItem className="mb-6">{t("home")}</DropdownMenuItem>
         <DropdownMenuItem className="mb-6">{t("pricing")}</DropdownMenuItem>
