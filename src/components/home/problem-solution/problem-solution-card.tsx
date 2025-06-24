@@ -22,19 +22,21 @@ const ProblemSolutionCard = () => {
   const messages = useMessages();
   const costs = messages.homepage.hiddencosts;
 
-  const cardData: CardItem[] = costs.map((item, index: number) => {
-    const icons = [
-      <TaskSquare color="#151f68" key="icon-1" />,
-      <CalendarRemove color="#151f68" key="icon-2" />,
-      <Chart21 color="#151f68" key="icon-3" />,
-    ];
+  const cardData: CardItem[] = costs.map(
+    (item: { title: string; desc: string }, index: number) => {
+      const icons = [
+        <TaskSquare color="#151f68" key="icon-1" />,
+        <CalendarRemove color="#151f68" key="icon-2" />,
+        <Chart21 color="#151f68" key="icon-3" />,
+      ];
 
-    return {
-      icon: icons[index],
-      title: item.title,
-      description: item.desc,
-    };
-  });
+      return {
+        icon: icons[index],
+        title: item.title,
+        description: item.desc,
+      };
+    },
+  );
 
   return (
     <div className="flex min-h-[400px] flex-col space-y-4 lg:mx-0 lg:grid lg:h-[215px] lg:grid-cols-3 lg:gap-5 lg:space-y-0">

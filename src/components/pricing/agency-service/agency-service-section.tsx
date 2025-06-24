@@ -1,3 +1,5 @@
+"use client";
+
 import { Transition, Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
