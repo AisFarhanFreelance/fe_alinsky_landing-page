@@ -105,7 +105,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <nav className="relative isolate my-2 w-full px-[104px]">
+      <nav className="relative isolate mt-8 w-full px-8 md:px-[104px]">
         <div className="my-5 flex flex-row items-center justify-between font-helvetica text-base leading-5">
           <motion.div whileHover="hover" variants={logoVariants}>
             <Link href="#">
