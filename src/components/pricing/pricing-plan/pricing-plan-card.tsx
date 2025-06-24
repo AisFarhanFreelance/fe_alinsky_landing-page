@@ -1,9 +1,8 @@
-import { motion } from "framer-motion";
+"use client";
+
 import { TickCircle } from "iconsax-reactjs";
 import { useTranslations } from "next-intl";
 import React from "react";
-
-// Import framer-motion
 
 import { Button } from "../../ui/button";
 import {
@@ -37,8 +36,8 @@ const PlanCardItem = ({
   const planButtonText = t("buttonText");
 
   return (
-    <div className="relative flex h-full w-full flex-col justify-center font-satoshi">
-      <motion.div
+    <div className="relative flex h-full w-full flex-col justify-center font-satoshi transition-transform duration-150 hover:scale-[1.01] active:scale-[0.995]">
+      <div
         className={`flex h-auto w-full flex-col rounded-[20px] lg:h-full ${
           planFeatured ? "items-center justify-center px-2 pb-2" : ""
         }`}
@@ -57,16 +56,13 @@ const PlanCardItem = ({
                 boxShadow: "0px 4px 56px 0px rgba(0, 0, 0, 0.15)",
               }),
         }}
-        whileHover={{ scale: 1.03 }} // Zoom in on hover
-        whileTap={{ scale: 0.98 }} // Zoom out on tap
-        transition={{ type: "spring", stiffness: 300, damping: 10 }} // Spring animation
       >
         {planFeatured && (
           <div className="py-4 text-sm font-bold text-alinsky-white">
             {tShared("mostPopular")}
           </div>
         )}
-        <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl transition-all duration-300">
+        <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl">
           <div>
             <CardHeader>
               <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
@@ -117,7 +113,7 @@ const PlanCardItem = ({
             </Button>
           </CardFooter>
         </Card>
-      </motion.div>
+      </div>
     </div>
   );
 };
@@ -125,22 +121,17 @@ const PlanCardItem = ({
 const PricingPlanCard = () => {
   return (
     <div className="flex flex-col gap-4 lg:flex-row">
-      {/* {plans.map((plan, idx) => (
-        <div key={idx} className="w-full lg:flex lg:flex-1 lg:flex-col">
-          <PlanCardItem {...plan} />
-        </div>
-      ))} */}
-      <div key={"plan-a"} className="w-full lg:flex lg:flex-1 lg:flex-col">
+      <div className="w-full lg:flex lg:flex-1 lg:flex-col">
         <PlanCardItem planKey="planA" planButtonVariant="outline" />
       </div>
-      <div key={"plan-b"} className="w-full lg:flex lg:flex-1 lg:flex-col">
+      <div className="w-full lg:flex lg:flex-1 lg:flex-col">
         <PlanCardItem
           planKey="planB"
           planButtonVariant="default"
           planFeatured={true}
         />
       </div>
-      <div key={"plan-c"} className="w-full lg:flex lg:flex-1 lg:flex-col">
+      <div className="w-full lg:flex lg:flex-1 lg:flex-col">
         <PlanCardItem planKey="planC" planButtonVariant="outline" />
       </div>
     </div>
