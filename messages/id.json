@@ -9,10 +9,10 @@
     "contact": "Hubungi Kami"
   },
   "homepage": {
-    "herotitle": "OPTIMALKAN",
-    "herotitlesub": "Alur Media Sosial Anda",
-    "waitlist": "BERGABUNG SEKARANG",
-    "hiddenCostTitle": "4 Biaya Tersembunyi yang Memperlambat Pertumbuhan Media Sosial Klien Anda",
+    "herotitle": "KELOLA",
+    "herotitlesub": "Media Sosial Anda dengan Cerdas",
+    "waitlist": "GABUNG WAITLIST SEKARANG",
+    "hiddenCostTitle": "4 Hambatan Tersembunyi yang Memperlambat Pertumbuhan Digital Anda:",
     "hiddencosts": [
       {
         "title": "Terlalu Banyak Alat, Nol Alur",
@@ -30,12 +30,12 @@
     "quotes": {
       "intro": "Jika salah satu dari masalah ini terasa terlalu nyata...",
       "callToReflect": "Saatnya untuk berpikir :",
-      "tagline": "Bagaimana jika media sosial Anda tidak memerlukan lebih banyak upaya, hanya alat yang lebih baik?"
+      "tagline": "Bagaimana jika semua ini bisa berjalan otomatis?"
     },
     "teamRole": {
-      "title": "Temui ",
-      "titleBold": "Pusat Komando Baru",
-      "subtitle": "Media Sosial Anda",
+      "title": "Kenalan dengan",
+      "titleBold": "Tim",
+      "subtitle": "Media Sosial Virtual Anda",
       "description": "Sebagian besar tim pemasaran membuang waktu 12+ jam setiap minggunya untuk",
       "socialMediaManager": "Manajer Sosial Media",
       "analyticsExpert": "Ahli Analisis",
@@ -43,23 +43,23 @@
     },
     "brandTone": {
       "title": "Nada Merek yang Konsisten",
-      "heading": "Buat postingan yang selaras dengan suara merek Anda dalam hitungan detik",
-      "description": "Bayangkan memiliki asisten yang langsung memahami gaya komunikasi merek Anda dan menulis seperti copywriter terbaik Anda—sesuai permintaan. Dengan AI Copy Enhancer dari ALINSKY, hasilkan postingan yang menarik perhatian hanya dalam hitungan detik, menghemat berjam-jam waktu pembuatan konten."
+      "heading": "Buat Konten Sesuai dengan Karakter Brand Anda",
+      "description": "Dalam hitungan detik, AI kami mempelajari tone dan karakter brand Anda. Hasilnya? Konten yang konsisten seolah ditulis oleh copywriter senior yang sudah mengenal brand Anda bertahun-tahun."
     },
     "contentAutopilot": {
       "title": "Konten Otomatis",
       "heading": "Hilangkan tugas posting berulang dengan otomatisasi cerdas",
-      "description": "Tak perlu lagi masuk ke lima platform berbeda untuk menjadwalkan konten. ALINSKY mengotomatisasi seluruh kalender posting Anda, memungkinkan Anda merencanakan jauh ke depan sambil memastikan setiap posting terbit tepat waktu dan di tempat yang seharusnya—tanpa usaha sama sekali."
+      "description": "Sekali setup, konten Anda terjadwal rapi untuk berbulan-bulan ke depan. Tidak ada lagi panik karena lupa posting atau kehabisan ide konten."
     },
     "effortlessPipeline": {
       "title": "Alur Kerja Tanpa Repot",
-      "heading": "Permudah kerja tim dengan alur persetujuan bawaan",
-      "description": "Berkoordinasi dengan tim belum pernah semudah ini. ALINSKY memusatkan proses tinjauan konten dengan alur persetujuan cerdas dan notifikasi real-time. Tim tetap sinkron dan tak ada yang terlewat."
+      "heading": "Workflow Tim yang Lancar",
+      "description": "Draft otomatis dikirim ke reviewer, notifikasi real-time untuk setiap update, dan proses revisi yang terstruktur. Tim Anda akan bekerja lebih efektif."
     },
     "realTimePerfReport": {
       "title": "Laporan Performa Real-Time",
-      "heading": "Pantau yang berhasil, temukan yang tidak, dan perbarui strategi dengan cepat",
-      "description": "Lupakan spreadsheet tak berujung dan tebak-tebakan. Dasbor real-time dari ALINSKY menunjukkan dengan jelas konten mana yang berhasil, mana yang tidak, dan membantu Anda beradaptasi dengan cepat—agar strategi Anda berkembang secepat audiens Anda."
+      "heading": "Dashboard Performance Secara Real-Time",
+      "description": "Strategi selalu up-to-date, Anda selalu tahu strategi mana yang bekerja dan mana yang perlu diperbaiki."
     },
     "preOrder": {
       "preOrderHeading": "Pre-Order berakhir dalam",
@@ -142,7 +142,7 @@
       "bookAudit": "Buat Audit Gratis"
     },
     "homepageCta": {
-      "headline": "Dashboard Media Sosial Anda Sudah Siap,",
+      "headline": "Tim Media Sosial Virtual Anda Sudah Siap,",
       "highlight": "Bagaimana dengan Anda?",
       "buttonText": "Mulai Sekarang"
     }
