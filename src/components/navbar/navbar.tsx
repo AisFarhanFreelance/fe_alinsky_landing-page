@@ -93,9 +93,8 @@ const Navbar = () => {
   const handleChange = (newLocale: string) => {
     if (newLocale === currentLocale) return;
 
-    // Ganti locale di URL secara langsung dan reload seluruh halaman
     const pathSegments = pathname.split("/");
-    pathSegments[1] = newLocale; // asumsi locale selalu di segmen pertama
+    pathSegments[1] = newLocale;
 
     const newUrl = pathSegments.join("/");
     globalThis.location.href = newUrl;
@@ -104,8 +103,8 @@ const Navbar = () => {
   const t = useTranslations("navbar");
 
   return (
-    <div className="w-full">
-      <nav className="relative isolate mt-8 w-full px-8 md:px-[104px]">
+    <div className="relative z-[10] w-full">
+      <nav className="relative isolate mt-8 w-full px-8 transition-all duration-300 ease-in-out md:px-[104px]">
         <div className="my-5 flex flex-row items-center justify-between font-helvetica text-base leading-5">
           <motion.div whileHover="hover" variants={logoVariants}>
             <Link href="#">
@@ -120,7 +119,7 @@ const Navbar = () => {
           </motion.div>
 
           <motion.div
-            className="hidden h-[52px] items-center rounded-2xl bg-alinsky-seasalt text-alinsky-dim-gray capitalize drop-shadow-lg md:flex"
+            className="hidden h-[52px] items-center rounded-2xl bg-white/60 text-alinsky-dim-gray shadow-[5px_5px_32px_rgba(0,0,0,0.1)] backdrop-blur-md transition-shadow duration-300 ease-in-out hover:shadow-[5px_5px_32px_rgba(0,0,0,0.1)] md:flex"
             variants={containerVariants}
             initial="rest"
             animate={isHovered ? "hover" : "rest"}
