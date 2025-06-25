@@ -5,6 +5,9 @@
 
 @theme inline {
   /** Alinsky */
+  --shadow-alinsky-soft: 0px 4px 25px 0px rgba(0, 0, 0, 0.05);
+  --shadow-alinsky-strong: 0px 4px 50px 16px rgba(0, 0, 0, 0.25);
+  --shadow-alinsky-most-popular: 0px 4px 74.6px 0px rgba(26, 36, 107, 0.5);
   --color-alinsky-night: var(--night);
   --color-alinsky-night-secondary: var(--night-secondary);
   --color-alinsky-eerie-black: var(--eerie-black);
@@ -201,6 +204,18 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+@layer utilities {
+  .shadow-alinsky-soft {
+    box-shadow: var(--shadow-alinsky-soft);
+  }
+  .shadow-alinsky-strong {
+    box-shadow: var(--shadow-alinsky-strong);
+  }
+  .shadow-alinsky-most-popular {
+    box-shadow: 0px 4px 74.6px 0px rgba(26, 36, 107, 0.5);
+  }
 }
 
 @layer base {

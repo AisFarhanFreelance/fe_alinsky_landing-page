@@ -45,9 +45,10 @@ const ServiceBlockSection = () => {
     },
     hover: {
       scale: 1.02,
+      borderRadius: "30px",
       boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.2)",
       transition: {
-        duration: 0.3,
+        duration: 0.1,
       },
     },
   };
@@ -114,7 +115,7 @@ const ServiceBlockSection = () => {
               whileHover="hover"
               className="h-full"
             >
-              <Card className="flex h-full flex-col justify-between rounded-2xl bg-alinsky-midnight-blue text-alinsky-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30">
+              <Card className="flex h-full flex-col justify-between rounded-[30px] bg-alinsky-midnight-blue text-alinsky-white transition-all duration-300 hover:shadow-alinsky-soft">
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
@@ -144,11 +145,11 @@ const ServiceBlockSection = () => {
               whileHover="hover"
               className="h-full"
             >
-              <Card className="flex h-full flex-col justify-between overflow-hidden rounded-2xl bg-alinsky-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/30">
+              <Card className="flex h-full flex-col justify-between overflow-hidden rounded-[30px] bg-alinsky-white transition-all duration-300 hover:shadow-alinsky-soft">
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:text-4xl xl:leading-[60px]"
+                    className="mb-6 text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:text-4xl xl:leading-[60px]"
                     style={{
                       backgroundImage:
                         "linear-gradient(145deg, #151F68 0%, #442FB8 62.26%, #6963E5 79.77%, #FDD8D8 95.38%, #5B5A5A 106.88%)",
@@ -181,7 +182,7 @@ const ServiceBlockSection = () => {
               whileHover="hover"
               className="h-full"
             >
-              <Card className="flex h-full flex-col justify-between overflow-hidden rounded-2xl bg-alinsky-white text-alinsky-midnight-blue transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/30">
+              <Card className="flex h-full flex-col justify-between overflow-hidden rounded-[30px] bg-alinsky-white text-alinsky-midnight-blue transition-all duration-300 hover:shadow-alinsky-soft">
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}

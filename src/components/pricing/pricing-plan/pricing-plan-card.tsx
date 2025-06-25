@@ -1,5 +1,7 @@
 "use client";
 
+import { cn } from "@/lib/utilities";
+import { motion } from "framer-motion";
 import { TickCircle } from "iconsax-reactjs";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -36,33 +38,39 @@ const PlanCardItem = ({
   const planButtonText = t("buttonText");
 
   return (
-    <div className="relative flex h-full w-full flex-col justify-center font-satoshi transition-transform duration-150 hover:scale-[1.01] active:scale-[0.995]">
+    <motion.div
+      whileHover={{
+        scale: 1.03,
+        y: -4,
+        boxShadow: "0px 12px 30px rgba(0, 0, 0, 0.15)",
+        borderRadius: "20px",
+      }}
+      whileTap={{
+        scale: 0.98,
+        y: 0,
+        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
+      className="relative flex h-full w-full flex-col justify-center font-satoshi transition-transform duration-150"
+    >
       <div
-        className={`flex h-auto w-full flex-col rounded-[20px] lg:h-full ${
-          planFeatured ? "items-center justify-center px-2 pb-2" : ""
-        }`}
-        style={{
-          ...(planFeatured
-            ? {
-                borderRadius: "24px",
-                backgroundImage:
-                  "url('/assets/images/background/most-popular-background.svg')",
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                boxShadow: "0px 4px 74.6px 0px rgba(26, 36, 107, 0.50)",
-              }
-            : {
-                boxShadow: "0px 4px 56px 0px rgba(0, 0, 0, 0.15)",
-              }),
-        }}
+        className={cn(
+          "flex h-auto w-full flex-col rounded-[20px] lg:h-full",
+          planFeatured
+            ? "items-center justify-center bg-[url('/assets/images/background/most-popular-background.svg')] bg-cover bg-center bg-no-repeat px-2 pb-2 shadow-alinsky-most-popular"
+            : "shadow-alinsky-soft",
+        )}
       >
         {planFeatured && (
           <div className="py-4 text-sm font-bold text-alinsky-white">
             {tShared("mostPopular")}
           </div>
         )}
-        <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black drop-shadow-lg backdrop-blur-2xl">
+        <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black backdrop-blur-2xl">
           <div>
             <CardHeader>
               <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
@@ -114,7 +122,7 @@ const PlanCardItem = ({
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

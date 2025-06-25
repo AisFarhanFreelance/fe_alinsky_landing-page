@@ -44,16 +44,11 @@ const ProblemSolutionCard = () => {
         <motion.div
           key={idx}
           initial={{ scale: 1 }}
-          whileHover={{
-            scale: 1.05,
-            zIndex: 10,
-            boxShadow:
-              "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.04)",
-          }}
+          whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          className="origin-center"
+          className="origin-center rounded-[20px] shadow-alinsky-soft"
         >
-          <Card className="flex h-full flex-col gap-y-12 rounded-2xl bg-alinsky-seasalt p-6 transition-all duration-300 hover:bg-white hover:shadow-xl">
+          <Card className="flex h-full flex-col gap-y-12 rounded-[20px] bg-alinsky-seasalt p-6 transition-all duration-300 hover:bg-white">
             <CardHeader className="flex flex-row justify-between">
               <motion.div whileHover={{ scale: 1.2 }}>{item.icon}</motion.div>
               <motion.div
