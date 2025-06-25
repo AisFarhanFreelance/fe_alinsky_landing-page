@@ -20,9 +20,8 @@ const NavbarMobile = () => {
   const handleChange = (newLocale: string) => {
     if (newLocale === currentLocale) return;
 
-    // Ganti locale di URL secara langsung dan reload seluruh halaman
     const pathSegments = pathname.split("/");
-    pathSegments[1] = newLocale; // asumsi locale selalu di segmen pertama
+    pathSegments[1] = newLocale;
 
     const newUrl = pathSegments.join("/");
     globalThis.location.href = newUrl;
