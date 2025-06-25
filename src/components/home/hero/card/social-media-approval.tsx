@@ -26,6 +26,8 @@ const SocialMediaApproval = () => {
               width: "100%",
               display: "flex",
               justifyContent: "center",
+              alignItems: "center", // ⬅️ penting untuk vertical centering
+              WebkitBackdropFilter: "blur(21px)", // Safari-specific
             }}
           >
             <Image

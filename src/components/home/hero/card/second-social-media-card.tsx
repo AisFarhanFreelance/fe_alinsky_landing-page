@@ -21,7 +21,12 @@ const SecondSocialMediaCard = () => {
           <div
             className="flex h-full w-full justify-center pt-8"
             style={{
+              justifyContent: "center",
+              alignItems: "center", // ⬅️ penting untuk vertical centering
+              width: "100%",
+              height: "100%",
               backdropFilter: "blur(21px)",
+              WebkitBackdropFilter: "blur(21px)", // Safari-specific
               clipPath: "url(#bgblur_0_9615_1006_clip_path)",
             }}
           >

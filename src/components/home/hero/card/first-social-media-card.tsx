@@ -15,21 +15,26 @@ const FirstSocialMediaCard = () => {
         <foreignObject x="-38.4483" y="-12.29" width="329.184" height="303.552">
           <div
             style={{
-              backdropFilter: "blur(21px)",
-              clipPath: "url(#bgblur_0_9615_1011_clip_path)",
-              height: "100%",
-              width: "100%",
               display: "flex",
               justifyContent: "center",
+              alignItems: "center", // ⬅️ penting untuk vertical centering
+              width: "100%",
+              height: "100%",
+              backdropFilter: "blur(21px)",
+              WebkitBackdropFilter: "blur(21px)", // Safari-specific
+              clipPath: "url(#bgblur_0_9615_1011_clip_path)",
             }}
           >
             <Image
               src={SocialMedia1}
               alt="Social Media"
-              style={{ objectFit: "contain" }}
+              style={{
+                objectFit: "contain",
+              }}
             />
           </div>
         </foreignObject>
+
         <path
           data-figma-bg-blur-radius="42"
           d="M19.8347 38.3319L59.7747 30.5683C65.9673 29.3646 72.3596 31.2312 76.9315 35.5781L88.2273 46.3173C93.0337 50.887 99.7536 52.8493 106.264 51.5839L197.248 33.8983C207.82 31.8434 218.056 38.7476 220.111 49.3192L247.874 192.146C249.928 202.718 243.024 212.954 232.453 215.008L60.6678 248.4C50.0962 250.455 39.8603 243.551 37.8053 232.979L4.41376 61.1944L4.32451 60.6994C2.57579 50.305 9.42809 40.3547 19.8347 38.3319Z"
