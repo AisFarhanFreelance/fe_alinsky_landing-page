@@ -84,8 +84,8 @@ const HeroSection = () => {
   const t = useTranslations("homepage");
 
   return (
-    <div className="flex min-h-[105vh] w-full items-center overflow-hidden">
-      <div className="z-10 flex w-full justify-center px-4">
+    <div className="relative flex h-[1007px] w-full items-center sm:h-[1194px] md:h-[1175px] 2xl:h-[1315px]">
+      <div className="min-h[105vh] z-10 flex w-full justify-center px-4">
         <motion.div
           className="max-w-[1920px] space-y-6 text-center"
           variants={containerVariants}
