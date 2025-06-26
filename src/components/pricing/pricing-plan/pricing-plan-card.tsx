@@ -70,7 +70,7 @@ const PlanCardItem = ({
             {tShared("mostPopular")}
           </div>
         )}
-        <Card className="flex flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black backdrop-blur-2xl">
+        <Card className="flex w-full flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black backdrop-blur-2xl">
           <div>
             <CardHeader>
               <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
