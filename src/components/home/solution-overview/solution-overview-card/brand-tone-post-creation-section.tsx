@@ -58,7 +58,11 @@ const BrandTonePostCreationSection = () => {
             variants={imageVariants}
             className="flex h-[360px] justify-center rounded-[2340.778px_46.816px_46.816px_46.816px] bg-alinsky-midnight-blue md:h-full xl:h-[648px]"
           >
-            <Image src={BrandToneImage} alt="Content Image 3" />
+            <Image
+              src={BrandToneImage}
+              alt="Content Image 3"
+              className="rounded-[32px]"
+            />
           </motion.div>
 
           <motion.div
