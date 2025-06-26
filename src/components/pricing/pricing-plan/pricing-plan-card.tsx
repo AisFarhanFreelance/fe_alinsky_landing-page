@@ -92,7 +92,7 @@ const PlanCardItem = ({
                   </div>
                   <sub>/month</sub>
                 </div>
-                <div className="text-2xl leading-[150%] font-bold xl:text-4xl">
+                <div className="text-2xl leading-[150%] font-bold">
                   <sup>Rp.</sup>&nbsp;{planPriceDiscount}&nbsp;<sub>/month</sub>
                 </div>
               </div>
