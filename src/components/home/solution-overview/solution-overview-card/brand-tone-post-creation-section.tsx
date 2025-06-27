@@ -56,7 +56,7 @@ const BrandTonePostCreationSection = () => {
         >
           <motion.div
             variants={imageVariants}
-            className="flex h-[360px] justify-center rounded-[2340.778px_46.816px_46.816px_46.816px] bg-alinsky-midnight-blue md:h-full xl:h-[648px]"
+            className="flex h-full justify-center rounded-[2340.778px_46.816px_46.816px_46.816px] bg-alinsky-midnight-blue md:h-full xl:h-[648px]"
           >
             <Image
               src={BrandToneImage}
@@ -67,7 +67,7 @@ const BrandTonePostCreationSection = () => {
 
           <motion.div
             variants={containerVariants}
-            className="flex h-fit flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 py-[72px] font-satoshi text-alinsky-midnight-blue xl:h-[648px]"
+            className="flex h-full flex-col justify-center space-y-8 rounded-[46px] bg-alinsky-anti-flash-white px-8 py-[72px] font-satoshi text-alinsky-midnight-blue xl:h-[648px]"
           >
             <motion.div
               variants={itemVariants}
