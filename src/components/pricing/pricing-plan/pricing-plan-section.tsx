@@ -52,7 +52,7 @@ const PricingPlanSection = () => {
       variants={containerVariants}
       className="relative w-full pb-16"
     >
-      <div className="flex justify-center">
+      <div id="pricing" className="flex justify-center">
         <div className="w-full max-w-[1920px] px-8 md:px-14 xl:px-[104px] 2xl:px-[344px]">
           <motion.div
             variants={containerVariants}

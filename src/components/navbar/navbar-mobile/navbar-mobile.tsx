@@ -38,10 +38,19 @@ const NavbarMobile = () => {
         align="end"
         className="mx-8 w-[calc(100vw-64px)] bg-[#FAFAFA] p-4 text-[#616161] sm:mx-0 sm:w-sm"
       >
-        <DropdownMenuItem className="mb-6">{t("home")}</DropdownMenuItem>
-        <DropdownMenuItem className="mb-6">{t("pricing")}</DropdownMenuItem>
-        <DropdownMenuItem className="mb-6">{t("features")}</DropdownMenuItem>
-        <DropdownMenuItem className="mb-6">{t("contact")}</DropdownMenuItem>
+        <DropdownMenuItem asChild className="mb-6">
+          <a href="#home">{t("home")}</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild className="mb-6">
+          <a href="#pricing">{t("pricing")}</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild className="mb-6">
+          <a href="#features">{t("features")}</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild className="mb-6">
+          <a href="#contact">{t("contact")}</a>
+        </DropdownMenuItem>
+
         <DropdownMenuItem>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>

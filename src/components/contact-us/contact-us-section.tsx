@@ -34,7 +34,6 @@ const ContactUsSection = () => {
     };
   }, []);
 
-  // Properly typed variants
   const buttonVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -61,6 +60,7 @@ const ContactUsSection = () => {
 
   return (
     <div
+      id="contact"
       ref={sectionRef}
       style={{ opacity: 0, transition: "opacity 0.8s ease" }}
       className="flex justify-center"

@@ -52,7 +52,7 @@ const HomePageCallToAction = () => {
       variants={containerVariants}
     >
       <motion.div
-        className="mx-[22px] flex w-[884px] flex-col items-center justify-between space-y-4 rounded-[20px] bg-gradient-to-br from-white/40 to-white/0 p-4 shadow-[0_-8px_24px_0_rgba(0,0,0,0.08)] backdrop-blur-[21px] sm:mx-0 sm:flex-row sm:px-16 sm:py-8"
+        className="mx-[22px] flex w-[884px] flex-col items-center justify-between space-y-4 rounded-[20px] bg-white p-4 shadow-[0_-8px_24px_0_rgba(0,0,0,0.08)] backdrop-blur-[21px] sm:mx-0 sm:flex-row sm:px-16 sm:py-8"
         whileHover={{ scale: 1.01 }}
         transition={{ type: "spring", stiffness: 300 }}
       >

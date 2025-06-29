@@ -30,28 +30,38 @@ const Footer = () => {
                 </h1>
                 <div className="flex flex-col space-y-3 font-satoshi text-[28px] capitalize sm:flex-row sm:space-y-0 sm:space-x-8">
                   <div className="flex flex-col space-y-3">
-                    {["home", "pricing", "product"].map((item, index) => (
-                      <span
-                        key={item}
+                    {[
+                      { key: "home", href: "#home" },
+                      { key: "pricing", href: "#pricing" },
+                      { key: "product", href: "#product" },
+                    ].map((item, index) => (
+                      <a
+                        key={item.key}
+                        href={item.href}
                         className="group mb-4 inline-block w-fit cursor-pointer"
                         style={{ transitionDelay: `${100 + index * 50}ms` }}
                       >
-                        {t(item)}
+                        {t(item.key)}
                         <div className="-mt-4 h-3 w-full origin-left scale-x-0 bg-alinsky-medium-slate-blue/50 transition-transform duration-300 group-hover:scale-x-100" />
-                      </span>
+                      </a>
                     ))}
                   </div>
 
                   <div className="flex flex-col space-y-3">
-                    {["contact", "tutorial", "blog"].map((item, index) => (
-                      <span
-                        key={item}
+                    {[
+                      { key: "contact", href: "#contact" },
+                      { key: "tutorial", href: "#tutorial" },
+                      { key: "blog", href: "#blog" },
+                    ].map((item, index) => (
+                      <a
+                        key={item.key}
+                        href={item.href}
                         className="group mb-4 inline-block w-fit cursor-pointer"
                         style={{ transitionDelay: `${250 + index * 50}ms` }}
                       >
-                        {t(item)}
+                        {t(item.key)}
                         <div className="-mt-4 h-3 w-full origin-left scale-x-0 bg-alinsky-medium-slate-blue/50 transition-transform duration-300 group-hover:scale-x-100" />
-                      </span>
+                      </a>
                     ))}
                   </div>
                 </div>

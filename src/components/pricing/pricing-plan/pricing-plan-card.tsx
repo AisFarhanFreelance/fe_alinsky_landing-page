@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/lib/utilities";
-import { motion } from "framer-motion";
 import { TickCircle } from "iconsax-reactjs";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -38,28 +37,14 @@ const PlanCardItem = ({
   const planButtonText = t("buttonText");
 
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.03,
-        y: -4,
-        boxShadow: "0px 12px 30px rgba(0, 0, 0, 0.15)",
-        borderRadius: "20px",
-      }}
-      whileTap={{
-        scale: 0.98,
-        y: 0,
-        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 20,
-      }}
-      className="relative flex h-full w-full flex-col justify-center font-satoshi transition-transform duration-150"
+    <div
+      className={cn(
+        "relative flex h-full w-full flex-col justify-center font-satoshi transition-all duration-200 ease-out will-change-transform hover:-translate-y-1 hover:scale-[1.03] hover:rounded-[24px] hover:shadow-xl active:translate-y-0 active:scale-[0.98] active:shadow",
+      )}
     >
       <div
         className={cn(
-          "flex h-auto w-full flex-col rounded-[20px] lg:h-full",
+          "flex h-auto w-full flex-col rounded-[24px] lg:h-full",
           planFeatured
             ? "items-center justify-center bg-[url('/assets/images/background/most-popular-background.svg')] bg-cover bg-center bg-no-repeat px-2 pb-2 shadow-alinsky-most-popular"
             : "shadow-alinsky-soft",
@@ -70,7 +55,7 @@ const PlanCardItem = ({
             {tShared("mostPopular")}
           </div>
         )}
-        <Card className="flex w-full flex-1 flex-col justify-between rounded-[20px] border-none bg-alinsky-white p-6 text-alinsky-rich-black backdrop-blur-2xl">
+        <Card className="flex w-full flex-1 flex-col justify-between rounded-[24px] border-none bg-alinsky-white p-6 text-alinsky-rich-black backdrop-blur-2xl">
           <div>
             <CardHeader>
               <CardTitle className="text-xl leading-[150%] font-black xl:text-4xl">
@@ -122,7 +107,7 @@ const PlanCardItem = ({
           </CardFooter>
         </Card>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

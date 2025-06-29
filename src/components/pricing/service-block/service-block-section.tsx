@@ -115,11 +115,11 @@ const ServiceBlockSection = () => {
               whileHover="hover"
               className="h-full"
             >
-              <Card className="flex h-full flex-col justify-between rounded-[30px] bg-alinsky-midnight-blue text-alinsky-white transition-all duration-300 hover:shadow-alinsky-soft">
-                <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
+              <Card className="flex h-[323px] flex-col justify-between rounded-[30px] bg-alinsky-midnight-blue text-alinsky-white transition-all duration-300 hover:shadow-alinsky-soft md:h-full lg:h-full">
+                <CardContent className="flex h-full flex-col items-center justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-4xl xl:leading-[120%]"
+                    className="mb-6 w-full font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-4xl xl:leading-[120%]"
                   >
                     {t("perfAnalytics")}
                   </motion.div>

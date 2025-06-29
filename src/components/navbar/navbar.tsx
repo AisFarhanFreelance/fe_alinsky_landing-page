@@ -107,7 +107,7 @@ const Navbar = () => {
       <nav className="relative isolate mt-8 w-full px-8 transition-all duration-300 ease-in-out md:px-[104px]">
         <div className="my-5 flex flex-row items-center justify-between font-helvetica text-base leading-5">
           <motion.div whileHover="hover" variants={logoVariants}>
-            <Link href="#">
+            <Link href="#home">
               <Image
                 src={Alinsky_Logo}
                 alt="Alinsky-Logo"
@@ -136,8 +136,8 @@ const Navbar = () => {
                   onHoverEnd={() => setIsHovered(undefined)}
                   className="relative flex h-full items-center"
                 >
-                  <Link
-                    href="#"
+                  <a
+                    href={`#${item}`}
                     className="relative block px-4 py-2 text-center"
                   >
                     <span className="relative inline-block pb-1">
@@ -152,7 +152,7 @@ const Navbar = () => {
                         />
                       )}
                     </span>
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
             </div>
