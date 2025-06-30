@@ -17,7 +17,7 @@ import {
 } from "../ui/dropdown-menu";
 import NavbarMobile from "./navbar-mobile/navbar-mobile";
 import USFlagIcon from "/public/assets/flags/united-states-flag.svg";
-import Alinsky_Logo from "/public/assets/logo/alinsky-logo.svg";
+import Alinsky_Logo from "/public/assets/logo/alinsky-logo.png";
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState<string | undefined>();
@@ -111,9 +111,7 @@ const Navbar = () => {
               <Image
                 src={Alinsky_Logo}
                 alt="Alinsky-Logo"
-                style={{ width: "auto", height: "auto" }}
-                className="rounded-2xl"
-                priority
+                className="h-[52px] w-auto"
               />
             </Link>
           </motion.div>

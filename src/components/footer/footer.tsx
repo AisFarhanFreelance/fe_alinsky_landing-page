@@ -74,10 +74,10 @@ const Footer = () => {
                   </h1>
                   <p className="font-satoshi text-base transition-all delay-400 duration-500">
                     <a
-                      href="mailto:info@alinsky.com"
+                      href="mailto:Socialhubindo@gmail.com"
                       className="hover:text-alinsky-silver"
                     >
-                      info@alinsky.com
+                      Socialhubindo@gmail.com
                     </a>
                   </p>
                 </div>
