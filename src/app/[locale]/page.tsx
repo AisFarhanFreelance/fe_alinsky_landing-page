@@ -8,8 +8,6 @@ import ContactUsSection from "@/components/contact-us/contact-us-section";
 import Footer from "@/components/footer/footer";
 import PreorderSection from "@/components/home/countdown/preorder-section";
 import BrandVoiceCard from "@/components/home/hero/card/brand-voice-card";
-import FirstSocialMediaCard from "@/components/home/hero/card/first-social-media-card";
-import SecondSocialMediaCard from "@/components/home/hero/card/second-social-media-card";
 import SocialMediaApproval from "@/components/home/hero/card/social-media-approval";
 import HeroSection from "@/components/home/hero/hero-section";
 import TeamRoleSection from "@/components/home/marketing-teams/team-role-section";
@@ -17,6 +15,7 @@ import ProblemSolutionSection from "@/components/home/problem-solution/problem-s
 import SolutionOverviewSection from "@/components/home/solution-overview/solution-overview-section";
 import PricingSection from "@/components/pricing/pricing-section";
 
+import SocialMedia from "/public/assets/images/additional/social-media.png";
 import BrushBackground from "/public/assets/images/background/brush-background.svg";
 import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
 
@@ -48,20 +47,7 @@ export default function Home() {
     <div className="relative min-h-screen">
       <div className="absolute top-[850px] left-0 z-[5] inline-flex origin-left scale-40 md:top-[900px] md:scale-90 lg:top-[1000px] xl:scale-100 2xl:top-[1100px]">
         <motion.div
-          className=""
-          variants={floatingVariants}
-          initial="hidden"
-          whileInView="visible"
-          whileHover={{ scale: 1.05 }}
-          animate="float"
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ delay: 0.3 }}
-        >
-          <FirstSocialMediaCard />
-        </motion.div>
-
-        <motion.div
-          className="-ml-20"
+          className="h-[250px]"
           variants={floatingVariants}
           initial="hidden"
           whileInView="visible"
@@ -70,13 +56,17 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ delay: 0.4 }}
         >
-          <SecondSocialMediaCard />
+          <Image
+            src={SocialMedia}
+            alt="First Social Media Card"
+            className="h-full w-full object-contain"
+          />
         </motion.div>
       </div>
 
       <motion.div
-        className="absolute top-[790px] right-[-40%] z-[5] 
-             h-[379px] w-[456px] scale-40 
+        className="absolute top-[790px] right-[-40%] z-[5]
+             h-[379px] w-[456px] scale-40
              md:top-[800px] md:right-[0%] md:scale-90 lg:top-[850px]
              xl:scale-100 2xl:top-[1000px]"
         variants={floatingVariants}
