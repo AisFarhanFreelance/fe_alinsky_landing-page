@@ -33,6 +33,9 @@ const Navbar = () => {
   };
 
   const logoVariants: Variants = {
+    rest: {
+      rotate: 0,
+    },
     hover: {
       rotate: [0, 5, -5, 0],
       transition: { duration: 0.5 },
@@ -106,7 +109,12 @@ const Navbar = () => {
     <div className="relative z-[10] w-full">
       <nav className="relative isolate mt-8 w-full px-8 transition-all duration-300 ease-in-out md:px-[104px]">
         <div className="my-5 flex flex-row items-center justify-between font-helvetica text-base leading-5">
-          <motion.div whileHover="hover" variants={logoVariants}>
+          <motion.div
+            initial="rest"
+            animate="rest"
+            whileHover="hover"
+            variants={logoVariants}
+          >
             <Link href="#home">
               <Image
                 src={Alinsky_Logo}

@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import Navbar from "@/components/navbar/navbar";
+// import Navbar from "@/components/navbar/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,7 +42,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div>
             <div className="fixed top-0 right-0 left-0 z-50">
-              <Navbar />
+              {/* <Navbar /> */}
             </div>
             <main className="overflow-hidden">{children}</main>
             {/* <div>

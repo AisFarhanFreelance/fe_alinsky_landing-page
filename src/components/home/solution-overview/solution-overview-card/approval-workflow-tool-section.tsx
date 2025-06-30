@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
-import ApprovalWorkflowImage from "/public/assets/images/additional/solution-overview/approval-workflow/approval-workflow.svg";
+import ApprovalWorkflowImage from "/public/assets/images/additional/solution-overview/approval-workflow/approval-workflow.png";
 
 const ApprovalWorkflowToolSection = () => {
   const itemVariants: Variants = {
@@ -62,7 +62,7 @@ const ApprovalWorkflowToolSection = () => {
           >
             <Image
               src={ApprovalWorkflowImage}
-              alt="Smart Automation Post Image"
+              alt="Effortless Pipeline Image"
               className="h-full w-full"
             />
           </motion.div>

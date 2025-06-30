@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
-import BrandToneImage from "/public/assets/images/additional/solution-overview/brand-tone/brand-tone-image.svg";
+import BrandToneImage from "/public/assets/images/additional/solution-overview/brand-tone/brand-tone-image.png";
 
 const BrandTonePostCreationSection = () => {
   const containerVariants: Variants = {

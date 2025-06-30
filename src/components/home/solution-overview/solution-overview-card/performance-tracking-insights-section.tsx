@@ -4,10 +4,9 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 
-import PerformanceTrackingImage from "/public/assets/images/additional/solution-overview/performance-tracking/performance-tracking.svg";
+import PerformanceTrackingImage from "/public/assets/images/additional/solution-overview/performance-tracking/performance-tracking.png";
 
 const PerformanceTrackingInsightsSection = () => {
-  // Animation variants
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,7 +36,7 @@ const PerformanceTrackingInsightsSection = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: [0.175, 0.885, 0.32, 1.275], // backOut easing
+        ease: [0.175, 0.885, 0.32, 1.275],
       },
     },
   };
