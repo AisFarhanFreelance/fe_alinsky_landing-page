@@ -119,10 +119,11 @@ const ServiceBlockSection = () => {
                 <CardContent className="flex h-full flex-col items-center justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 w-full font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-4xl xl:leading-[120%]"
+                    className="mb-6 w-full self-center text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-4xl xl:leading-[120%]"
                   >
                     {t("perfAnalytics")}
                   </motion.div>
+
                   <div className="flex-1" />
                   <motion.div
                     variants={imagePopVariants}
@@ -151,7 +152,7 @@ const ServiceBlockSection = () => {
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:text-4xl xl:leading-[60px]"
+                    className="mb-6 self-center text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:text-4xl xl:leading-[60px]"
                     style={{
                       backgroundImage:
                         "linear-gradient(145deg, #151F68 0%, #442FB8 62.26%, #6963E5 79.77%, #FDD8D8 95.38%, #5B5A5A 106.88%)",
@@ -190,7 +191,7 @@ const ServiceBlockSection = () => {
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-end xl:text-right xl:text-4xl xl:leading-[52px]"
+                    className="mb-6 self-center text-center font-helvetica  text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-end xl:text-right xl:text-4xl xl:leading-[52px]"
                   >
                     {t("monthlyStrategy")}
                   </motion.div>
