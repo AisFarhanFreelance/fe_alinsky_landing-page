@@ -119,7 +119,7 @@ const PerformanceTrackingInsightsSection = () => {
             <Image
               src={PerformanceTrackingImage}
               alt="Performance Tracking Image"
-              className="object-contain"
+              className="mx-auto object-contain"
             />
           </motion.div>
         </motion.div>
