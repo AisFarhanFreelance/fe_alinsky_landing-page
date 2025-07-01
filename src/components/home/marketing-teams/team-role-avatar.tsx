@@ -114,7 +114,7 @@ const TeamRoleAvatar = () => {
               </motion.div>
             </motion.div>
             <motion.span
-              className="mt-4 font-satoshi text-xl font-bold text-alinsky-onyx"
+              className="mt-4 font-satoshi text-xl font-normal text-alinsky-onyx"
               whileHover={{ scale: 1.05 }}
             >
               {t(label)}
