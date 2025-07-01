@@ -46,6 +46,12 @@ const PlanCardItem = ({
       href: "https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20Package%E2%80%AFC%20and%20would%20like%20a%20demo%2C%20*how%20to%20proceed%3F*",
     },
   };
+  const buttonClassName = cn(
+    "w-full uppercase",
+    planFeatured
+      ? "bg-alinsky-midnight-blue text-alinsky-white hover:bg-alinsky-midnight-blue/80"
+      : "border-2 border-alinsky-midnight-blue text-alinsky-midnight-blue",
+  );
 
   return (
     <div
@@ -113,11 +119,7 @@ const PlanCardItem = ({
               <Button
                 asChild
                 variant={planButtonVariant}
-                className={`w-full uppercase ${
-                  planFeatured
-                    ? "bg-alinsky-midnight-blue text-alinsky-white hover:bg-alinsky-midnight-blue/80"
-                    : "border-2 border-alinsky-midnight-blue text-alinsky-midnight-blue"
-                }`}
+                className={buttonClassName}
               >
                 <a
                   href={buttonProps[planKey].href}
