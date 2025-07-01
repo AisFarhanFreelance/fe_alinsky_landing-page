@@ -49,20 +49,30 @@ const Footer = () => {
 
                   <div className="flex flex-col space-y-3">
                     {[
-                      { key: "contact", href: "#contact" },
-                      { key: "tutorial", href: "#tutorial" },
-                      { key: "blog", href: "#blog" },
-                    ].map((item, index) => (
-                      <a
-                        key={item.key}
-                        href={item.href}
-                        className="group mb-4 inline-block w-fit cursor-pointer"
-                        style={{ transitionDelay: `${250 + index * 50}ms` }}
-                      >
-                        {t(item.key)}
-                        <div className="-mt-4 h-3 w-full origin-left scale-x-0 bg-alinsky-medium-slate-blue/50 transition-transform duration-300 group-hover:scale-x-100" />
-                      </a>
-                    ))}
+                      { key: "contact", href: "#contact", disabled: false },
+                      { key: "tutorial", href: "#", disabled: true },
+                      { key: "blog", href: "#", disabled: true },
+                    ].map((item, index) =>
+                      item.disabled ? (
+                        <span
+                          key={item.key}
+                          className="mb-4 inline-block w-fit cursor-not-allowed text-alinsky-battleship-gray opacity-50"
+                          style={{ transitionDelay: `${250 + index * 50}ms` }}
+                        >
+                          {t(item.key)}
+                        </span>
+                      ) : (
+                        <a
+                          key={item.key}
+                          href={item.href}
+                          className="group mb-4 inline-block w-fit cursor-pointer"
+                          style={{ transitionDelay: `${250 + index * 50}ms` }}
+                        >
+                          {t(item.key)}
+                          <div className="-mt-4 h-3 w-full origin-left scale-x-0 bg-alinsky-medium-slate-blue/50 transition-transform duration-300 group-hover:scale-x-100" />
+                        </a>
+                      ),
+                    )}
                   </div>
                 </div>
               </div>
@@ -83,33 +93,44 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-row justify-end space-x-1">
-                  <a
-                    href="https://www.instagram.com/socialhubs.id?igsh=MTJzc3Q4NjduYzdhMQ=="
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-all delay-600 duration-500 hover:scale-110"
-                  >
-                    <Instagram color="#ffffff" size="24" />
-                  </a>
-                  <a
-                    href="https://wa.me/6281234567890?text=*Hi%20SocialHub!*%0A%0AI%E2%80%99d%20like%20to%20ask%20about%20%E2%80%A6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-all delay-700 duration-500 hover:scale-110"
-                  >
-                    <Whatsapp color="#ffffff" size="24" />
-                  </a>
+                  <div className="space-y-8">
+                    <h1 className="font-helvetica text-xs uppercase transition-all delay-300 duration-500">
+                      {t("connect")}
+                    </h1>
+                    <div className="flex flex-row justify-end space-x-1">
+                      <a
+                        href="https://www.instagram.com/socialhubs.id?igsh=MTJzc3Q4NjduYzdhMQ=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-all delay-600 duration-500 hover:scale-110"
+                      >
+                        <Instagram color="#ffffff" size="24" />
+                      </a>
+                      <a
+                        href="https://wa.me/6281234567890?text=*Hi%20SocialHub!*%0A%0AI%E2%80%99d%20like%20to%20ask%20about%20%E2%80%A6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-all delay-700 duration-500 hover:scale-110"
+                      >
+                        <Whatsapp color="#ffffff" size="24" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-row justify-between px-6 py-4 text-xs text-alinsky-battleship-gray transition-all delay-700 duration-500 sm:px-12">
-              <div>&copy; {currentYear} — Copyright</div>
-              <div className="transition-transform hover:scale-105">
-                {t("privacy")}
+            <div className="mt-auto flex w-full flex-row justify-between px-6 py-4 text-xs text-alinsky-battleship-gray transition-all delay-700 duration-500 sm:px-12">
+              <div className="w-full self-end">
+                &copy; {currentYear} — Copyright
               </div>
-              <div className="transition-transform hover:scale-105">
-                All rights reserved
+              <div className="flex w-full flex-col items-end gap-1 text-xs transition-all delay-700 duration-500 sm:flex-row sm:items-center sm:justify-between sm:gap-0">
+                <div className="transition-transform hover:scale-105">
+                  {t("privacy")}
+                </div>
+                <div className="transition-transform hover:scale-105 sm:ml-auto">
+                  All rights reserved
+                </div>
               </div>
             </div>
           </div>
