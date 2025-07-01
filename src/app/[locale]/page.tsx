@@ -65,7 +65,7 @@ export default function Home() {
       </div>
 
       <motion.div
-        className="absolute top-[7px] right-[-40%] z-[5]
+        className="absolute top-[780px] right-[-40%] z-[5]
              h-[379px] w-[456px] scale-55
              md:top-[880px] md:right-[0%] md:scale-90 lg:top-[850px]
              xl:scale-100 2xl:top-[1000px]"
