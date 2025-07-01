@@ -35,6 +35,17 @@ const PlanCardItem = ({
   const planDescription = t("description");
   const planFeatures = t.raw("features") as string[];
   const planButtonText = t("buttonText");
+  const buttonProps: Record<string, { href: string }> = {
+    planA: {
+      href: "https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20*Package%E2%80%AFA*%20and%20would%20like%20a%20demo%2C%20*how%20to%20proceed%3F*",
+    },
+    planB: {
+      href: "https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20Package%E2%80%AFB%20and%20would%20like%20a%20demo%2C%20*how%20to%20proceed%3F*",
+    },
+    planC: {
+      href: "https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20Package%E2%80%AFC%20and%20would%20like%20a%20demo%2C%20*how%20to%20proceed%3F*",
+    },
+  };
 
   return (
     <div
@@ -98,12 +109,25 @@ const PlanCardItem = ({
           </div>
 
           <CardFooter className="p-0">
-            <Button
-              variant={planButtonVariant}
-              className={`w-full uppercase ${planFeatured ? "bg-alinsky-midnight-blue text-alinsky-white hover:bg-alinsky-midnight-blue/80" : "border-2 border-alinsky-midnight-blue text-alinsky-midnight-blue"}`}
-            >
-              {planButtonText}
-            </Button>
+            {buttonProps[planKey] !== undefined && (
+              <Button
+                asChild
+                variant={planButtonVariant}
+                className={`w-full uppercase ${
+                  planFeatured
+                    ? "bg-alinsky-midnight-blue text-alinsky-white hover:bg-alinsky-midnight-blue/80"
+                    : "border-2 border-alinsky-midnight-blue text-alinsky-midnight-blue"
+                }`}
+              >
+                <a
+                  href={buttonProps[planKey].href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {planButtonText}
+                </a>
+              </Button>
+            )}
           </CardFooter>
         </Card>
       </div>
@@ -117,6 +141,7 @@ const PricingPlanCard = () => {
       <div className="w-full lg:flex lg:flex-1 lg:flex-col">
         <PlanCardItem planKey="planA" planButtonVariant="outline" />
       </div>
+
       <div className="w-full lg:flex lg:flex-1 lg:flex-col">
         <PlanCardItem
           planKey="planB"

@@ -58,7 +58,7 @@ const PreorderSection = () => {
   return (
     <div className="flex justify-center md:my-0">
       <div className="h-fit w-full max-w-[1920px] xl:h-[516px]">
-        <div className="mx-8 flex flex-col space-y-6 rounded-4xl bg-alinsky-midnight-blue px-4 py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] sm:px-6 md:px-8 xl:mx-[104px] xl:space-y-14 xl:px-[104px] xl:py-32 2xl:mx-[344px] 2xl:px-[344px]">
+        <div className="mx-8 flex flex-col space-y-6 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] xl:mx-[104px] xl:space-y-14 xl:py-32 2xl:mx-[344px]">
           <div className="flex flex-col space-y-4">
             <span className="text-xl font-bold capitalize xl:text-[32px]">
               {t("preOrderHeading")}
@@ -89,6 +89,7 @@ const PreorderSection = () => {
             </div>
           </div>
 
+          {/* Untuk md dan lg */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -104,13 +105,37 @@ const PreorderSection = () => {
                 ease: "easeInOut",
               },
             }}
-            className="flex w-full flex-col-reverse items-center gap-1 text-xl font-bold uppercase md:flex-row md:justify-center md:gap-8 md:text-2xl"
+            className="hidden items-center justify-center gap-x-1 text-center text-xl font-bold uppercase md:flex xl:text-2xl"
           >
             <span className="text-alinsky-sunset">{t("hurry")}</span>
-            <div className="text-center text-alinsky-platinum md:text-right">
-              <span>{t("only")}</span>
-              <span className="text-alinsky-beige">20 </span>
-              <span>{t("stockLeft")}</span>
+            <span className="text-alinsky-platinum">{t("only")}</span>
+            <span className="font-bold text-alinsky-beige">20</span>
+            <span className="text-alinsky-platinum">{t("stockLeft")}</span>
+          </motion.div>
+
+          {/* Untuk mobile */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              scale: [1, 1.02, 1],
+            }}
+            transition={{
+              opacity: { duration: 0.4, delay: 0.4 },
+              scale: {
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              },
+            }}
+            className="flex flex-col items-center gap-y-1 text-xl font-bold uppercase md:hidden"
+          >
+            <div className="text-alinsky-sunset">{t("hurry")}</div>
+            <div className="flex flex-row gap-x-1">
+              <span className="text-alinsky-platinum">{t("only")}</span>
+              <span className="text-alinsky-beige">20</span>
+              <span className="text-alinsky-platinum">{t("stockLeft")}</span>
             </div>
           </motion.div>
         </div>

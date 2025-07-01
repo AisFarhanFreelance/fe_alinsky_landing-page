@@ -94,8 +94,17 @@ const SmartAutomationPostSection = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button className="font-satoshi text-[15px] leading-[26px] tracking-[0.46px] uppercase">
-                {tShared("learnMore")}
+              <Button
+                asChild
+                className="font-satoshi text-[15px] leading-[26px] tracking-[0.46px] uppercase"
+              >
+                <motion.a
+                  href="https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20your%20posting%20automation%20feature.%20*How%20to%20proceed%3F*"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {tShared("learnMore")}
+                </motion.a>
               </Button>
             </motion.div>
           </motion.div>

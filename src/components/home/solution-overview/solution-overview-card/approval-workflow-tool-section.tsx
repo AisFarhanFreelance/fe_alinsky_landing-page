@@ -107,8 +107,17 @@ const ApprovalWorkflowToolSection = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button className="font-satoshi text-[15px] leading-[26px] tracking-[0.46px] uppercase">
-                {tShared("learnMore")}
+              <Button
+                asChild
+                className="font-satoshi text-[15px] leading-[26px] tracking-[0.46px] uppercase"
+              >
+                <motion.a
+                  href="https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0ACould%20you%20explain%20how%20your%20built%E2%80%91in%20approval%20workflows%20keep%20teams%20aligned%2C%20*how%20to%20proceed%3F*"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {tShared("learnMore")}
+                </motion.a>
               </Button>
             </motion.div>
           </motion.div>

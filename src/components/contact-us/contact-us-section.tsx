@@ -93,13 +93,26 @@ const ContactUsSection = () => {
                 whileTap="tap"
                 className="overflow-hidden rounded-full"
               >
-                <Button className="relative overflow-hidden rounded-full bg-alinsky-midnight-blue px-[22px] py-2 text-[15px] leading-[26px] font-normal tracking-[0.46px] text-alinsky-white hover:bg-alinsky-midnight-blue/90">
-                  <motion.span
-                    className="absolute inset-0 rounded-full bg-white opacity-0 hover:opacity-10"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 0.1, transition: { duration: 0.3 } }}
-                  />
-                  {t("reachOut")}
+                <Button
+                  asChild
+                  className="relative overflow-hidden rounded-full bg-alinsky-midnight-blue px-[22px] py-2 text-[15px] leading-[26px] font-normal tracking-[0.46px] text-alinsky-white hover:bg-alinsky-midnight-blue/90"
+                >
+                  <a
+                    href="https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99d%20like%20to%20discuss%20my%20brand%E2%80%99s%20needs%20directly%2C%20*how%20to%20proceed%3F*"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative block w-full"
+                  >
+                    <motion.span
+                      className="absolute inset-0 rounded-full bg-white opacity-0 hover:opacity-10"
+                      initial={{ opacity: 0 }}
+                      whileHover={{
+                        opacity: 0.1,
+                        transition: { duration: 0.3 },
+                      }}
+                    />
+                    {t("reachOut")}
+                  </a>
                 </Button>
               </motion.div>
 
@@ -120,18 +133,26 @@ const ContactUsSection = () => {
                 className="overflow-hidden rounded-full"
               >
                 <Button
+                  asChild
                   variant="outline"
                   className="relative overflow-hidden rounded-full border-alinsky-midnight-blue px-[22px] py-2 text-[15px] leading-[26px] font-normal tracking-[0.46px] text-alinsky-midnight-blue"
                 >
-                  <motion.span
-                    className="absolute inset-0 rounded-full bg-alinsky-midnight-blue opacity-0 hover:opacity-10"
-                    initial={{ opacity: 0 }}
-                    whileHover={{
-                      opacity: 0.1,
-                      transition: { duration: 0.3 },
-                    }}
-                  />
-                  {t("bookAudit")}
+                  <a
+                    href="https://wa.me/6281310072368?text=*Hi%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20a%20free%20audit%2C%20*how%20to%20proceed%3F*"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative block w-full"
+                  >
+                    <motion.span
+                      className="absolute inset-0 rounded-full bg-alinsky-midnight-blue opacity-0 hover:opacity-10"
+                      initial={{ opacity: 0 }}
+                      whileHover={{
+                        opacity: 0.1,
+                        transition: { duration: 0.3 },
+                      }}
+                    />
+                    {t("bookAudit")}
+                  </a>
                 </Button>
               </motion.div>
             </motion.div>

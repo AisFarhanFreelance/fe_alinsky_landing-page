@@ -96,8 +96,17 @@ const PerformanceTrackingInsightsSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Button className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95">
-                  {tShared("learnMore")}
+                <Button
+                  asChild
+                  className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95"
+                >
+                  <motion.a
+                    href="https://wa.me/6281310072368?text=*Hey%20SocialHub!%20*%0A%0AI%E2%80%99d%20like%20details%20on%20your%20real%E2%80%91time%20dashboard%20insights%2C%20*how%20to%20proceed%3F*"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {tShared("learnMore")}
+                  </motion.a>
                 </Button>
               </motion.div>
             </motion.div>

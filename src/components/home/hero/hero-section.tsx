@@ -193,7 +193,10 @@ const HeroSection = () => {
               className="leading-[26px] tracking-[0.46px] uppercase"
               asChild
             >
-              <motion.button
+              <motion.a
+                href="https://wa.me/6281310072368?text=*Hello%20SocialHub!*%20%0A%0AI%E2%80%99m%20excited%20about%20joining%20your%20waitlist%2C%20could%20you%20let%20me%20know%20*how%20to%20secure%20my%20spot%3F*"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{
                   scale: 1.1,
                   transition: { duration: 0.2 },
@@ -204,7 +207,7 @@ const HeroSection = () => {
                 }}
               >
                 {t("waitlist")}
-              </motion.button>
+              </motion.a>
             </Button>
           </motion.div>
         </motion.div>

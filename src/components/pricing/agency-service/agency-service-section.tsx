@@ -115,8 +115,17 @@ const AgencyServiceSection = () => {
             whileHover="hover"
             whileTap="tap"
           >
-            <Button className="font-helvetica text-[15px] leading-[26px] tracking-[0.46px] uppercase">
-              {t("cta")}
+            <Button
+              asChild
+              className="font-helvetica text-[15px] leading-[26px] tracking-[0.46px] uppercase"
+            >
+              <a
+                href="https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99m%20ready%20to%20explore%20your%20agency%20services%2C%20*how%20do%20we%20get%20started%3F*"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("cta")}
+              </a>
             </Button>
           </motion.div>
         </motion.div>

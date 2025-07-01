@@ -45,7 +45,7 @@ const BrandTonePostCreationSection = () => {
   const tShared = useTranslations("shared");
 
   return (
-    <div className="flex justify-center overflow-hidden">
+    <div id="features" className="flex justify-center overflow-hidden">
       <div className="w-full max-w-[1920px]">
         <motion.div
           initial="hidden"
@@ -114,8 +114,17 @@ const BrandTonePostCreationSection = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Button className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95">
-                  {tShared("learnMore")}
+                <Button
+                  asChild
+                  className="bg-alinsky-midnight-blue font-helvetica text-[15px] leading-[26px] tracking-[0.46px] text-alinsky-white uppercase hover:bg-alinsky-midnight-blue/95"
+                >
+                  <motion.a
+                    href="https://wa.me/6281310072368?text=*Hello%20SocialHub!*%0A%0AI%E2%80%99d%20love%20to%20learn%20more%20about%20your%20Brand%20Voice%20feature%2C%20*how%20to%20proceed%3F*"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {tShared("learnMore")}
+                  </motion.a>
                 </Button>
               </motion.div>
             </motion.div>

@@ -33,7 +33,7 @@ const Footer = () => {
                     {[
                       { key: "home", href: "#home" },
                       { key: "pricing", href: "#pricing" },
-                      { key: "product", href: "#product" },
+                      { key: "features", href: "#features" },
                     ].map((item, index) => (
                       <a
                         key={item.key}
@@ -82,18 +82,23 @@ const Footer = () => {
                   </p>
                 </div>
 
-                <div className="space-y-8 justify-self-end">
-                  <h1 className="font-helvetica text-xs uppercase transition-all delay-500 duration-500">
-                    {t("connect")}
-                  </h1>
-                  <div className="flex flex-row justify-end space-x-1">
-                    <span className="cursor-pointer transition-all delay-600 duration-500 hover:scale-110">
-                      <Instagram color="#ffffff" size="24" />
-                    </span>
-                    <span className="cursor-pointer transition-all delay-700 duration-500 hover:scale-110">
-                      <Whatsapp color="#ffffff" size="24" />
-                    </span>
-                  </div>
+                <div className="flex flex-row justify-end space-x-1">
+                  <a
+                    href="https://www.instagram.com/socialhubs.id?igsh=MTJzc3Q4NjduYzdhMQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-all delay-600 duration-500 hover:scale-110"
+                  >
+                    <Instagram color="#ffffff" size="24" />
+                  </a>
+                  <a
+                    href="https://wa.me/6281234567890?text=*Hi%20SocialHub!*%0A%0AI%E2%80%99d%20like%20to%20ask%20about%20%E2%80%A6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-all delay-700 duration-500 hover:scale-110"
+                  >
+                    <Whatsapp color="#ffffff" size="24" />
+                  </a>
                 </div>
               </div>
             </div>
