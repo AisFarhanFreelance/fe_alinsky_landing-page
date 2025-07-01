@@ -119,7 +119,7 @@ const ServiceBlockSection = () => {
                 <CardContent className="flex h-full flex-col items-center justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 w-full self-center text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-4xl xl:leading-[120%]"
+                    className="mb-6 w-full self-center text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-start xl:text-left xl:text-3xl xl:leading-[48px]"
                   >
                     {t("perfAnalytics")}
                   </motion.div>
@@ -152,7 +152,7 @@ const ServiceBlockSection = () => {
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 self-center text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:text-4xl xl:leading-[60px]"
+                    className="mb-6 self-center text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:text-3xl xl:leading-[48px]"
                     style={{
                       backgroundImage:
                         "linear-gradient(145deg, #151F68 0%, #442FB8 62.26%, #6963E5 79.77%, #FDD8D8 95.38%, #5B5A5A 106.88%)",
@@ -191,10 +191,11 @@ const ServiceBlockSection = () => {
                 <CardContent className="flex h-full flex-col justify-between p-6 sm:p-8 xl:p-10">
                   <motion.div
                     variants={textSlideVariants}
-                    className="mb-6 self-center text-center font-helvetica  text-lg font-bold tracking-[-0.18px] sm:text-xl xl:self-end xl:text-right xl:text-4xl xl:leading-[52px]"
+                    className="mx-auto mb-6 w-full max-w-[600px] text-center font-helvetica text-lg font-bold tracking-[-0.18px] sm:text-xl xl:mr-0 xl:ml-auto xl:text-right xl:text-3xl xl:leading-[48px]"
                   >
                     {t("monthlyStrategy")}
                   </motion.div>
+
                   <div className="flex-1" />
                   <motion.div
                     variants={imagePopVariants}
