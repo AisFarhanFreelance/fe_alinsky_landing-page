@@ -16,6 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import NavbarMobile from "./navbar-mobile/navbar-mobile";
+import IDFlagIcon from "/public/assets/flags/indonesia-flag.svg";
 import USFlagIcon from "/public/assets/flags/united-states-flag.svg";
 import Alinsky_Logo from "/public/assets/logo/alinsky-logo.png";
 
@@ -105,6 +106,8 @@ const Navbar = () => {
 
   const t = useTranslations("navbar");
 
+  const flagIcon = currentLocale === "id" ? IDFlagIcon : USFlagIcon;
+
   return (
     <div className="relative z-[10] w-full">
       <nav className="relative isolate mt-8 w-full px-8 transition-all duration-300 ease-in-out md:px-[104px]">
@@ -173,8 +176,10 @@ const Navbar = () => {
                 >
                   <Button className="flex items-center rounded-full bg-alinsky-rich-black px-4 font-helvetica text-[15px] text-alinsky-white hover:bg-alinsky-rich-black/90">
                     <Image
-                      src={USFlagIcon}
-                      alt="English"
+                      src={flagIcon}
+                      alt={
+                        currentLocale === "id" ? "Bahasa Indonesia" : "English"
+                      }
                       className="h-6 w-6 rounded-full"
                       width={24}
                       height={24}

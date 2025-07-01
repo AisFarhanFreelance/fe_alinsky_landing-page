@@ -11,6 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import IDFlagIcon from "/public/assets/flags/indonesia-flag.svg";
 import USFlagIcon from "/public/assets/flags/united-states-flag.svg";
 
 const NavbarMobile = () => {
@@ -28,6 +29,8 @@ const NavbarMobile = () => {
   };
 
   const t = useTranslations("navbar");
+
+  const flagIcon = currentLocale === "id" ? IDFlagIcon : USFlagIcon;
 
   return (
     <DropdownMenu>
@@ -56,7 +59,7 @@ const NavbarMobile = () => {
             <DropdownMenuTrigger asChild>
               <Button className="flex items-center gap-x-2 rounded-full bg-alinsky-rich-black px-4 font-helvetica text-[15px] text-alinsky-white hover:bg-alinsky-rich-black/90 ">
                 <Image
-                  src={USFlagIcon}
+                  src={flagIcon}
                   alt="English"
                   className="h-6 w-6 rounded-full"
                 />
