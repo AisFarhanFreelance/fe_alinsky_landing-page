@@ -45,9 +45,9 @@ const floatingVariants: Variants = {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <div className="absolute top-[850px] left-0 z-[5] w-max origin-left scale-40 md:top-[900px] md:scale-90 lg:top-[1000px] xl:scale-100 2xl:top-[1100px]">
+      <div className="absolute top-[890px] left-[-50px] z-[5] w-max origin-left scale-60 -rotate-18 md:top-[1100px] md:scale-90 lg:top-[1200px] xl:scale-100 2xl:top-[1200px]">
         <motion.div
-          className="h-[250px] w-[400px]" // Add explicit width
+          className="h-[250px] w-[400px]"
           variants={floatingVariants}
           initial="hidden"
           whileInView="visible"
@@ -65,9 +65,9 @@ export default function Home() {
       </div>
 
       <motion.div
-        className="absolute top-[790px] right-[-40%] z-[5]
-             h-[379px] w-[456px] scale-40
-             md:top-[800px] md:right-[0%] md:scale-90 lg:top-[850px]
+        className="absolute top-[7px] right-[-40%] z-[5]
+             h-[379px] w-[456px] scale-55
+             md:top-[880px] md:right-[0%] md:scale-90 lg:top-[850px]
              xl:scale-100 2xl:top-[1000px]"
         variants={floatingVariants}
         initial="hidden"
