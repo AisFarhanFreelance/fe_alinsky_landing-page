@@ -126,6 +126,8 @@ const ServiceBlockSection = () => {
                   <div className="flex-1" />
                   <motion.div
                     variants={imagePopVariants}
+                    initial="hidden"
+                    animate="show"
                     whileHover="hover"
                     className="mt-6 w-full max-w-[200px] sm:max-w-[160px] xl:max-w-[280px]"
                   >
@@ -163,6 +165,8 @@ const ServiceBlockSection = () => {
                   <div className="flex-1" />
                   <motion.div
                     variants={imagePopVariants}
+                    initial="hidden"
+                    animate="show"
                     whileHover="hover"
                     className="mt-6 flex justify-center"
                   >
@@ -193,6 +197,8 @@ const ServiceBlockSection = () => {
                   <div className="flex-1" />
                   <motion.div
                     variants={imagePopVariants}
+                    initial="hidden"
+                    animate="show"
                     whileHover="hover"
                     className="mt-6 flex justify-center"
                   >
