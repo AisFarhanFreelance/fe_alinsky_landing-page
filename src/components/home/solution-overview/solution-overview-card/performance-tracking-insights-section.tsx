@@ -119,6 +119,7 @@ const PerformanceTrackingInsightsSection = () => {
             <Image
               src={PerformanceTrackingImage}
               alt="Performance Tracking Image"
+              className="object-contain"
             />
           </motion.div>
         </motion.div>

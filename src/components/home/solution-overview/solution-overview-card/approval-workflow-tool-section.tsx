@@ -63,7 +63,7 @@ const ApprovalWorkflowToolSection = () => {
             <Image
               src={ApprovalWorkflowImage}
               alt="Effortless Pipeline Image"
-              className="h-full w-full"
+              className="h-full w-full object-contain"
             />
           </motion.div>
 
