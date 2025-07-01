@@ -94,7 +94,7 @@ const ApprovalWorkflowToolSection = () => {
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-3">
-              <div className="text-3xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
+              <div className="text-xl leading-[100%] font-bold tracking-[-0.18px] xl:text-4xl">
                 {t("heading")}
               </div>
               <div className="text-base leading-[140%] tracking-[0.1px] opacity-80">

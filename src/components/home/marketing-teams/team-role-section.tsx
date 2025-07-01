@@ -75,15 +75,15 @@ const TeamRoleSection = () => {
 
       <motion.div className="mx-8 flex min-h-screen flex-col items-center justify-center space-y-12 py-16 alinsky-2xl:mx-[104px] sm:py-[240px] md:mx-14 xl:mx-[104px]">
         <motion.div
-          className="z-10 mx-auto max-w-[1920px] space-y-8 text-center"
+          className="z-10 mx-auto max-w-[1920px] space-y-2 text-center lg:space-y-8"
           variants={containerVariants}
         >
           <motion.div
-            className="flex flex-col items-center space-y-0.5 font-satoshi capitalize"
+            className="flex flex-col items-center space-y-0.5  font-satoshi capitalize"
             variants={containerVariants}
           >
             <motion.div
-              className="text-xl text-alinsky-onyx capitalize sm:text-2xl lg:text-5xl lg:leading-16"
+              className="text-2xl text-alinsky-onyx capitalize sm:text-2xl lg:text-5xl lg:leading-16"
               variants={titleVariants}
             >
               {t("teamRole.title")}
