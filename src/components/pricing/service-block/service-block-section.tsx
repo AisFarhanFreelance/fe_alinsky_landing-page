@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
 
-import Hand from "/public/assets/images/additional/3d-hand.svg";
+import Hand from "/public/assets/images/additional/3d-hand.png";
 import Bars from "/public/assets/images/additional/bars.svg";
 import Circullar from "/public/assets/images/additional/circullar.svg";
 
