@@ -73,19 +73,13 @@ const HomePageCallToAction = () => {
             size="lg"
             className="bg-alinsky-midnight-blue px-[22px] py-2 text-[15px] leading-[26px] font-normal tracking-[0.46px] text-alinsky-white hover:bg-alinsky-midnight-blue/90"
           >
-            <a
-              href="https://wa.me/6281310072368?text=*Hi%20SocialHub!*%0A%0AI%E2%80%99d%20like%20to%20ask%20about%20%E2%80%A6"
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.button
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
             >
-              <motion.span
-                variants={buttonVariants}
-                whileHover="hover"
-                whileTap="tap"
-              >
-                {t("buttonText")}
-              </motion.span>
-            </a>
+              {t("buttonText")}
+            </motion.button>
           </Button>
         </motion.div>
       </motion.div>
