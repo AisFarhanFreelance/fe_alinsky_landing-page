@@ -45,7 +45,7 @@ const floatingVariants: Variants = {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <div className="absolute top-[890px] left-[-50px] z-[5] w-max origin-left scale-60 -rotate-18 md:top-[1100px] md:scale-90 lg:top-[1200px] xl:scale-100 2xl:top-[1200px]">
+      <div className="absolute top-[890px] left-[-50px] z-[5] w-max origin-left scale-60 -rotate-18 md:top-[1100px] md:scale-90 lg:top-[1200px] xl:left-[32px] xl:scale-150 2xl:top-[1200px]">
         <motion.div
           className="h-[250px] w-[400px]"
           variants={floatingVariants}
@@ -67,8 +67,8 @@ export default function Home() {
       <motion.div
         className="absolute top-[780px] right-[-40%] z-[5]
              h-[379px] w-[456px] scale-55
-             md:top-[880px] md:right-[0%] md:scale-90 lg:top-[850px]
-             xl:scale-100 2xl:top-[1000px]"
+             md:top-[880px] md:right-[0%] md:scale-90 lg:top-[850px] lg:right-[56px]
+             xl:scale-100 2xl:top-[1020px]"
         variants={floatingVariants}
         initial="hidden"
         whileInView="visible"
@@ -144,7 +144,7 @@ export default function Home() {
       </div>
 
       <div className="relative">
-        <div className="absolute bottom-160 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2 px-4 md:bottom-95 xl:bottom-110">
+        <div className="absolute bottom-155 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2 px-4 md:bottom-95 xl:bottom-110">
           <HomePageCallToAction />
         </div>
         <Footer />
