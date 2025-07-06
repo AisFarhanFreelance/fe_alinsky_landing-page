@@ -56,13 +56,13 @@ const PricingPlanSection = () => {
         <div className="w-full max-w-[1920px] px-8 md:px-14 xl:px-[104px] 2xl:px-[344px]">
           <motion.div
             variants={containerVariants}
-            className="space-y-6 lg:mt-[108px] lg:space-y-16"
+            className="space-y-6 lg:space-y-6"
           >
             <motion.div
               variants={itemVariants}
-              className="text-center capitalize"
+              className="space-y-6 text-center capitalize"
             >
-              <div className="font-helvetica text-2xl leading-16 font-bold text-alinsky-rich-black lg:text-5xl">
+              <div className="font-helvetica text-2xl font-bold text-alinsky-rich-black lg:text-5xl">
                 {t("title")}
               </div>
               <div className="font-satoshi text-sm font-medium text-alinsky-dim-gray lg:text-xl">

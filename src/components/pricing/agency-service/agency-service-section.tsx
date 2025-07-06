@@ -80,11 +80,11 @@ const AgencyServiceSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="mx-8 flex h-fit flex-col items-center justify-center space-y-6 rounded-4xl bg-alinsky-midnight-blue py-48 text-alinsky-white alinsky-2xl:mx-[104px] md:mx-14 md:py-28 xl:mx-[104px] xl:h-[500px] xl:space-y-12 2xl:mx-[344px]"
+          className="mx-8 flex h-fit flex-col items-center justify-center space-y-4 rounded-4xl bg-alinsky-midnight-blue py-48 text-alinsky-white alinsky-2xl:mx-[104px] md:mx-14 md:space-y-4 md:py-28 xl:mx-[104px] xl:space-y-6 2xl:mx-[344px]"
         >
           <motion.div
             variants={textVariants}
-            className="text-center capitalize"
+            className="space-y-4 text-center capitalize md:space-y-4 xl:space-y-6"
           >
             <motion.div
               variants={textVariants}
@@ -95,7 +95,8 @@ const AgencyServiceSection = () => {
             <div>
               <motion.div
                 variants={superpowerVariants}
-                className="w-[874px] font-helvetica text-[40px] font-bold italic xl:text-[64px]"
+                className="w-[874px] font-helvetica text-[40px] leading-[100%]
+ font-bold italic xl:text-[64px]"
                 style={{
                   backgroundImage:
                     "linear-gradient(90deg, #FAFAFA, #F9BAB6, #B7B9F4, #FAFAFA)",
