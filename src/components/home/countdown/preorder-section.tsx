@@ -57,9 +57,10 @@ const PreorderSection = () => {
 
   return (
     <div className="flex justify-center md:my-0">
-      <div className="h-fit w-full max-w-[1920px] xl:h-[516px]">
-        <div className="mx-8 flex flex-col space-y-6 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] xl:mx-[104px] xl:space-y-14 xl:py-32 2xl:mx-[344px]">
-          <div className="flex flex-col space-y-4">
+      <div className="h-full w-full max-w-[1920px]">
+        <div className="mx-8 flex flex-col rounded-4xl bg-alinsky-midnight-blue text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] xl:mx-[104px] 2xl:mx-[344px]">
+          {/* <div className="mx-8 flex flex-col space-y-8 rounded-4xl bg-alinsky-midnight-blue py-20 text-center font-satoshi text-alinsky-platinum alinsky-2xl:mx-[104px] xl:mx-[104px] xl:space-y-14 xl:py-32 2xl:mx-[344px]"></div> */}
+          <div className="flex flex-col space-y-6 pt-[80px]">
             <span className="text-xl font-bold capitalize xl:text-[32px]">
               {t("preOrderHeading")}
             </span>
@@ -89,7 +90,6 @@ const PreorderSection = () => {
             </div>
           </div>
 
-          {/* Untuk md dan lg */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -105,7 +105,7 @@ const PreorderSection = () => {
                 ease: "easeInOut",
               },
             }}
-            className="hidden items-center justify-center gap-x-1 text-center text-xl font-bold uppercase md:flex xl:text-2xl"
+            className="hidden items-center justify-center space-x-1 pt-6 pb-[80px] text-center text-xl font-bold uppercase md:flex xl:text-2xl"
           >
             <span className="text-alinsky-sunset">{t("hurry")}</span>
             <span className="text-alinsky-platinum">{t("only")}</span>
@@ -113,7 +113,6 @@ const PreorderSection = () => {
             <span className="text-alinsky-platinum">{t("stockLeft")}</span>
           </motion.div>
 
-          {/* Untuk mobile */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
@@ -129,10 +128,10 @@ const PreorderSection = () => {
                 ease: "easeInOut",
               },
             }}
-            className="flex flex-col items-center gap-y-1 text-xl font-bold uppercase md:hidden"
+            className="flex flex-col items-center pt-6 pb-[80px] text-xl font-bold uppercase md:hidden"
           >
             <div className="text-alinsky-sunset">{t("hurry")}</div>
-            <div className="flex flex-row gap-x-1">
+            <div className="flex flex-row">
               <span className="text-alinsky-platinum">{t("only")}</span>
               <span className="text-alinsky-beige">20</span>
               <span className="text-alinsky-platinum">{t("stockLeft")}</span>
