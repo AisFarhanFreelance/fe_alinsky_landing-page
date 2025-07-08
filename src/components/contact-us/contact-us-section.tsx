@@ -66,7 +66,7 @@ const ContactUsSection = () => {
       className="flex justify-center"
     >
       <div className="w-full max-w-[1920px]">
-        <div className="mx-8 my-[72px] flex h-[274px] items-center justify-center overflow-hidden alinsky-2xl:mx-[104px] md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
+        <div className="mx-8 mb-[72px] flex h-[274px] items-center justify-center overflow-hidden alinsky-2xl:mx-[104px] md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
           <div className="flex flex-col items-center justify-center space-y-10 text-center">
             <div
               ref={headingRef}

@@ -13,7 +13,7 @@ const PricingFooter = () => {
       className="flex justify-center"
     >
       <div className="mx-8 w-fit items-center justify-center self-center rounded-full px-14 py-5 text-center font-satoshi text-base font-normal text-alinsky-midnight-blue alinsky-2xl:mx-[104px] md:mx-14 xl:mx-[104px] xl:flex xl:text-2xl">
-        {t("headline")}
+        {t("headline")}&nbsp;
         <b>
           <i>{t("highlight")}</i>
         </b>

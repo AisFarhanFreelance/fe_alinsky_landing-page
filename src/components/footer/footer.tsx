@@ -19,10 +19,7 @@ const Footer = () => {
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
         <div className="mx-8 mb-6 alinsky-2xl:mx-[104px] md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
-          <div
-            ref={footerRef}
-            className="translate-y-5 rounded-4xl bg-alinsky-rich-black pt-2 opacity-0 transition-all duration-700 ease-out md:pt-14 xl:pt-32"
-          >
+          <div className="translate-y-5 rounded-4xl bg-alinsky-rich-black pt-8 opacity-0 transition-all duration-700 ease-out md:pt-16 xl:pt-24">
             <div className="grid-1 grid gap-12 p-6 text-alinsky-white sm:grid-cols-2 sm:gap-6 sm:p-12">
               <div className="space-y-8">
                 <h1 className="animate-delay-100 font-helvetica text-xs uppercase">

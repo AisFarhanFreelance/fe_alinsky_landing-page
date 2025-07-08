@@ -9,8 +9,16 @@ const PricingSection = () => {
       <PricingPlanSection />
       <div className="space-y-16">
         <AgencyServiceSection />
-        <PricingFooter />
+
+        <div className="md:hidden">
+          <PricingFooter />
+        </div>
+
         <ServiceBlockSection />
+
+        <div className="hidden md:block">
+          <PricingFooter />
+        </div>
       </div>
     </div>
   );
