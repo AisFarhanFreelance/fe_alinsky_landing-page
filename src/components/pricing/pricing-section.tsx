@@ -9,8 +9,8 @@ const PricingSection = () => {
       <PricingPlanSection />
       <div className="space-y-16">
         <AgencyServiceSection />
-        <ServiceBlockSection />
         <PricingFooter />
+        <ServiceBlockSection />
       </div>
     </div>
   );
