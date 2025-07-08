@@ -19,13 +19,16 @@ const Footer = () => {
     <div className="flex justify-center">
       <div className="w-full max-w-[1920px]">
         <div className="mx-8 mb-6 alinsky-2xl:mx-[104px] md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
-          <div className="translate-y-5 rounded-4xl bg-alinsky-rich-black pt-8 opacity-0 transition-all duration-700 ease-out md:pt-16 xl:pt-24">
+          <div
+            ref={footerRef}
+            className="translate-y-5 rounded-4xl bg-alinsky-rich-black pt-16 opacity-0 transition-all duration-700 ease-out md:pt-24 xl:pt-32"
+          >
             <div className="grid-1 grid gap-12 p-6 text-alinsky-white sm:grid-cols-2 sm:gap-6 sm:p-12">
               <div className="space-y-8">
                 <h1 className="animate-delay-100 font-helvetica text-xs uppercase">
                   {t("catalog")}
                 </h1>
-                <div className="flex flex-col space-y-3 font-satoshi text-[28px] capitalize sm:flex-row sm:space-y-0 sm:space-x-8">
+                <div className="flex flex-col font-satoshi text-[28px] capitalize sm:flex-row sm:space-y-0 sm:space-x-8 md:space-y-3">
                   <div className="flex flex-col space-y-3">
                     {[
                       { key: "home", href: "#home" },
@@ -81,10 +84,10 @@ const Footer = () => {
                   </h1>
                   <p className="font-satoshi text-base transition-all delay-400 duration-500">
                     <a
-                      href="mailto:Socialhubindo@gmail.com"
+                      href="mailto:socialhubs.id@gmail.com"
                       className="hover:text-alinsky-silver"
                     >
-                      Socialhubindo@gmail.com
+                      socialhubs.id@gmail.com
                     </a>
                   </p>
                 </div>
