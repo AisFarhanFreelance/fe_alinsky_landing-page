@@ -6,6 +6,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import Navbar from "@/components/navbar/navbar";
+import UserIdlePopup from "@/components/pop-up/user-idle-popup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,10 @@ export default async function RootLayout({
             <div className="fixed top-0 right-0 left-0 z-50">
               <Navbar />
             </div>
-            <main className="overflow-hidden">{children}</main>
+            <main className="overflow-hidden">
+              {children}
+              <UserIdlePopup />
+            </main>
             {/* <div>
               <Footer />
             </div> */}
