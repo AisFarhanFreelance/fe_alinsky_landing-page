@@ -79,7 +79,7 @@ const PreorderSection = () => {
                   >
                     {unit.value}
                   </span>
-                  <span className="mt-1 text-sm text-alinsky-platinum">
+                  <span className="mt-1 text-[14px] leading-none text-alinsky-platinum lg:text-[20px]">
                     {unit.label}
                   </span>
                 </motion.div>
