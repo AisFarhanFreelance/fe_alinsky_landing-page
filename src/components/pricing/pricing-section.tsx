@@ -1,12 +1,12 @@
 import PricingFooter from "../footer/pricing-footer";
 import AgencyServiceSection from "./agency-service/agency-service-section";
-import PricingPlanSection from "./pricing-plan/pricing-plan-section";
+// import PricingPlanSection from "./pricing-plan/pricing-plan-section";
 import ServiceBlockSection from "./service-block/service-block-section";
 
 const PricingSection = () => {
   return (
     <div className="my-8">
-      <PricingPlanSection />
+      {/* <PricingPlanSection /> */}
       <div className="space-y-16">
         <AgencyServiceSection />
 

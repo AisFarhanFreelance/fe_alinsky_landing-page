@@ -8,12 +8,10 @@ const PreorderSection = () => {
   const deadline = new Date("2025-07-25T14:00:00Z");
 
   const [salesTime, setSalesTime] = useState<{
-    days: string;
     hours: string;
     minutes: string;
     seconds: string;
   }>({
-    days: "00",
     hours: "00",
     minutes: "00",
     seconds: "00",
@@ -29,16 +27,12 @@ const PreorderSection = () => {
         return;
       }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-      );
+      const totalHours = Math.floor(distance / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       setSalesTime({
-        days: String(days).padStart(2, "0"),
-        hours: String(hours).padStart(2, "0"),
+        hours: String(totalHours).padStart(2, "0"),
         minutes: String(minutes).padStart(2, "0"),
         seconds: String(seconds).padStart(2, "0"),
       });
@@ -48,9 +42,9 @@ const PreorderSection = () => {
   }, [deadline]);
 
   const timeUnits = [
-    { value: salesTime.hours, label: "hours" },
-    { value: salesTime.minutes, label: "minutes" },
-    { value: salesTime.seconds, label: "seconds" },
+    { value: salesTime.hours, label: "Hour(s)" },
+    { value: salesTime.minutes, label: "Minute(s)" },
+    { value: salesTime.seconds, label: "Second(s)" },
   ];
 
   const t = useTranslations("homepage.preOrder");
@@ -64,11 +58,11 @@ const PreorderSection = () => {
             <span className="text-xl font-bold capitalize xl:text-[32px]">
               {t("preOrderHeading")}
             </span>
-            <div className="flex flex-row justify-center space-x-8 text-5xl leading-[100%] font-normal md:text-6xl xl:text-8xl">
+            <div className="flex flex-row justify-center space-x-4 text-5xl leading-[100%] font-normal md:space-x-8 md:text-6xl lg:space-x-12 xl:text-8xl">
               {timeUnits.map((unit, idx) => (
                 <motion.div
                   key={idx}
-                  className="flex flex-col"
+                  className="flex flex-col items-center"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
@@ -84,6 +78,9 @@ const PreorderSection = () => {
                     }}
                   >
                     {unit.value}
+                  </span>
+                  <span className="mt-1 text-sm text-alinsky-platinum">
+                    {unit.label}
                   </span>
                 </motion.div>
               ))}
