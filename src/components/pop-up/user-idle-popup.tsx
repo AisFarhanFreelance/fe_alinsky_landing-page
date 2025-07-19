@@ -3,7 +3,15 @@
 import { useIdle } from "@/lib/hooks/use-idle";
 import { useEffect, useState } from "react";
 
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "../ui/dialog";
+import { Button } from "../ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "../ui/dialog";
 
 const UserIdlePopup = () => {
   const isIdle = useIdle(30_000);
@@ -33,6 +41,12 @@ const UserIdlePopup = () => {
             What&apos;s Holding Your Brand Back !
           </span>
         </div>
+        <DialogFooter>
+          <Button className="uppercase">Request A Marketing Audit</Button>
+          <DialogClose asChild>
+            <Button className="uppercase">Maybe Later</Button>
+          </DialogClose>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
