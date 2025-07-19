@@ -14,9 +14,9 @@ import {
 } from "../ui/dialog";
 
 const UserIdlePopup = () => {
-  const isIdle = useIdle(30_000);
-  const [hasTriggered, setHasTriggered] = useState(true);
-  const [open, setOpen] = useState(true);
+  const isIdle = useIdle(5000);
+  const [hasTriggered, setHasTriggered] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (isIdle && !hasTriggered) {
@@ -28,7 +28,7 @@ const UserIdlePopup = () => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="flex flex-col items-center justify-center">
+      <DialogContent className="dura flex scale-95 flex-col items-center justify-center space-y-8 opacity-0 transition-all duration-500 ease-out data-[state=open]:scale-100 data-[state=open]:opacity-100">
         <DialogHeader>
           <DialogTitle className="font-satoshi text-2xl font-normal">
             Free Marketing Audit
@@ -42,10 +42,16 @@ const UserIdlePopup = () => {
           </span>
         </div>
         <DialogFooter>
-          <Button className="uppercase">Request A Marketing Audit</Button>
-          <DialogClose asChild>
-            <Button className="uppercase">Maybe Later</Button>
-          </DialogClose>
+          <div className="flex w-full flex-col space-y-2">
+            <Button className="bg-alinsky-midnight-blue py-4 text-alinsky-white uppercase transition-transform duration-200 hover:scale-101 hover:bg-alinsky-midnight-blue hover:text-alinsky-white">
+              Request A Marketing Audit
+            </Button>
+            <DialogClose asChild>
+              <Button className="border border-alinsky-midnight-blue py-4 uppercase transition-transform duration-200 hover:scale-101">
+                Maybe Later
+              </Button>
+            </DialogClose>
+          </div>
         </DialogFooter>
       </DialogContent>
     </Dialog>
