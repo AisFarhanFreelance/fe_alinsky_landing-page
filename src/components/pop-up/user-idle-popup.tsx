@@ -1,6 +1,7 @@
 "use client";
 
 import { useIdle } from "@/lib/hooks/use-idle";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import { Button } from "../ui/button";
@@ -35,6 +36,13 @@ const UserIdlePopup = () => {
           </DialogTitle>
         </DialogHeader>
 
+        <Image
+          src="/assets/images/additional/pop-up/search.png"
+          alt="Search"
+          width={120}
+          height={120}
+          className="mb-4"
+        />
         <div className="flex flex-col items-center font-satoshi text-4xl text-alinsky-midnight-blue">
           <span className="font-medium">Discover</span>
           <span className="font-bold">

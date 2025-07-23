@@ -1,10 +1,13 @@
 import { Variants, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import FillDetailPopup from "@/components/pop-up/fill-in-details-popup";
 
 import { Button } from "../ui/button";
 
 const ContactUsSection = () => {
+  const [open, setOpen] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
@@ -133,32 +136,26 @@ const ContactUsSection = () => {
                 className="overflow-hidden rounded-full"
               >
                 <Button
-                  asChild
                   variant="outline"
                   className="relative overflow-hidden rounded-full border-alinsky-midnight-blue px-[22px] py-2 text-[15px] leading-[26px] font-normal tracking-[0.46px] text-alinsky-midnight-blue"
+                  onClick={() => setOpen(true)}
                 >
-                  <a
-                    href="https://wa.me/6281310072368?text=*Hi%20SocialHub!*%0A%0AI%E2%80%99m%20interested%20in%20a%20free%20audit%2C%20*how%20to%20proceed%3F*"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative block w-full"
-                  >
-                    <motion.span
-                      className="absolute inset-0 rounded-full bg-alinsky-midnight-blue opacity-0 hover:opacity-10"
-                      initial={{ opacity: 0 }}
-                      whileHover={{
-                        opacity: 0.1,
-                        transition: { duration: 0.3 },
-                      }}
-                    />
-                    {t("bookAudit")}
-                  </a>
+                  <motion.span
+                    className="absolute inset-0 rounded-full bg-alinsky-midnight-blue opacity-0 hover:opacity-10"
+                    initial={{ opacity: 0 }}
+                    whileHover={{
+                      opacity: 0.1,
+                      transition: { duration: 0.3 },
+                    }}
+                  />
+                  {t("bookAudit")}
                 </Button>
               </motion.div>
             </motion.div>
           </div>
         </div>
       </div>
+      <FillDetailPopup open={open} onOpenChange={setOpen} />
     </div>
   );
 };
