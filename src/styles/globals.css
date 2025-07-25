@@ -225,4 +225,35 @@
   body {
     @apply bg-background text-foreground;
   }
+
+/* .PhoneInput {
+  @apply w-full rounded-[16px] bg-[#F5F5F5] px-3 py-[14px] text-sm;
+  border: 1px solid #E0E0E0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Satoshi", sans-serif;
+  color: #151F68;
+  background-color: #F5F5F5;
+}
+
+.PhoneInput:hover {
+  border-color: #442FB8;
+}
+
+.PhoneInput:focus-within {
+  border-color: #151F68;
+  border-width: 2px;
+}
+
+.PhoneInputInput {
+  @apply flex-1 bg-transparent text-sm outline-none border-none;
+  font-family: "Satoshi", sans-serif;
+  color: #151F68;
+}
+
+.PhoneInputCountrySelect {
+  @apply bg-transparent text-sm border-none outline-none;
+  font-family: "Satoshi", sans-serif;
+  color: #151F68;
+} */
+
 }

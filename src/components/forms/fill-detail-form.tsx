@@ -1,6 +1,9 @@
 "use client";
 
 import * as React from "react";
+import { useState } from "react";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 import { Button } from "../ui/button";
 import { DialogClose, DialogFooter } from "../ui/dialog";
@@ -16,13 +19,14 @@ interface FillDetailFormProps {
 }
 
 const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmit }) => {
-  const [formData, setFormData] = React.useState({
+  const [formData, setFormData] = useState({
     brand: "",
     email: "",
     number: "",
     social: "",
   });
 
+  const [phone, setPhone] = useState("");
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -32,8 +36,13 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // onSubmit(formData);
-    console.log(formData);
+    const submissionData = {
+      ...formData,
+      number: phone,
+    };
+    // console.log("Data to submit:", submissionData);
+
+    onSubmit(submissionData);
   };
 
   return (
@@ -48,7 +57,7 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmit }) => {
             placeholder="Your brand"
           />
         </div>
-        <div className="mb-8 flex flex-col gap-4 sm:flex-row">
+        <div className="mb-8 flex flex-col gap-8 sm:flex-row">
           <div className="w-full sm:w-1/2">
             <TextInput
               label="Email"
@@ -60,13 +69,24 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmit }) => {
             />
           </div>
           <div className="w-full sm:w-1/2">
-            <TextInput
-              label="Number"
-              name="number"
-              value={formData.number}
-              onChange={handleChange}
-              placeholder="What's Your Personal Number?"
-            />
+            <div className="flex flex-col gap-2">
+              <PhoneInput
+                id="phone"
+                defaultCountry="ID"
+                value={phone}
+                placeholder="Your Phone Number"
+                onChange={(value) => {
+                  setPhone(value || "");
+                  setFormData((prev) => ({ ...prev, number: value || "" }));
+                }}
+                className="h-[56px] w-full rounded-[16px] border border-[#E0E0E0] bg-[#F5F5F5] px-3 font-[Satoshi] text-sm transition-colors focus-within:border-2 focus-within:border-[#151F68] hover:border-[#442FB8]"
+                inputClassName="flex-1 bg-transparent text-sm text-[#151F68] font-[Satoshi] outline-none border-none"
+                countrySelectProps={{
+                  className:
+                    "bg-transparent text-sm font-[Satoshi] text-[#151F68] border-none outline-none",
+                }}
+              />
+            </div>
           </div>
         </div>
         <TextInput

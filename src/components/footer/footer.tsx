@@ -2,7 +2,11 @@ import { Instagram, Whatsapp } from "iconsax-reactjs";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 
-const Footer = () => {
+interface FooterProps {
+  className?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ className }) => {
   const currentYear = new Date().getFullYear();
   const footerRef = useRef<HTMLDivElement>(null);
 
@@ -16,12 +20,12 @@ const Footer = () => {
   const t = useTranslations("footer");
 
   return (
-    <div className="flex justify-center">
+    <div className={`flex justify-center ${className ?? ""}`}>
       <div className="w-full max-w-[1920px]">
         <div className="mx-8 mb-6 alinsky-2xl:mx-[104px] md:mx-14 xl:mx-[104px] 2xl:mx-[344px]">
           <div
             ref={footerRef}
-            className="translate-y-5 rounded-4xl bg-alinsky-rich-black pt-16 opacity-0 transition-all duration-700 ease-out md:pt-24 xl:pt-32"
+            className="translate-y-5 rounded-4xl bg-alinsky-rich-black pt-32 opacity-0 transition-all duration-700 ease-out md:pt-24 xl:pt-32"
           >
             <div className="grid-1 grid gap-12 p-6 text-alinsky-white sm:grid-cols-2 sm:gap-6 sm:p-12">
               <div className="space-y-8">

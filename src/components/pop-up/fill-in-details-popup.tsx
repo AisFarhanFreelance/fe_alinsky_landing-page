@@ -15,15 +15,6 @@ const FillDetailPopup: React.FC<FillDetailPopupProps> = ({
   open,
   onOpenChange,
 }) => {
-  const handleSubmit = (data: {
-    name: string;
-    email: string;
-    message: string;
-  }) => {
-    console.log("Form submitted:", data);
-    onOpenChange(false);
-  };
-
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="flex flex-col space-y-6">

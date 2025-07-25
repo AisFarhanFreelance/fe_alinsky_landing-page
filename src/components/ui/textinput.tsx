@@ -1,6 +1,6 @@
 "use client";
 
-import TextField from "@mui/material/TextField";
+import { TextField } from "@mui/material";
 import * as React from "react";
 
 interface TextInputProps {
@@ -11,6 +11,7 @@ interface TextInputProps {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
   placeholder?: string;
+  className?: string;
   type?: string;
   error?: boolean;
   helperText?: string;
@@ -61,7 +62,7 @@ const TextInput: React.FC<TextInputProps> = ({
         },
         "& .MuiOutlinedInput-root": {
           borderRadius: "16px",
-          backgroundColor: "F5F5F5",
+          backgroundColor: "#F5F5F5",
           "& fieldset": {
             borderColor: "#E0E0E0",
           },

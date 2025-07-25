@@ -15,7 +15,7 @@ import ProblemSolutionSection from "@/components/home/problem-solution/problem-s
 import SolutionOverviewSection from "@/components/home/solution-overview/solution-overview-section";
 import PricingSection from "@/components/pricing/pricing-section";
 
-import SocialMediaMobile from "/public/assets/images/additional/social-media-mobile.png";
+import SocialMediaMobile from "/public/assets/images/additional/social-media-mobile.svg";
 import SocialMedia from "/public/assets/images/additional/social-media.png";
 import BrushBackground from "/public/assets/images/background/brush-background.svg";
 import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
@@ -65,7 +65,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="absolute top-[700px] left-[-150px] z-[5] block w-max origin-left scale-180 md:hidden">
+      <div className="absolute top-[700px] left-[-120px] z-[5] block w-max origin-left scale-180 md:hidden">
         <motion.div
           className="h-[181px] w-[255px]"
           variants={floatingVariants}
@@ -163,12 +163,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative">
-        <div className="absolute bottom-170 left-1/2 z-10 w-full max-w-4xl -translate-x-1/2 px-4 md:bottom-95 xl:bottom-110">
-          <HomePageCallToAction />
-        </div>
-        <Footer />
+      <div className="relative z-10 mx-auto -mb-24 max-w-[900px] px-4 md:max-w-[780px]">
+        <HomePageCallToAction />
       </div>
+
+      <Footer className="relative z-0" />
     </div>
   );
 }
