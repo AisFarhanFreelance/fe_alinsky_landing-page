@@ -7,7 +7,6 @@ import HomePageCallToAction from "@/components/call-to-action/homepage-call-to-a
 import ContactUsSection from "@/components/contact-us/contact-us-section";
 import Footer from "@/components/footer/footer";
 import PreorderSection from "@/components/home/countdown/preorder-section";
-import BrandVoiceCard from "@/components/home/hero/card/brand-voice-card";
 import SocialMediaApproval from "@/components/home/hero/card/social-media-approval";
 import HeroSection from "@/components/home/hero/hero-section";
 import TeamRoleSection from "@/components/home/marketing-teams/team-role-section";
@@ -15,7 +14,8 @@ import ProblemSolutionSection from "@/components/home/problem-solution/problem-s
 import SolutionOverviewSection from "@/components/home/solution-overview/solution-overview-section";
 import PricingSection from "@/components/pricing/pricing-section";
 
-import SocialMediaMobile from "/public/assets/images/additional/social-media-mobile.svg";
+import BrandVoiceCard from "/public/assets/images/additional/brand-voice-card-content.svg";
+import SocialMediaMobile from "/public/assets/images/additional/social-media-mobile.png";
 import SocialMedia from "/public/assets/images/additional/social-media.png";
 import BrushBackground from "/public/assets/images/background/brush-background.svg";
 import NoiseOverlay from "/public/assets/images/background/noise-brush-background.svg";
@@ -46,7 +46,7 @@ const floatingVariants: Variants = {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <div className="absolute top-[890px] left-[-50px] z-[5] hidden w-max origin-left scale-60 -rotate-18 md:top-[1100px] md:block md:scale-90 lg:top-[1200px] xl:left-[32px] xl:scale-150 2xl:top-[1200px]">
+      <div className="absolute top-[890px] left-[-50px] z-[5] hidden w-max origin-left scale-60 -rotate-18 md:top-[1100px] md:block md:scale-90 lg:top-[1000px] xl:left-[32px] xl:scale-150 2xl:top-[1200px]">
         <motion.div
           className="h-[250px] w-[400px]"
           variants={floatingVariants}
@@ -65,7 +65,7 @@ export default function Home() {
         </motion.div>
       </div>
 
-      <div className="absolute top-[700px] left-[-120px] z-[5] block w-max origin-left scale-180 md:hidden">
+      <div className="absolute top-[700px] left-[-180px] z-[5] block w-max origin-left scale-180 md:hidden">
         <motion.div
           className="h-[181px] w-[255px]"
           variants={floatingVariants}
@@ -121,7 +121,7 @@ export default function Home() {
 
           <div className="relative z-10 w-full max-w-[1920px] overflow-hidden">
             <motion.div
-              className="absolute top-[5%] right-[-50%] h-[379px] w-[456px] scale-60 alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 sm:right-[-20%] md:top-[15%] md:scale-60 xl:right-[-15%] xl:bottom-[25%] xl:scale-75 2xl:right-[2%] 2xl:bottom-[28%] 2xl:scale-90"
+              className="absolute top-[5%] right-[-25%] h-[379px] w-[456px] scale-60 alinsky-2xl:right-[-10%] alinsky-2xl:bottom-[25%] alinsky-2xl:scale-75 sm:right-[-10%] md:top-[5%] md:scale-65 xl:right-[5%] xl:bottom-[25%] xl:scale-75 2xl:right-[2%] 2xl:bottom-[28%] 2xl:scale-90"
               variants={floatingVariants}
               initial="hidden"
               whileInView="visible"
@@ -129,7 +129,13 @@ export default function Home() {
               animate="float"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <BrandVoiceCard />
+              <Image
+                src={BrandVoiceCard}
+                alt="Brand Voice"
+                width={456}
+                height={265.6}
+                className="object-contain"
+              />
             </motion.div>
 
             <div className="">
