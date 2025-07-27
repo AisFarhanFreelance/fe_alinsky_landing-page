@@ -79,10 +79,17 @@ const UserIdlePopup = () => {
         </DialogContent>
       </Dialog>
 
-      <FillDetailPopup
-        open={showFillDetailPopup}
-        onOpenChange={setShowFillDetailPopup}
-      />
+      {showFillDetailPopup && (
+        <FillDetailPopup
+          open={showFillDetailPopup}
+          onOpenChange={(open) => {
+            setShowFillDetailPopup(open);
+            if (!open) {
+              setHasTriggered(true);
+            }
+          }}
+        />
+      )}
     </>
   );
 };
