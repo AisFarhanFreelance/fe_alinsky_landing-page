@@ -1,6 +1,7 @@
 "use client";
 
 import { useIdle } from "@/lib/hooks/use-idle";
+import { XIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -33,8 +34,12 @@ const UserIdlePopup = () => {
     <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="dura flex scale-95 flex-col items-center justify-center opacity-0 transition-all duration-500 ease-out data-[state=open]:scale-100 data-[state=open]:opacity-100">
-          <DialogHeader>
-            <DialogTitle className="font-satoshi text-2xl font-normal text-alinsky-midnight-blue">
+          <DialogClose className="absolute top-9 right-12 hidden p-1 text-alinsky-midnight-blue opacity-70 hover:opacity-100 focus:outline-none md:block">
+            <XIcon className="h-5 w-5" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+          <DialogHeader className="relative mb-4">
+            <DialogTitle className="text-2xl font-medium text-alinsky-midnight-blue">
               Free Marketing Audit
             </DialogTitle>
           </DialogHeader>
@@ -46,14 +51,15 @@ const UserIdlePopup = () => {
             height={120}
             className="mb-4"
           />
-          <div className="flex flex-col items-center font-satoshi text-lg text-alinsky-midnight-blue lg:text-4xl">
+          <div className="flex flex-col items-center font-satoshi text-2xl text-alinsky-midnight-blue">
             <span className="font-medium">Discover</span>
-            <span className="text-center font-bold">
-              What&apos;s Holding Your Brand Back !
-            </span>
+            <h1 className="text-center text-2xl font-bold">
+              What’s Holding
+              <span className="block sm:inline"> Your Brand Back?</span>
+            </h1>
           </div>
           <DialogFooter>
-            <div className="flex w-full flex-row space-x-2">
+            <div className="flex w-full flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-2">
               <DialogClose asChild>
                 <Button className="flex-1 border border-alinsky-midnight-blue py-4 uppercase transition-transform duration-200 hover:scale-101">
                   Maybe Later
