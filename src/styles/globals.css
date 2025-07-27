@@ -17,12 +17,16 @@
   --color-alinsky-gray-600: var(--gray-600);
   --color-alinsky-silver: var(--silver);
   --color-alinsky-rich-black: var(--rich-black);
+  --color-alinsky-royal-purple: var(--rich-black);
   --color-alinsky-battleship-gray: var(--battleship-gray);
   --color-alinsky-midnight-blue: var(--midnight-blue);
+  --color-alinsky-lavender-haze: var(--midnight-blue);
   --color-alinsky-egyptian-blue: var(--egyptian-blue);
   --color-alinsky-violet-blue: var(--violet-blue);
   --color-alinsky-persian-blue: var(--persian-blue);
+  --color-alinsky-frosted-berry: var(--persian-blue);
   --color-alinsky-medium-slate-blue: var(--medium-slate-blue);
+  --color-alinsky-lilac-flash: var(--medium-slate-blue);
   --color-alinsky-slate-blue: var(--slate-blue);
   --color-alinsky-picton-blue: var(--picton-blue);
   --color-alinsky-vista-blue: var(--vista-blue);
@@ -45,6 +49,7 @@
   --color-alinsky-white-smoke: var(--white-smoke);
   --color-alinsky-seasalt: var(--seasalt);
   --color-alinsky-white: var(--white);
+  --color-alinsky-sunlight: var(--white);
   --color-alinsky-beige: var(--beige);
   /** Alinsky */
 
@@ -226,7 +231,7 @@
     @apply bg-background text-foreground;
   }
 
-/* .PhoneInput {
+  /* .PhoneInput {
   @apply w-full rounded-[16px] bg-[#F5F5F5] px-3 py-[14px] text-sm;
   border: 1px solid #E0E0E0;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -255,5 +260,4 @@
   font-family: "Satoshi", sans-serif;
   color: #151F68;
 } */
-
 }
