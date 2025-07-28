@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
+import Image from "next/image";
 import * as React from "react";
 
+import backgroundEllipse from "../../../public/assets/images/additional/background-ellipse.svg";
 import messageSentAnimation from "../../../public/assets/lottie/message-sent.json";
 import { Button } from "../ui/button";
 import { Dialog, DialogContent, DialogHeader } from "../ui/dialog";
@@ -16,32 +18,44 @@ interface NotificationProps {
 const Notification: React.FC<NotificationProps> = ({ show, onClose }) => {
   return (
     <Dialog open={show} onOpenChange={onClose}>
-      <DialogContent className="relative flex flex-col items-center justify-center space-y-6 overflow-hidden bg-white font-satoshi">
-        {/* Background Image */}
-        <img
-          src="/assets/images/background-ellipse.png"
+      <DialogContent className="flex flex-col items-center justify-center space-y-6 font-satoshi">
+        <Image
+          src={backgroundEllipse}
           alt="Background Ellipse"
-          className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
+          width={400}
+          height={400}
+          className="absolute -z-10 object-contain"
         />
 
-        {/* Header Text */}
-        <DialogHeader className="text-center">
-          <motion.div className="rounded-2xl bg-[#FAFAFA] p-2 text-[24px] font-black text-alinsky-slate-blue italic lg:py-6">
-            Help Is On Its Way!
+        <DialogHeader className="relative">
+          <motion.div className="rounded-2xl bg-[#FAFAFA] p-2 text-2xl font-black text-alinsky-slate-blue italic lg:py-6 lg:text-3xl">
+            <span
+              className="bg-gradient-to-r from-[rgba(32,22,88,0.5)] via-white to-[rgba(29,20,78,0.5)] bg-clip-text text-transparent"
+              style={{
+                background:
+                  "linear-gradient(90deg, #3A377F 0%, #7B77A9 30.29%, #CEC8EC 55.36%, #3A377F 100%)",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Help Is On Its Way!
+            </span>
           </motion.div>
         </DialogHeader>
-
-        {/* Lottie Animation */}
         <Lottie
           animationData={messageSentAnimation}
           loop={true}
           className="h-36 w-36"
         />
+        <p className="z-10 text-center text-lg text-muted-foreground lg:text-xl">
+          Check your email within 24 hours.
+        </p>
 
-        {/* OK Button */}
         <Button
+          type="button"
           onClick={onClose}
-          className="w-[364px] bg-alinsky-midnight-blue py-4 text-alinsky-white uppercase transition-transform duration-200 hover:scale-101 hover:bg-alinsky-midnight-blue hover:text-alinsky-white"
+          className="w-full max-w-[364px] flex-1 bg-alinsky-midnight-blue py-4 text-alinsky-white uppercase transition-transform duration-200 hover:scale-101 hover:bg-alinsky-midnight-blue hover:text-alinsky-white"
         >
           OK
         </Button>
