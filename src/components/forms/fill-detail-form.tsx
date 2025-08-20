@@ -1,9 +1,11 @@
 "use client";
 
+import { addBrands } from "@/actions/brand-action";
 import * as React from "react";
-import { useState } from "react";
+import { useState, useTransition } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { toast } from "sonner";
 
 import { Button } from "../ui/button";
 import { DialogClose, DialogFooter } from "../ui/dialog";
@@ -21,6 +23,7 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmitSuccess }) => {
     social: "",
   });
   const [phone, setPhone] = useState("");
+  const [isPending, startTransition] = useTransition();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -31,9 +34,24 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmitSuccess }) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const submissionData = { ...formData, number: phone };
-    console.log(submissionData);
-    if (onSubmitSuccess) onSubmitSuccess();
+
+    startTransition(async () => {
+      const submissionData = { ...formData, number: phone };
+      const result = await addBrands({
+        brand_name: submissionData.brand,
+        email: submissionData.email,
+        phone_number: submissionData.number,
+        social_url: submissionData.social,
+      });
+
+      if (result.success) {
+        toast.success(result.message);
+      } else {
+        toast.error(result.message);
+      }
+
+      if (onSubmitSuccess) onSubmitSuccess();
+    });
   };
 
   return (
@@ -68,7 +86,7 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmitSuccess }) => {
                 placeholder="Your Phone Number"
                 onChange={(value) => {
                   setPhone(value || "");
-                  setFormData((prev) => ({ ...prev, number: value || "" }));
+                  setFormData((previous) => ({ ...previous, number: value || "" }));
                 }}
                 className="h-[56px] w-full rounded-[16px] border border-[#E0E0E0] bg-[#F5F5F5] px-3 font-[Satoshi] text-sm transition-colors focus-within:border-2 focus-within:border-[#151F68] hover:border-[#442FB8]"
                 inputClassName="flex-1 bg-transparent text-sm text-[#151F68] font-[Satoshi] outline-none border-none"
@@ -102,9 +120,10 @@ const FillDetailForm: React.FC<FillDetailFormProps> = ({ onSubmitSuccess }) => {
           </DialogClose>
           <Button
             type="submit"
+            disabled={isPending}
             className="flex-1 bg-alinsky-midnight-blue py-4 text-alinsky-white uppercase transition-transform duration-200 hover:scale-101 hover:bg-alinsky-midnight-blue hover:text-alinsky-white"
           >
-            Submit
+            {isPending ? "Submitting" : "Submit"}
           </Button>
         </div>
       </DialogFooter>
