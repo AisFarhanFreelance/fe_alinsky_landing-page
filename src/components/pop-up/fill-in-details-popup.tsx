@@ -15,6 +15,7 @@ import {
 
 type FillDetailPopupProps = {
   open: boolean;
+  // eslint-disable-next-line no-unused-vars
   onOpenChange: (open: boolean) => void;
 };
 
