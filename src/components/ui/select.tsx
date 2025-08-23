@@ -9,6 +9,7 @@ export interface SelectOption {
 
 interface PlainSelectProps {
   value: string;
+  // eslint-disable-next-line no-unused-vars
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   options: SelectOption[];
   placeholder?: string;

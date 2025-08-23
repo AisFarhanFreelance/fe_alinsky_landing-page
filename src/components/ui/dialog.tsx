@@ -1,10 +1,11 @@
+ 
 "use client";
 
 import { cn } from "@/lib/utilities";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { AnimatePresence, motion } from "framer-motion";
-// import { XIcon } from "lucide-react";
 import * as React from "react";
+
+/* eslint-disable unicorn/no-null */
 
 function Dialog({
   ...props
